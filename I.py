@@ -1,4 +1,3 @@
-# import python packages
 import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import Element
 import json
