@@ -2,6 +2,16 @@ import Utils
 import pandas as pd
 
 def R1(metadata_list, repository_choice):
+    """
+    Evaluate the reusability principle R1 by checking metadata completeness.
+
+    Args:
+        metadata_list (list): A list of metadata entries to check for completeness.
+        repository_choice (str): The choice of repository to determine specific checks.
+
+    Returns:
+        float: The score indicating metadata completeness.
+    """
     score = R1_2(metadata_list, repository_choice)
     df = pd.DataFrame({
         "Principle": ["R1"],
@@ -13,6 +23,16 @@ def R1(metadata_list, repository_choice):
     return score
 
 def R1_1(metadata, repository_choice):
+    """
+    Evaluate the reusability principle R1.1 by checking the use of community standards.
+
+    Args:
+        metadata (dict): The metadata to check for community standards fields.
+        repository_choice (str): The choice of repository to determine specific checks.
+
+    Returns:
+        float: The score indicating the presence of community standards fields.
+    """
     community_standards_fields = ["license", "citation", "termsOfUse"]
     present_fields = [field for field in community_standards_fields if field in metadata]
     score = len(present_fields) / len(community_standards_fields)
@@ -30,6 +50,16 @@ def R1_1(metadata, repository_choice):
     return score
 
 def R1_2(metadata_list, repository_choice):
+    """
+    Evaluate the reusability principle R1.2 by checking provenance metadata completeness.
+
+    Args:
+        metadata_list (list): A list of metadata entries to check for provenance.
+        repository_choice (str): The choice of repository to determine specific checks.
+
+    Returns:
+        float: The score indicating the completeness of provenance metadata.
+    """
     provenance = 0
     try:
         output, index = Utils.find_list_in_list(metadata_list[0], ["authors"])
@@ -64,6 +94,16 @@ def R1_2(metadata_list, repository_choice):
     return score
 
 def R1_3(metadata, repository_choice):
+    """
+    Evaluate the reusability principle R1.3 by checking if (meta)data meet domain-relevant community standards.
+
+    Args:
+        metadata (dict): The metadata to check for domain-relevant community standards.
+        repository_choice (str): The choice of repository to determine specific checks.
+
+    Returns:
+        None: As the scoring is not provided for this metric.
+    """
     score = None
     df = pd.DataFrame({
         "Principle": ["R1.3"],

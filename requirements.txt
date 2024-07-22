@@ -1,0 +1,8 @@
+requests
+tabulate
+pandas
+xml.etree.ElementTree
+bs4
+re
+json
+ftplib

@@ -12,6 +12,12 @@ repository_name = ""
 keywords = []
 
 def main():
+    """
+    Prompt the user to select a data repository and enter keywords for the search.
+
+    Returns:
+        tuple: The chosen repository name and the list of keywords.
+    """
     global repository_choice, repository_name, keywords
     
     print("Which data repository do you want to use?")
@@ -48,6 +54,16 @@ def main():
     return repository_name, keywords
 
 def initialize(repository_name, keywords):
+    """
+    Initialize the search by retrieving metadata from the chosen repository using the provided keywords.
+
+    Args:
+        repository_name (str): The name of the chosen repository.
+        keywords (list): The list of keywords for the search.
+
+    Returns:
+        tuple: Metadata, repository choice, repository URL, and request status.
+    """
     request_status = ""
     response_data = ""
 
@@ -66,7 +82,6 @@ def initialize(repository_name, keywords):
         request_status = r_repo.status_code
         response_data = r_repo.json()
         hits = response_data.get("hits", [])
-        hits = response_data.get("hits", [])
         experiment_ids = []
         for hit in hits:
             accession = hit.get("accession", "")
@@ -78,7 +93,7 @@ def initialize(repository_name, keywords):
             url_1 = Utils.get_json_metadata_link(study_accession)
             print(url_1)
             r_repo = requests.get(url_1)
-            request_status = (r_repo.status_code)
+            request_status = r_repo.status_code
             print(request_status)
             response_data = r_repo.json()
             response_data_list.append(response_data)
@@ -94,7 +109,7 @@ def initialize(repository_name, keywords):
                         params={"db"   : repository_acronym,
                                 "term" : query_string
                                 })
-        request_status = (r_repo.status_code)
+        request_status = r_repo.status_code
         root = ET.fromstring(r_repo.text)
         for field in root.iter('Id'):
             id = field.text
@@ -109,7 +124,7 @@ def initialize(repository_name, keywords):
         base_url = "https://www.ebi.ac.uk/gwas/rest/api/studies?page=1&size=500"
         r_repo = requests.get(base_url)
         response_data = r_repo.json()
-        request_status = (r_repo.status_code)
+        request_status = r_repo.status_code
         hits = []
         for accession in response_data["_embedded"]["studies"]:
             disease = accession["diseaseTrait"]["trait"]
@@ -139,7 +154,7 @@ def initialize(repository_name, keywords):
         response = requests.get(base_url, headers=headers)
         if response.status_code == 200:
             response_data = response.json()
-        request_status = (response.status_code)
+        request_status = response.status_code
         hits = []
         for accession in response_data["@graph"]:
             try:
@@ -173,7 +188,7 @@ def initialize(repository_name, keywords):
         response = requests.get(base_url, params=params)
         if response.status_code == 200:
             response_data = response.json()
-        request_status = (response.status_code)
+        request_status = response.status_code
         hits = []
         for accession in response_data["data"]["hits"]:
             try:
@@ -200,7 +215,7 @@ def initialize(repository_name, keywords):
         response = requests.get(base_url)
         if response.status_code == 200:
             response_data = response.json()
-        request_status = (response.status_code)
+        request_status = response.status_code
         hits = []
         for hit in response_data["hits"]:
             try:
@@ -220,6 +235,19 @@ def initialize(repository_name, keywords):
     return metadata, repository_choice, url, request_status
 
 def assess(metadata, keywords, repository_choice, url, request_status):
+    """
+    Assess the retrieved metadata using various scoring functions.
+
+    Args:
+        metadata (dict): The metadata retrieved from the repository.
+        keywords (list): The list of keywords for the search.
+        repository_choice (str): The chosen repository.
+        url (str): The URL of the repository.
+        request_status (int): The status code of the request.
+
+    Returns:
+        list: A list of scores for various metrics.
+    """
     data = [
         ["F1 score", F.F1(url)],
         ["F2 score", F.F2(keywords, metadata, repository_choice)],

@@ -6,6 +6,15 @@ import re
 import pandas as pd
 
 def check_format(input_str):
+    """
+    Check the format of the input string to determine if it's in a known interoperable format.
+
+    Args:
+        input_str (str or list): The input string or list to check the format of.
+
+    Returns:
+        int: 1 if the format is recognized as interoperable (e.g., json, xml, owl, etc.), 0 otherwise.
+    """
     META = "(Meta)data is in format: "
     if type(input_str) == list:
         input_str = input_str[0]
@@ -51,6 +60,16 @@ def check_format(input_str):
     return 0
 
 def check_ontology(metadata, repository_choice):
+    """
+    Check the ontology used in the metadata for different repository choices.
+
+    Args:
+        metadata (list or dict): The metadata to check for ontology usage.
+        repository_choice (str): The choice of repository to determine specific checks.
+
+    Returns:
+        float: The proportion of valid ontology usage based on the repository choice.
+    """
     count = 0
     zeros = 0
     ones = 0
@@ -83,7 +102,7 @@ def check_ontology(metadata, repository_choice):
         zeros = samples - ones
         print("#ZEROS: " + str(zeros))
         print("#ONES: " + str(ones))
-        return count/samples
+        return count / samples
 
     if repository_choice == "5":
         return 0
@@ -100,7 +119,7 @@ def check_ontology(metadata, repository_choice):
         zeros = len(metadata) - ones
         print("#ZEROS: " + str(zeros))
         print("#ONES: " + str(ones))
-        return count/len(metadata)
+        return count / len(metadata)
 
     if repository_choice == "3":
         for hit in metadata:
@@ -170,6 +189,16 @@ def check_ontology(metadata, repository_choice):
         return o_name_list, o_id_list, o_of_name, o_of_value
 
 def search_bioportal(query, ontology_name):
+    """
+    Search for a term in BioPortal to check if it exists within a specified ontology.
+
+    Args:
+        query (str): The query term to search for.
+        ontology_name (str): The name of the ontology to search within.
+
+    Returns:
+        int: 1 if the term exists in the ontology, 0 otherwise.
+    """
     BASE_URL = "https://data.bioontology.org"
     API_KEY = "da05700b-cb69-49ef-840e-731b6d425aa4"
     url = f"{BASE_URL}/ontologies"
@@ -188,6 +217,15 @@ def search_bioportal(query, ontology_name):
         return None
 
 def I1(metadata):
+    """
+    Evaluate the interoperability principle I1 by checking the format of metadata.
+
+    Args:
+        metadata (str or list): The metadata to check the format of.
+
+    Returns:
+        int: 1 if the format is recognized as interoperable, 0 otherwise.
+    """
     score = check_format(metadata)
     df = pd.DataFrame({
         "Principle": ["I1"],
@@ -199,6 +237,16 @@ def I1(metadata):
     return score
 
 def I2(metadata, repository_choice):
+    """
+    Evaluate the interoperability principle I2 by checking ontology usage in metadata.
+
+    Args:
+        metadata (list or dict): The metadata to check for ontology usage.
+        repository_choice (str): The choice of repository to determine specific checks.
+
+    Returns:
+        float: The proportion of valid ontology usage based on the repository choice.
+    """
     score = check_ontology(metadata, repository_choice)
     df = pd.DataFrame({
         "Principle": ["I2"],
@@ -210,6 +258,15 @@ def I2(metadata, repository_choice):
     return score
 
 def I3(metadata):
+    """
+    Evaluate the interoperability principle I3 by checking for qualified references in metadata.
+
+    Args:
+        metadata (str or list): The metadata to check for qualified references.
+
+    Returns:
+        int: 1 if qualified references are found, 0 otherwise.
+    """
     score = 0
     explanation = "Metadata include qualified references to other (meta)data"
     uri_regex = re.compile(
@@ -230,5 +287,3 @@ def I3(metadata):
     })
     print(df.head())
     return score
-
-

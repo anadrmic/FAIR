@@ -5,6 +5,15 @@ import pandas as pd
 import Utils
 
 def find_doi_in_webpage(url):
+    """
+    Check for the presence of a DOI (Digital Object Identifier) in a webpage.
+
+    Args:
+        url (str): The URL of the webpage to search for a DOI.
+
+    Returns:
+        int: 1 if a DOI is found, 0 otherwise.
+    """
     if not url:
         return 0
     
@@ -21,6 +30,17 @@ def find_doi_in_webpage(url):
     return 1 if dois else 0
 
 def search_keywords_and_output_percentage(keywords, metadata, repository_choice):
+    """
+    Search for keywords in metadata and calculate the percentage of matches.
+
+    Args:
+        keywords (list of str): List of keywords to search for.
+        metadata (list of dict): Metadata to search within.
+        repository_choice (str): Identifier for the repository type.
+
+    Returns:
+        float: The percentage of keywords found in the metadata.
+    """
     if not keywords:
         return 1
 
@@ -48,6 +68,16 @@ def search_keywords_and_output_percentage(keywords, metadata, repository_choice)
         return 1
 
 def check_for_id(dictionary, repository_choice):
+    """
+    Check for specific identifiers in the metadata based on the repository choice.
+
+    Args:
+        dictionary (list of dict): Metadata to search for identifiers.
+        repository_choice (str): Identifier for the repository type.
+
+    Returns:
+        float: The percentage of entries containing the identifier.
+    """
     if repository_choice == "1":
         count = 0
         for hit in dictionary:
@@ -90,6 +120,16 @@ def check_for_id(dictionary, repository_choice):
     return 0
 
 def search_google_datasets(metadata, repository_choice):
+    """
+    Search for dataset names in Google Dataset Search and calculate the percentage found.
+
+    Args:
+        metadata (list of dict): Metadata containing dataset names.
+        repository_choice (str): Identifier for the repository type.
+
+    Returns:
+        float: The percentage of dataset names found in Google Dataset Search.
+    """
     dataset_name_list = []
     if repository_choice == "1":
         dataset_name_list = [hit["attributes"][0]["value"] for hit in metadata]
@@ -125,6 +165,15 @@ def search_google_datasets(metadata, repository_choice):
     return count / len(dataset_name_list)
 
 def F1(url):
+    """
+    Evaluate the findability principle F1 for a given dataset by checking DOI presence in a webpage.
+
+    Args:
+        url (str): The URL of the webpage to search for a DOI.
+
+    Returns:
+        int: Score indicating DOI presence (1 if found, 0 otherwise).
+    """
     score = find_doi_in_webpage(url)
     df = pd.DataFrame({
         "Principle": ["F1"],
@@ -136,6 +185,17 @@ def F1(url):
     return score
 
 def F2(keywords, metadata, repository_choice):
+    """
+    Evaluate the findability principle F2 for a given dataset by searching for keywords in metadata.
+
+    Args:
+        keywords (list of str): List of keywords to search for.
+        metadata (list of dict): Metadata to search within.
+        repository_choice (str): Identifier for the repository type.
+
+    Returns:
+        float: Score indicating the percentage of keywords found in the metadata.
+    """
     score = search_keywords_and_output_percentage(keywords, metadata, repository_choice)
     df = pd.DataFrame({
         "Principle": ["F2"],
@@ -147,6 +207,16 @@ def F2(keywords, metadata, repository_choice):
     return score
 
 def F3(metadata, repository_choice):
+    """
+    Evaluate the findability principle F3 for a given dataset by checking for identifiers in metadata.
+
+    Args:
+        metadata (list of dict): Metadata to search for identifiers.
+        repository_choice (str): Identifier for the repository type.
+
+    Returns:
+        float: Score indicating the percentage of entries containing the identifier.
+    """
     score = check_for_id(metadata, repository_choice)
     df = pd.DataFrame({
         "Principle": ["F3"],
@@ -158,6 +228,16 @@ def F3(metadata, repository_choice):
     return score
 
 def F4(metadata, repository_choice):
+    """
+    Evaluate the findability principle F4 for a given dataset by checking for presence in Google Dataset Search.
+
+    Args:
+        metadata (list of dict): Metadata containing dataset names.
+        repository_choice (str): Identifier for the repository type.
+
+    Returns:
+        float: Score indicating the percentage of dataset names found in Google Dataset Search.
+    """
     score = search_google_datasets(metadata, repository_choice)
     df = pd.DataFrame({
         "Principle": ["F4"],

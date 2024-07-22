@@ -12,6 +12,12 @@ repository_name = ""
 keywords = []
 
 def main_1():
+    """
+    Prompt the user to select a data repository and specify the number of samples to assess.
+
+    Returns:
+        tuple: The chosen repository name and the number of samples to assess.
+    """
     global repository_choice, repository_name
     
     print("Which data repository do you want to use?")
@@ -26,6 +32,7 @@ def main_1():
     while repository_choice not in ['1', '2', '3', '4', '5', '6']:
         print("Invalid choice. Please enter either 1, 2, 3, 4, 5 or 6.")
         repository_choice = input("Enter the number corresponding to your choice: ")
+    
     repository_names = {
         '1': "ArrayExpress",
         '2': "Gene Expression Omnibus",
@@ -39,6 +46,19 @@ def main_1():
     return repository_name, limit
 
 def assess(metadata, keywords, repository_choice, url, request_status):
+    """
+    Assess the FAIR metrics for the given metadata and repository choice.
+
+    Args:
+        metadata (list or dict): The metadata to be assessed.
+        keywords (list): Keywords to be used in the assessment.
+        repository_choice (str): The chosen repository for assessment.
+        url (str): The URL of the repository.
+        request_status (int): The status code of the metadata request.
+
+    Returns:
+        list: A list of scores for each assessed FAIR metric.
+    """
     data = [
         ["F1 score", F.F1(url)],
         ["F2 score", F.F2(keywords, metadata, repository_choice)],
@@ -60,6 +80,16 @@ def assess(metadata, keywords, repository_choice, url, request_status):
     return [row[1] for row in data]
 
 def initialize(repository_name, limit):
+    """
+    Initialize the assessment by retrieving metadata from the chosen repository.
+
+    Args:
+        repository_name (str): The name of the chosen repository.
+        limit (int): The number of samples to retrieve.
+
+    Returns:
+        tuple: Metadata, repository choice, repository URL, and request status.
+    """
     request_status = ""
     response_data = ""
     
@@ -87,7 +117,7 @@ def initialize(repository_name, limit):
             study_accession = hit
             url_1 = Utils.get_json_metadata_link(study_accession)
             r_repo = requests.get(url_1)
-            request_status = (r_repo.status_code)
+            request_status = r_repo.status_code
             response_data = r_repo.json()
             response_data_list.append(response_data)
         response_data = response_data_list
@@ -99,7 +129,7 @@ def initialize(repository_name, limit):
         repository_acronym = "gds" 
         r_repo = requests.get(repository_api,
                         params={"db"   : repository_acronym })
-        request_status = (r_repo.status_code)
+        request_status = r_repo.status_code
         root = ET.fromstring(r_repo.text)
         for field in root.iter('Id'):
             id = field.text
@@ -114,7 +144,7 @@ def initialize(repository_name, limit):
         base_url = "https://www.ebi.ac.uk/gwas/rest/api/studies?page=1&size=500"
         r_repo = requests.get(base_url)
         response_data = r_repo.json()
-        request_status = (r_repo.status_code)
+        request_status = r_repo.status_code
         hits = []
         for accession in response_data["_embedded"]["studies"]:
             hits.append(accession["accessionId"])
@@ -135,7 +165,7 @@ def initialize(repository_name, limit):
         response = requests.get(base_url, headers=headers)
         if response.status_code == 200:
             response_data = response.json()
-        request_status = (response.status_code)
+        request_status = response.status_code
         hits = []
         for accession in response_data["@graph"]:
             try:
@@ -164,7 +194,7 @@ def initialize(repository_name, limit):
         response = requests.get(base_url, params=params)
         if response.status_code == 200:
             response_data = response.json()
-        request_status = (response.status_code)
+        request_status = response.status_code
         hits = []
         for accession in response_data["data"]["hits"]:
             try:
@@ -191,7 +221,7 @@ def initialize(repository_name, limit):
         response = requests.get(base_url)
         if response.status_code == 200:
             response_data = response.json()
-        request_status = (response.status_code)
+        request_status = response.status_code
         hits = []
         for hit in response_data["hits"]:
             try:
@@ -207,5 +237,6 @@ def initialize(repository_name, limit):
             response_data = response.json()
             response_data_list.append(response_data)
         response_data = response_data_list
+    
     metadata = response_data
     return metadata, repository_choice, url, request_status
