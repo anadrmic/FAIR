@@ -1,7 +1,69 @@
-import Utils
 import pandas as pd
+import utils
+
+
+# Set display options to show all rows and columns
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
+
+# Set display width to show the entire dataframe without truncation
+pd.set_option('display.width', 1000)
+pd.set_option('display.max_colwidth', 100)
+
+
+def check_metadata_richness(metadata_list):
+    """
+    Check if metadata are richly described with a plurality of accurate and relevant attributes.
+
+    Parameters:
+    - metadata_list (list): List of metadata records.
+
+    Returns:
+    - results (dict): Summary of the richness check.
+    """
+    key_attributes = [
+        'experiment_protocol', 'machine_model', 'species', 'drug_regime',
+        'manufacturer', 'brand', 'experimental_conditions', 'study_design'
+    ]
+
+    results = {
+        'total_records': len(metadata_list),
+        'records_with_all_attributes': 0,
+        'records_with_missing_attributes': 0,
+        'missing_attributes_summary': {}
+    }
+
+    for attribute in key_attributes:
+        results['missing_attributes_summary'][attribute] = 0
+
+    # Check each metadata record
+    for metadata in metadata_list:
+        attributes_present = True
+        for attribute in key_attributes:
+            if attribute not in metadata or not metadata[attribute]:
+                results['missing_attributes_summary'][attribute] += 1
+                attributes_present = False
+
+        if attributes_present:
+            results['records_with_all_attributes'] += 1
+        else:
+            results['records_with_missing_attributes'] += 1
+
+    if results['total_records'] > 0:
+        results['percentage_with_all_attributes'] = (
+                (results['records_with_all_attributes'] / results['total_records']) * 100
+        )
+        results['percentage_with_missing_attributes'] = (
+                (results['records_with_missing_attributes'] / results['total_records']) * 100
+        )
+    else:
+        results['percentage_with_all_attributes'] = 0
+        results['percentage_with_missing_attributes'] = 0
+
+    return results['percentage_with_all_attributes']
 
 def R1(metadata_list, repository_choice):
+
     """
     Evaluate the reusability principle R1 by checking metadata completeness.
 
@@ -12,7 +74,8 @@ def R1(metadata_list, repository_choice):
     Returns:
         float: The score indicating metadata completeness.
     """
-    score = R1_2(metadata_list, repository_choice)
+
+    score = check_metadata_richness(metadata_list)
     df = pd.DataFrame({
         "Principle": ["R1"],
         "Description": ["Reusability: Metadata completeness"],
@@ -20,9 +83,12 @@ def R1(metadata_list, repository_choice):
         "Explanation": ["Metadata is complete" if score == 1 else "Metadata is incomplete: it does not include the type of object nor the metadata specify the content of the data technical properties of its data file and format."]
     })
     print(df.head())
+
     return score
 
+
 def R1_1(metadata, repository_choice):
+
     """
     Evaluate the reusability principle R1.1 by checking the use of community standards.
 
@@ -33,6 +99,7 @@ def R1_1(metadata, repository_choice):
     Returns:
         float: The score indicating the presence of community standards fields.
     """
+
     community_standards_fields = ["license", "citation", "termsOfUse"]
     present_fields = [field for field in community_standards_fields if field in metadata]
     score = len(present_fields) / len(community_standards_fields)
@@ -47,9 +114,12 @@ def R1_1(metadata, repository_choice):
         ]
     })
     print(df.head())
+
     return score
 
+
 def R1_2(metadata_list, repository_choice):
+
     """
     Evaluate the reusability principle R1.2 by checking provenance metadata completeness.
 
@@ -60,15 +130,16 @@ def R1_2(metadata_list, repository_choice):
     Returns:
         float: The score indicating the completeness of provenance metadata.
     """
+
     provenance = 0
     try:
-        output, index = Utils.find_list_in_list(metadata_list[0], ["authors"])
+        output, index = utils.find_list_in_list(metadata_list[0], ["authors"])
         if index:
             provenance += 1        
-        output, index = Utils.find_list_in_list(metadata_list[0], ["email"])
+        output, index = utils.find_list_in_list(metadata_list[0], ["email"])
         if index:
             provenance += 1
-        output, index = Utils.find_list_in_list(metadata_list[0], ["title"])
+        output, index = utils.find_list_in_list(metadata_list[0], ["title"])
         if index:
             provenance += 1
         if provenance == 3:
@@ -93,7 +164,9 @@ def R1_2(metadata_list, repository_choice):
     print(df.head())
     return score
 
+
 def R1_3(metadata, repository_choice):
+
     """
     Evaluate the reusability principle R1.3 by checking if (meta)data meet domain-relevant community standards.
 
@@ -104,6 +177,7 @@ def R1_3(metadata, repository_choice):
     Returns:
         None: As the scoring is not provided for this metric.
     """
+
     score = None
     df = pd.DataFrame({
         "Principle": ["R1.3"],
@@ -115,4 +189,5 @@ def R1_3(metadata, repository_choice):
         ]
     })
     print(df.head())
+
     return score

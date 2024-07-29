@@ -1,11 +1,7 @@
 import requests
 import xml.etree.ElementTree as ET
 from tabulate import tabulate
-import Utils
-import F
-import A
-import I
-import R
+from fair_metrics import Accessibility, Findability, Interoperability, Reusability
 
 repository_choice = ""
 repository_name = ""

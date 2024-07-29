@@ -1,7 +1,9 @@
 import requests
 from ftplib import FTP
 
+
 def pretty_print_xml(root):
+
     """
     Print the structure and content of an XML tree.
 
@@ -11,6 +13,7 @@ def pretty_print_xml(root):
     Returns:
         int: The count of printed elements.
     """
+
     count = 0
     for i in range(len(root)):
         if len(root[i]) == 0:
@@ -29,9 +32,12 @@ def pretty_print_xml(root):
                         print("  <" + str(root[i][j][k].tag) + ">")
                         print("      " + str(root[i][j][k].text))
                         count += 1
+
     return count
 
+
 def xml_to_list(root):
+
     """
     Convert an XML tree to a list of tags and text content.
 
@@ -41,6 +47,7 @@ def xml_to_list(root):
     Returns:
         list: A list containing two lists - one with tags and one with text content.
     """
+
     xml_list_tag = []
     xml_list_text = []
     for i in range(len(root)):
@@ -63,9 +70,12 @@ def xml_to_list(root):
                         xml_list_tag.append(tag.lower())
                         xml_list_text.append(text.lower())
     xml_list = [xml_list_tag, xml_list_text]
+
     return xml_list
 
+
 def find_list_in_list(long_list, short_list):
+
     """
     Find occurrences of elements from a short list in a long list.
 
@@ -85,7 +95,9 @@ def find_list_in_list(long_list, short_list):
                 index.append(i)
     return found, index
 
+
 def get_ftp_link(study_accession):
+
     """
     Generate an FTP link for a given study accession.
 
@@ -95,11 +107,15 @@ def get_ftp_link(study_accession):
     Returns:
         str: The FTP link for downloading the study data.
     """
+
     source_code = study_accession.split("-")[1]
     url = "ftp://ftp.ebi.ac.uk/pub/databases/microarray/data/experiment/" + source_code + f"/{study_accession}/{study_accession}.sdrf.txt"
+
     return url
 
+
 def download_file_via_ftp(ftp_link, local_file_path):
+
     """
     Download a file from an FTP server.
 
@@ -110,6 +126,7 @@ def download_file_via_ftp(ftp_link, local_file_path):
     Raises:
         Exception: If there is an error during the download.
     """
+
     try:
         ftp_parts = ftp_link.split("/")
         ftp_host = ftp_parts[2]
@@ -123,7 +140,9 @@ def download_file_via_ftp(ftp_link, local_file_path):
     except Exception as e:
         print(f"Error downloading file: {e}")
 
+
 def get_json_metadata_link(study_accession):
+
     """
     Get the JSON metadata link for a given study accession.
 
@@ -133,8 +152,15 @@ def get_json_metadata_link(study_accession):
     Returns:
         str: The JSON metadata link for the study.
     """
+
     url = f"https://www.ebi.ac.uk/biostudies/api/v1/studies/{study_accession}/info"
     response = requests.get(url)
     data = response.json()
     link = data.get("httpLink") + f"/{study_accession}.json"
+
     return link
+
+
+def get_json_metadata_link(study_accession):
+    return f"https://www.ebi.ac.uk/biostudies/api/v1/studies/{study_accession}"
+

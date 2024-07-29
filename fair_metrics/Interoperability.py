@@ -5,61 +5,88 @@ import requests
 import re
 import pandas as pd
 
-def check_format(input_str):
+
+# Set display options to show all rows and columns
+pd.set_option('display.max_rows', None)
+pd.set_option('display.max_columns', None)
+
+# Set display width to show the entire dataframe without truncation
+pd.set_option('display.width', 1000)
+pd.set_option('display.max_colwidth', 100)
+
+
+def check_format(metadata_list):
+
     """
     Check the format of the input string to determine if it's in a known interoperable format.
 
     Args:
-        input_str (str or list): The input string or list to check the format of.
+        metadata_list (str or list): The input string or list to check the format of.
 
     Returns:
         int: 1 if the format is recognized as interoperable (e.g., json, xml, owl, etc.), 0 otherwise.
     """
-    META = "(Meta)data is in format: "
-    if type(input_str) == list:
-        input_str = input_str[0]
-    try:
-        if isinstance(input_str, Element) or isinstance(input_str, dict):
-            print(META + "json")
-            return 1
-    except:
-        pass
-    try:
-        json.loads(input_str)
-        print(META + "json")
-    except ValueError:
-        pass
-    try:
-        ET.fromstring(input_str)
-        print(META + "xml")
-        return 1
-    except ET.ParseError:
-        pass
-    try:
-        if "owl:" in input_str or "http://www.w3.org/2002/07/owl#" in input_str:
-            print(META + "owl")
-            return 1
-        if "[Term]" in input_str or "[Typedef]" in input_str:
-            print(META + "OBO")
-            return 1
-        if "@prefix" in input_str or "<http://www.w3.org/1999/02/22-rdf-syntax-ns#" in input_str:
-            print(META + "RDF")
-            return 1
-        if "@context" in input_str:
-            print(META + "JSON-LD")
-            return 1
-        if "@prefix" in input_str or "<http://www.w3.org/1999/02/22-rdf-syntax-ns#" in input_str:
-            print(META + "Turtle (TTL)")
-            return 1
-        if "<http://" in input_str or "@prefix" in input_str:
-            print(META + "N-Triples")
-            return 1
-    except:
-        pass
 
-    return 0
+    META = "(Meta)data is in format: "
+    if type(metadata_list) == dict:
+        metadata_list = input_str["biosamples"]
+
+    score = 0
+    for input_str in metadata_list:
+        try:
+            if isinstance(input_str, Element) or isinstance(input_str, dict):
+                print(META + "json")
+                score += 1
+                continue
+        except:
+            pass
+        try:
+            json.loads(input_str)
+            print(META + "json")
+            score += 1
+            continue
+        except ValueError:
+            pass
+        try:
+            ET.fromstring(input_str)
+            print(META + "xml")
+            score += 1
+            continue
+        except ET.ParseError:
+            pass
+        try:
+            if "owl:" in input_str or "http://www.w3.org/2002/07/owl#" in input_str:
+                print(META + "owl")
+                score += 1
+                continue
+            if "[Term]" in input_str or "[Typedef]" in input_str:
+                print(META + "OBO")
+                score += 1
+                continue
+            if "@prefix" in input_str or "<http://www.w3.org/1999/02/22-rdf-syntax-ns#" in input_str:
+                print(META + "RDF")
+                score += 1
+                continue
+            if "@context" in input_str:
+                print(META + "JSON-LD")
+                score += 1
+                continue
+            if "@prefix" in input_str or "<http://www.w3.org/1999/02/22-rdf-syntax-ns#" in input_str:
+                print(META + "Turtle (TTL)")
+                score += 1
+                continue
+            if "<http://" in input_str or "@prefix" in input_str:
+                print(META + "N-Triples")
+                score += 1
+                continue
+        except:
+            pass
+
+    return score / len(metadata_list)
+
 
 def check_ontology(metadata, repository_choice):
+
     """
     Check the ontology used in the metadata for different repository choices.
 
@@ -70,6 +97,7 @@ def check_ontology(metadata, repository_choice):
     Returns:
         float: The proportion of valid ontology usage based on the repository choice.
     """
+
     count = 0
     zeros = 0
     ones = 0
@@ -105,10 +133,11 @@ def check_ontology(metadata, repository_choice):
         return count / samples
 
     if repository_choice == "5":
+        # no ontology mentioned
         return 0
 
     if repository_choice == "4":
-        for hit in metadata:
+        for hit in metadata["biosamples"]:
             ontology_id = hit["biosample_ontology"]
             pattern = r'(?<=_)[A-Z]+(?=_)'
             match = re.search(pattern, ontology_id)
@@ -146,6 +175,7 @@ def check_ontology(metadata, repository_choice):
         return count / len(metadata)
 
     if repository_choice == "2":
+        # no ontology mentioned
         return 0
 
     if repository_choice == "1":
@@ -188,7 +218,9 @@ def check_ontology(metadata, repository_choice):
 
         return o_name_list, o_id_list, o_of_name, o_of_value
 
+
 def search_bioportal(query, ontology_name):
+
     """
     Search for a term in BioPortal to check if it exists within a specified ontology.
 
@@ -199,6 +231,7 @@ def search_bioportal(query, ontology_name):
     Returns:
         int: 1 if the term exists in the ontology, 0 otherwise.
     """
+
     BASE_URL = "https://data.bioontology.org"
     API_KEY = "da05700b-cb69-49ef-840e-731b6d425aa4"
     url = f"{BASE_URL}/ontologies"
@@ -214,61 +247,11 @@ def search_bioportal(query, ontology_name):
         return 0
     else:
         print("Error:", response.status_code)
+
         return None
 
-def I1(metadata):
-    """
-    Evaluate the interoperability principle I1 by checking the format of metadata.
 
-    Args:
-        metadata (str or list): The metadata to check the format of.
-
-    Returns:
-        int: 1 if the format is recognized as interoperable, 0 otherwise.
-    """
-    score = check_format(metadata)
-    df = pd.DataFrame({
-        "Principle": ["I1"],
-        "Description": ["Interoperability: Format check"],
-        "Score": [score],
-        "Explanation": ["Format is interoperable" if score else "Format is not interoperable: the format of the (meta)data is not one of the following: json, xml, json-ld, owl, obo, rdf, ttl, or n-triples."]
-    })
-    print(df.head())
-    return score
-
-def I2(metadata, repository_choice):
-    """
-    Evaluate the interoperability principle I2 by checking ontology usage in metadata.
-
-    Args:
-        metadata (list or dict): The metadata to check for ontology usage.
-        repository_choice (str): The choice of repository to determine specific checks.
-
-    Returns:
-        float: The proportion of valid ontology usage based on the repository choice.
-    """
-    score = check_ontology(metadata, repository_choice)
-    df = pd.DataFrame({
-        "Principle": ["I2"],
-        "Description": ["Interoperability: Ontology check"],
-        "Score": [score],
-        "Explanation": ["Ontology is used and valid" if score else "Ontology is not valid: the ontology that is used is not present on the BioPortal or not used at all."]
-    })
-    print(df.head())
-    return score
-
-def I3(metadata):
-    """
-    Evaluate the interoperability principle I3 by checking for qualified references in metadata.
-
-    Args:
-        metadata (str or list): The metadata to check for qualified references.
-
-    Returns:
-        int: 1 if qualified references are found, 0 otherwise.
-    """
-    score = 0
-    explanation = "Metadata include qualified references to other (meta)data"
+def find_other_metadata_references(metadata):
     uri_regex = re.compile(
         r'http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
     )
@@ -279,6 +262,71 @@ def I3(metadata):
     else:
         score = 0
         explanation = "Metadata do not include qualified references to other (meta)data: there is no URI in the (meta)data that would represent an entity."
+    return score, explanation
+
+
+def I1(metadata):
+
+    """
+    Evaluate the interoperability principle I1 by checking the format of metadata.
+
+    Args:
+        metadata (str or list): The metadata to check the format of.
+
+    Returns:
+        int: 1 if the format is recognized as interoperable, 0 otherwise.
+    """
+
+    score = check_format(metadata)
+    df = pd.DataFrame({
+        "Principle": ["I1"],
+        "Description": ["Interoperability: Format check"],
+        "Score": [score],
+        "Explanation": ["Format is interoperable" if score else "Format is not interoperable: the format of the (meta)data is not one of the following: json, xml, json-ld, owl, obo, rdf, ttl, or n-triples."]
+    })
+    print(df.head())
+
+    return score
+
+
+def I2(metadata, repository_choice):
+
+    """
+    Evaluate the interoperability principle I2 by checking ontology usage in metadata.
+
+    Args:
+        metadata (list or dict): The metadata to check for ontology usage.
+        repository_choice (str): The choice of repository to determine specific checks.
+
+    Returns:
+        float: The proportion of valid ontology usage based on the repository choice.
+    """
+
+    score = check_ontology(metadata, repository_choice)
+    df = pd.DataFrame({
+        "Principle": ["I2"],
+        "Description": ["Interoperability: Ontology check"],
+        "Score": [score],
+        "Explanation": ["Ontology is used and valid" if score else "Ontology is not valid: the ontology that is used is not present on the BioPortal or not used at all."]
+    })
+    print(df.head())
+
+    return score
+
+
+def I3(metadata):
+
+    """
+    Evaluate the interoperability principle I3 by checking for qualified references in metadata.
+
+    Args:
+        metadata (str or list): The metadata to check for qualified references.
+
+    Returns:
+        int: 1 if qualified references are found, 0 otherwise.
+    """
+
+    score, explanation = find_other_metadata_references(metadata)
     df = pd.DataFrame({
         "Principle": ["I3"],
         "Description": ["Interoperability: Metadata include qualified references to other (meta)data"],
@@ -286,4 +334,5 @@ def I3(metadata):
         "Explanation": [explanation]
     })
     print(df.head())
+
     return score
