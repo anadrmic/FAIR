@@ -85,22 +85,22 @@ def check_format(metadata_list):
     return score / len(metadata_list)
 
 
-def check_ontology(metadata, repository_choice):
-
+def check_ontology(metadata, repository_choice, metric):
     """
     Check the ontology used in the metadata for different repository choices.
 
     Args:
         metadata (list or dict): The metadata to check for ontology usage.
         repository_choice (str): The choice of repository to determine specific checks.
+        metric (str): The metric to calculate ('proportion' or 'unique_count').
 
     Returns:
-        float: The proportion of valid ontology usage based on the repository choice.
+        float or int: The calculated metric value based on the repository choice.
     """
-
     count = 0
     zeros = 0
     ones = 0
+    unique_ontologies = set()
 
     if repository_choice == "6":
         samples = 0
@@ -120,21 +120,26 @@ def check_ontology(metadata, repository_choice):
                                     break
                                 if search_bioportal(query, ont):
                                     count += 1
+                                    unique_ontologies.add(ont)
                                 else:
-                                    zeros += 1                            
+                                    zeros += 1
                             except:
                                 continue
                     except:
                         continue
         ones = count
         zeros = samples - ones
-        print("#ZEROS: " + str(zeros))
-        print("#ONES: " + str(ones))
-        return count / samples
+        if metric == 'proportion':
+            return count / samples
+        elif metric == 'unique_count':
+            return len(unique_ontologies)
 
     if repository_choice == "5":
-        # no ontology mentioned
-        return 0
+        # No ontology mentioned
+        if metric == 'proportion':
+            return 0
+        elif metric == 'unique_count':
+            return 0
 
     if repository_choice == "4":
         for hit in metadata["biosamples"]:
@@ -144,11 +149,13 @@ def check_ontology(metadata, repository_choice):
             if match:
                 ontology = match.group(0)
                 count += 1
+                unique_ontologies.add(ontology)
         ones = count
         zeros = len(metadata) - ones
-        print("#ZEROS: " + str(zeros))
-        print("#ONES: " + str(ones))
-        return count / len(metadata)
+        if metric == 'proportion':
+            return count / len(metadata)
+        elif metric == 'unique_count':
+            return len(unique_ontologies)
 
     if repository_choice == "3":
         for hit in metadata:
@@ -158,25 +165,33 @@ def check_ontology(metadata, repository_choice):
             response_data = r_repo.json()
             if response_data:
                 ontology_score += 1
+                unique_ontologies.add(response_data["id"])
             manufacturer = hit["platforms"][0]["manufacturer"]
             genotypingTechnology = hit["genotypingTechnologies"][0]["genotypingTechnology"]
             trait = hit["diseaseTrait"]["trait"]
             if search_bioportal(manufacturer, "EFO"):
                 ontology_score += 1
+                unique_ontologies.add(manufacturer)
             if search_bioportal(genotypingTechnology, "EFO"):
                 ontology_score += 1
+                unique_ontologies.add(genotypingTechnology)
             if search_bioportal(trait, "EFO"):
                 ontology_score += 1
-            count += ontology_score / 4 
+                unique_ontologies.add(trait)
+            count += ontology_score / 4
         ones = count
         zeros = len(metadata) - ones
-        print("#ZEROS: " + str(zeros))
-        print("#ONES: " + str(ones))
-        return count / len(metadata)
+        if metric == 'proportion':
+            return count / len(metadata)
+        elif metric == 'unique_count':
+            return len(unique_ontologies)
 
     if repository_choice == "2":
-        # no ontology mentioned
-        return 0
+        # No ontology mentioned
+        if metric == 'proportion':
+            return 0
+        elif metric == 'unique_count':
+            return 0
 
     if repository_choice == "1":
         o_name_list = []
@@ -196,6 +211,7 @@ def check_ontology(metadata, repository_choice):
                     o_id_list.append(ontology_id)
                     o_of_name.append(ontology_of_name)
                     o_of_value.append(ontology_of_value)
+                    unique_ontologies.add(ontology_name)
                 except:
                     continue
             for term in metadata["section"]["subsections"][0]:
@@ -208,6 +224,7 @@ def check_ontology(metadata, repository_choice):
                     o_id_list.append(ontology_id)
                     o_of_name.append(ontology_of_name)
                     o_of_value.append(ontology_of_value)
+                    unique_ontologies.add(ontology_name)
                 except:
                     continue
         except:
@@ -216,7 +233,10 @@ def check_ontology(metadata, repository_choice):
             o_of_name.append(0)
             o_of_value.append(0)
 
-        return o_name_list, o_id_list, o_of_name, o_of_value
+        if metric == 'proportion':
+            return len(o_name_list) / len(metadata)
+        elif metric == 'unique_count':
+            return len(unique_ontologies)
 
 
 def search_bioportal(query, ontology_name):
@@ -301,17 +321,20 @@ def I2(metadata, repository_choice):
     Returns:
         float: The proportion of valid ontology usage based on the repository choice.
     """
+    metric_proportion = "proportion"
+    metric_unique_count = "unique_count"
+    score_proportion = check_ontology(metadata, repository_choice, metric_proportion)
+    unique_count_score = check_ontology(metadata, repository_choice, metric_unique_count)
 
-    score = check_ontology(metadata, repository_choice)
     df = pd.DataFrame({
         "Principle": ["I2"],
         "Description": ["Interoperability: Ontology check"],
-        "Score": [score],
-        "Explanation": ["Ontology is used and valid" if score else "Ontology is not valid: the ontology that is used is not present on the BioPortal or not used at all."]
+        "Score": [score_proportion],
+        "Explanation": ["Ontology is used and valid" if score_proportion else "Ontology is not valid: the ontology that is used is not present on the BioPortal or not used at all. The total number of unique ontologies used is " + str(unique_count_score)]  
     })
     print(df.head())
 
-    return score
+    return score_proportion
 
 
 def I3(metadata):

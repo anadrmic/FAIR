@@ -3,7 +3,7 @@ from assess import assess
 
 
 def initialize():
-
+    # SWITCH
     print("Which data repository do you want to use?")
     print("1. ArrayExpress")
     print("2. Gene Expression Omnibus")

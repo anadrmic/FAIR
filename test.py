@@ -3,10 +3,11 @@ import repositories
 import assess
 import statistics
 
-print("Evaluating the whole ARRAY EXPRESS database: \n")
+
+print("Evaluating the whole ENCODE database: \n")
 
 # Initialize repository choice and keywords
-repository_choice = "1"
+repository_choice = "4"
 keywords = []
 
 # Retrieve metadata

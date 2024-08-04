@@ -1,4 +1,6 @@
 import pandas as pd
+import xml.etree.ElementTree as ET
+import json
 import utils
 
 
@@ -36,7 +38,6 @@ def check_metadata_richness(metadata_list):
     for attribute in key_attributes:
         results['missing_attributes_summary'][attribute] = 0
 
-    # Check each metadata record
     for metadata in metadata_list:
         attributes_present = True
         for attribute in key_attributes:
@@ -61,6 +62,44 @@ def check_metadata_richness(metadata_list):
         results['percentage_with_missing_attributes'] = 0
 
     return results['percentage_with_all_attributes']
+
+
+def check_fields_in_metadata(metadata_list, fields_to_check):
+    present_fields = []
+
+    for field in fields_to_check:
+        for metadata in metadata_list:
+            try:
+                metadata_json = json.loads(metadata)
+                if field in json.dumps(metadata_json):
+                    present_fields.append(field)
+                    break
+            except json.JSONDecodeError:
+                try:
+                    metadata_xml = ET.fromstring(metadata)
+                    if field in ET.tostring(metadata_xml).decode():
+                        present_fields.append(field)
+                        break
+                except ET.ParseError:
+                    continue
+    return present_fields, len(present_fields) / len(fields_to_check)
+
+
+def check_fields_in_metadata_geo(metadata_list, fields_to_check):
+    provenance = 0
+    try:
+        output, index = utils.find_list_in_list(metadata_list[0], fields_to_check[0])
+        if index:
+            provenance += 1        
+        output, index = utils.find_list_in_list(metadata_list[0], fields_to_check[1])
+        if index:
+            provenance += 1
+        output, index = utils.find_list_in_list(metadata_list[0], fields_to_check[2])
+        if index:
+            provenance += 1
+    except:
+        return 0
+    return provenance/len(fields_to_check)
 
 def R1(metadata_list, repository_choice):
 
@@ -101,15 +140,14 @@ def R1_1(metadata, repository_choice):
     """
 
     community_standards_fields = ["license", "citation", "termsOfUse"]
-    present_fields = [field for field in community_standards_fields if field in metadata]
-    score = len(present_fields) / len(community_standards_fields)
+    present_fields, score = check_fields_in_metadata(metadata, community_standards_fields)
     df = pd.DataFrame({
         "Principle": ["R1.1"],
         "Description": ["Reusability: Use of community standards"],
         "Score": [score],
         "Explanation": [
-            "All community standards fields present" if score == 1 else
-            "Some community standards fields present" if score > 0 else
+            f"All community standards fields present: {community_standards_fields}" if score == 1 else
+            f"Some community standards fields present: {present_fields}" if score > 0 else
             "(Meta)data do not contain license information represented using an appropriate metadata element: No community standards fields present"
         ]
     })
@@ -131,33 +169,17 @@ def R1_2(metadata_list, repository_choice):
         float: The score indicating the completeness of provenance metadata.
     """
 
-    provenance = 0
-    try:
-        output, index = utils.find_list_in_list(metadata_list[0], ["authors"])
-        if index:
-            provenance += 1        
-        output, index = utils.find_list_in_list(metadata_list[0], ["email"])
-        if index:
-            provenance += 1
-        output, index = utils.find_list_in_list(metadata_list[0], ["title"])
-        if index:
-            provenance += 1
-        if provenance == 3:
-            score = 1
-        elif provenance == 0:
-            score = 0
-        else:
-            score = 0.5
-    except:
-        score = 0
-
+    if repository_choice == "2":
+        score = check_fields_in_metadata_geo(metadata_list, ["authors", "email", "title"])
+    else:
+        present_fields, score = check_fields_in_metadata(metadata_list, ["authors", "email", "title"])
     df = pd.DataFrame({
         "Principle": ["R1.2"],
         "Description": ["Reusability: Provenance metadata completeness"],
         "Score": [score],
         "Explanation": [
             "All provenance metadata present" if score == 1 else
-            "Some provenance metadata present" if score == 0.5 else
+            "Some provenance metadata present" if score > 0 else
             "No provenance metadata present: no author, email or title specified."
         ]
     })
