@@ -1,0 +1,299 @@
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+60.00% of entities have all required fields (3 out of 5).
+40.00% of entities are missing some required fields (2 out of 5).
+
+Breakdown of missing fields:
+0 entities are missing 'Parkinson' field.
+0 entities are missing 'homo sapiens' field.
+2 entities are missing 'frontal lobe' field.
+The score is: 0.6.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (5 out of 5).
+0.00% of entities are missing the ID field (0 out of 5).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+60.00% of entities have all required fields (3 out of 5).
+40.00% of entities are missing some required fields (2 out of 5).
+
+Breakdown of missing fields:
+0 entities are missing 'Parkinson' field.
+0 entities are missing 'homo sapiens' field.
+2 entities are missing 'frontal lobe' field.
+The score is: 0.6.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (5 out of 5).
+0.00% of entities are missing the ID field (0 out of 5).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+60.00% of entities have all required fields (3 out of 5).
+40.00% of entities are missing some required fields (2 out of 5).
+
+Breakdown of missing fields:
+0 entities are missing 'Parkinson' field.
+0 entities are missing 'homo sapiens' field.
+2 entities are missing 'frontal lobe' field.
+The score is: 0.6.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (5 out of 5).
+0.00% of entities are missing the ID field (0 out of 5).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+60.00% of entities have all required fields (3 out of 5).
+40.00% of entities are missing some required fields (2 out of 5).
+
+Breakdown of missing fields:
+0 entities are missing 'Parkinson' field.
+0 entities are missing 'homo sapiens' field.
+2 entities are missing 'frontal lobe' field.
+The score is: 0.6.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (5 out of 5).
+0.00% of entities are missing the ID field (0 out of 5).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+60.00% of entities have all required fields (3 out of 5).
+40.00% of entities are missing some required fields (2 out of 5).
+
+Breakdown of missing fields:
+0 entities are missing 'Parkinson' field.
+0 entities are missing 'homo sapiens' field.
+2 entities are missing 'frontal lobe' field.
+The score is: 0.6.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (5 out of 5).
+0.00% of entities are missing the ID field (0 out of 5).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+60.00% of entities have all required fields (3 out of 5).
+40.00% of entities are missing some required fields (2 out of 5).
+
+Breakdown of missing fields:
+0 entities are missing 'Parkinson' field.
+0 entities are missing 'homo sapiens' field.
+2 entities are missing 'frontal lobe' field.
+The score is: 0.6.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (5 out of 5).
+0.00% of entities are missing the ID field (0 out of 5).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+60.00% of entities have all required fields (3 out of 5).
+40.00% of entities are missing some required fields (2 out of 5).
+
+Breakdown of missing fields:
+0 entities are missing 'Parkinson' field.
+0 entities are missing 'homo sapiens' field.
+2 entities are missing 'frontal lobe' field.
+The score is: 0.6.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (5 out of 5).
+0.00% of entities are missing the ID field (0 out of 5).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+60.00% of entities have all required fields (3 out of 5).
+40.00% of entities are missing some required fields (2 out of 5).
+
+Breakdown of missing fields:
+0 entities are missing 'Parkinson' field.
+0 entities are missing 'homo sapiens' field.
+2 entities are missing 'frontal lobe' field.
+The score is: 0.6.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (5 out of 5).
+0.00% of entities are missing the ID field (0 out of 5).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+60.00% of entities have all required fields (3 out of 5).
+40.00% of entities are missing some required fields (2 out of 5).
+
+Breakdown of missing fields:
+0 entities are missing 'Parkinson' field.
+0 entities are missing 'homo sapiens' field.
+2 entities are missing 'frontal lobe' field.
+The score is: 0.6.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+60.00% of entities have all required fields (3 out of 5).
+40.00% of entities are missing some required fields (2 out of 5).
+
+Breakdown of missing fields:
+0 entities are missing 'Parkinson' field.
+0 entities are missing 'homo sapiens' field.
+2 entities are missing 'frontal lobe' field.
+The score is: 0.6.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (5 out of 5).
+0.00% of entities are missing the ID field (0 out of 5).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+60.00% of entities have all required fields (3 out of 5).
+40.00% of entities are missing some required fields (2 out of 5).
+
+Breakdown of missing fields:
+0 entities are missing 'Parkinson' field.
+0 entities are missing 'homo sapiens' field.
+2 entities are missing 'frontal lobe' field.
+The score is: 0.6.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (5 out of 5).
+0.00% of entities are missing the ID field (0 out of 5).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+60.00% of entities have all required fields (3 out of 5).
+40.00% of entities are missing some required fields (2 out of 5).
+
+Breakdown of missing fields:
+0 entities are missing 'Parkinson' field.
+0 entities are missing 'homo sapiens' field.
+2 entities are missing 'frontal lobe' field.
+The score is: 0.6.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (5 out of 5).
+0.00% of entities are missing the ID field (0 out of 5).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+60.00% of entities have all required fields (3 out of 5).
+40.00% of entities are missing some required fields (2 out of 5).
+
+Breakdown of missing fields:
+0 entities are missing 'Parkinson' field.
+0 entities are missing 'homo sapiens' field.
+2 entities are missing 'frontal lobe' field.
+The score is: 0.6.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (5 out of 5).
+0.00% of entities are missing the ID field (0 out of 5).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+60.00% of entities have all required fields (3 out of 5).
+40.00% of entities are missing some required fields (2 out of 5).
+
+Breakdown of missing fields:
+0 entities are missing 'Parkinson' field.
+0 entities are missing 'homo sapiens' field.
+2 entities are missing 'frontal lobe' field.
+The score is: 0.6.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (5 out of 5).
+0.00% of entities are missing the ID field (0 out of 5).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+60.00% of entities have all required fields (3 out of 5).
+40.00% of entities are missing some required fields (2 out of 5).
+
+Breakdown of missing fields:
+0 entities are missing 'Parkinson' field.
+0 entities are missing 'homo sapiens' field.
+2 entities are missing 'frontal lobe' field.
+The score is: 0.6.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (5 out of 5).
+0.00% of entities are missing the ID field (0 out of 5).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+60.00% of entities have all required fields (3 out of 5).
+40.00% of entities are missing some required fields (2 out of 5).
+
+Breakdown of missing fields:
+0 entities are missing 'Parkinson' field.
+0 entities are missing 'homo sapiens' field.
+2 entities are missing 'frontal lobe' field.
+The score is: 0.6.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (5 out of 5).
+0.00% of entities are missing the ID field (0 out of 5).
+The score is: 1.0.

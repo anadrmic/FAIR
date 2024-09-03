@@ -95,9 +95,8 @@ def retrieve_metadata(repository_name):
 
         metadata_list = []
         for hit in experiment_ids:
-            print(hit)
             study_accession = hit
-            url_1 = utils.get_json_metadata_link(study_accession)
+            url_1 = f"https://www.ebi.ac.uk/biostudies/api/v1/studies/{study_accession}"
             r_repo = requests.get(url_1)
             request_status = r_repo.status_code
             metadata = r_repo.json()

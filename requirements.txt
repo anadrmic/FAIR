@@ -5,3 +5,4 @@ bs4
 re
 json
 ftplib
+matplotlib

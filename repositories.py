@@ -2,6 +2,10 @@ import requests
 import xml.etree.ElementTree as ET
 import utils
 import json
+import os
+import time
+from tqdm import tqdm
+
 
 def retrieve_metadata(repository_choice, keywords):
     """
@@ -26,12 +30,14 @@ def retrieve_metadata(repository_choice, keywords):
         metadata_list, request_status, url = fetch_geo_metadata(keywords)
     elif repository_choice == "3":
         metadata_list, request_status, url = fetch_gwas_metadata(keywords)
-    elif repository_choice == "4":
-        metadata_list, request_status, url = fetch_encode_metadata(keywords)
+    elif repository_choice == "41":
+        metadata_list, request_status, url = fetch_biosamples_metadata(keywords)
+    elif repository_choice == "42":
+        metadata_list, request_status, url = fetch_experiments_metadata(keywords)
     elif repository_choice == "5":
-        metadata_list, request_status, url = fetch_gdc_metadata()
+        metadata_list, request_status, url = fetch_gdc_metadata(keywords)
     elif repository_choice == "6":
-        metadata_list, request_status, url = fetch_icgc_metadata()
+        metadata_list, request_status, url = fetch_icgc_metadata(keywords)
 
     return metadata_list, request_status, url
 
@@ -47,49 +53,49 @@ def fetch_arrayexpress_metadata(keywords):
     - request_status (int): HTTP request status code.
     - url (str): URL of the repository.
     """
-    request_status = ""
-    metadata = ""
+    print("Fetching ArrayExpress metadata...")
+    metadata_list = []
     url = "https://www.re3data.org/repository/r3d100010222"
     repository_api = "https://www.ebi.ac.uk/biostudies/api/v1/search"
 
-    initial_response = requests.get(repository_api, params={
-        "study_type": "transcription profiling by array",
-        "pageSize": 1,
-        "page": 1
-    })
-    initial_data = initial_response.json()
-    total_hits = initial_data.get("totalHits", 0)
-    page_size = 100
-    total_pages = (total_hits // page_size) + 1
+    if not keywords:
+        print("No keywords provided. Fetching all metadata...")
+        metadata, request_status = utils.fetch_ae_metadata(None, start_batch=0)
+        metadata_list.extend(metadata)
+    else:
+        print(f"Fetching metadata with keywords: {keywords}")
 
-    experiment_ids = []
-    for page in range(1, total_pages + 1):
+        # Constructing query string dynamically
+        combined_query = " AND ".join(keywords)
+
+        # Making the API request
         r_repo = requests.get(repository_api, params={
-            "study_type": "transcription profiling by array",
-            "pageSize": page_size,
-            "page": page
+            "query": combined_query, 
+            "pageSize": 100,
         })
+
+        print(f"API Call: {r_repo.url}")
         request_status = r_repo.status_code
-        metadata = r_repo.json()
-        hits = metadata.get("hits", [])
+        response_data = r_repo.json()
+        hits = response_data.get("hits", [])
+        experiment_ids = []
+
         for hit in hits:
             accession = hit.get("accession", "")
             if len(accession) == 11:
                 experiment_ids.append(accession)
+        print(f"Total Study IDs retrieved: {len(experiment_ids)}")
 
-    print(f"Total Study IDs retrieved: {len(experiment_ids)}")
-
-    metadata_list = []
-    filename = "metadata/arrayexpress.txt"
-    with open(filename, 'w') as file:
-        for hit in experiment_ids:
-            study_accession = hit
-            url_1 = utils.get_json_metadata_link(study_accession)
-            r_repo = requests.get(url_1)
-            request_status = r_repo.status_code
-            metadata = r_repo.json()
-            metadata_list.append(metadata)
-            file.write(json.dumps(metadata, indent=4) + '\n')
+        filename = "metadata/arrayexpress.txt"
+        with open(filename, 'w') as file:
+            for study_accession in experiment_ids:
+                url_1 = f"https://www.ebi.ac.uk/biostudies/api/v1/studies/{study_accession}"
+                r_repo = requests.get(url_1)
+                print(f"API Call: {r_repo.url}")
+                request_status = r_repo.status_code
+                metadata = r_repo.json()
+                metadata_list.append(metadata)
+                file.write(json.dumps(metadata, indent=4) + '\n')
 
     return metadata_list, request_status, url
 
@@ -105,24 +111,28 @@ def fetch_geo_metadata(keywords):
     - request_status (int): HTTP request status code.
     - url (str): URL of the repository.
     """
+    print("Fetching GEO metadata...")
     repository_api = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?"
     url = "https://www.re3data.org/repository/r3d100010283"
     repository_acronym = "gds"
 
-    params = {"db": repository_acronym}
-    if keywords:
-        params["term"] = " AND ".join(keywords)
-
-    r_repo = requests.get(repository_api, params=params)
-    request_status = r_repo.status_code
-    root_meta = ET.fromstring(r_repo.text)
-    metadata = root_meta[0]
-
-    filename = "metadata/geo.txt"
-    with open(filename, 'w') as file:
-        file.write(ET.tostring(metadata, encoding='unicode') + '\n')
+    if not keywords:
+        print("No keywords provided. Fetching all metadata...")
+        metadata, request_status = utils.fetch_geo_metadata(None, start_batch=0)
+    else:
+        print(f"Fetching metadata with keywords: {keywords}")
+        params = {"db": repository_acronym, "term": " AND ".join(keywords)}
+        r_repo = requests.get(repository_api, params=params)
+        print(f"API Call: {r_repo.url}")
+        request_status = r_repo.status_code
+        root_meta = ET.fromstring(r_repo.text)
+        metadata = root_meta[0]
+        filename = "metadata/geo.txt"
+        with open(filename, 'w') as file:
+            file.write(ET.tostring(metadata, encoding='unicode') + '\n')
 
     return metadata, request_status, url
+
 
 def fetch_gwas_metadata(keywords):
     """
@@ -136,207 +146,252 @@ def fetch_gwas_metadata(keywords):
     - request_status (int): HTTP request status code.
     - url (str): URL of the repository.
     """
+    print("Fetching GWAS Catalog metadata...")
     url = "https://www.re3data.org/repository/r3d100014209"
     base_url = "https://www.ebi.ac.uk/gwas/rest/api/studies"
-    page = 1
-    page_size = 500
-    hits = []
-
-    params = {"page": page, "size": page_size}
-    if keywords:
-        params["q"] = " AND ".join(keywords)
-
-    while True:
-        r_repo = requests.get(base_url, params=params)
-        request_status = r_repo.status_code
-        metadata = r_repo.json()
-
-        if not metadata["_embedded"]["studies"]:
-            break
-
-        for accession in metadata["_embedded"]["studies"]:
-            hits.append(accession["accessionId"])
-
-        page += 1
-        params["page"] = page
-
     metadata_list = []
-    filename = "metadata/gwas.txt"
-    with open(filename, 'w') as file:
-        for study_accession in hits:
-            accession_url = f"https://www.ebi.ac.uk/gwas/rest/api/studies/{study_accession}"
-            r_repo = requests.get(accession_url)
+
+    if not keywords:
+        print("No keywords provided. Fetching all metadata...")
+        metadata, request_status = utils.fetch_gwas_metadata(None, start_batch=0)
+        metadata_list.extend(metadata)
+    else:
+        print(f"Fetching metadata with keywords: {keywords}")
+        params = {"page": 1, "size": 500, "q": " AND ".join(keywords)}
+        while True:
+            r_repo = requests.get(base_url, params=params)
+            print(f"API Call: {r_repo.url}")
             request_status = r_repo.status_code
             metadata = r_repo.json()
-            metadata_list.append(metadata)
-            file.write(json.dumps(metadata, indent=4) + '\n')
+
+            if not metadata["_embedded"]["studies"]:
+                break
+
+            for study in metadata["_embedded"]["studies"]:
+                study_accession = study["accessionId"]
+                hits.append(study_accession)
+            
+            params["page"] += 1
+
+        filename = "metadata/gwas.txt"
+        with open(filename, 'w') as file:
+            for study_accession in hits:
+                accession_url = f"https://www.ebi.ac.uk/gwas/rest/api/studies/{study_accession}"
+                r_repo = requests.get(accession_url)
+                print(f"API Call: {r_repo.url}")
+                request_status = r_repo.status_code
+                metadata = r_repo.json()
+                metadata_list.append(metadata)
+                file.write(json.dumps(metadata, indent=4) + '\n')
 
     return metadata_list, request_status, url
 
-def fetch_encode_metadata(keywords):
-    """
-    Fetch metadata from the ENCODE repository.
 
-    Parameters:
-    - keywords (list): List of keywords to filter metadata.
-
-    Returns:
-    - metadata (dict): Dictionary containing biosamples and experiments metadata.
-    - request_status (int): HTTP request status code.
-    - url (str): URL of the repository.
-    """
-    url = "https://www.re3data.org/repository/r3d100013051"
-    headers = {'accept': 'application/json'}
-
-    biosample_hits, biosample_data_list = fetch_encode_biosamples(headers, keywords)
-    experiment_hits, experiment_data_list = fetch_encode_experiments(headers, keywords)
-
-    metadata = {
-        "biosamples": biosample_data_list,
-        "experiments": experiment_data_list
-    }
-
-    filename = "metadata/encode.txt"
-    with open(filename, 'w') as file:
-        file.write(json.dumps(metadata, indent=4) + '\n')
-
-    return metadata, 200, url
-
-def fetch_encode_biosamples(headers, keywords):
+def fetch_biosamples_metadata(keywords):
     """
     Fetch biosample metadata from the ENCODE repository.
 
     Parameters:
-    - headers (dict): HTTP headers for the request.
     - keywords (list): List of keywords to filter metadata.
 
     Returns:
-    - biosample_hits (list): List of biosample accessions.
     - biosample_data_list (list): List of biosample metadata records.
+    - request_status (int): HTTP request status code.
+    - url (str): URL of the repository.
     """
+    print("Fetching ENCODE biosamples metadata...")
+    url = "https://www.re3data.org/repository/r3d100013051"
+    headers = {'accept': 'application/json'}
     biosample_base_url = 'https://www.encodeproject.org/search/?type=Biosample&limit=all&format=json'
-    if keywords:
-        biosample_base_url += "&searchTerm=" + "+".join(keywords)
 
-    biosample_response = requests.get(biosample_base_url, headers=headers)
-    if biosample_response.status_code == 200:
-        biosample_metadata = biosample_response.json()
-        biosample_hits = [accession["accession"] for accession in biosample_metadata["@graph"] if
-                          "accession" in accession]
+    if not keywords:
+        print("No keywords provided. Fetching all biosample metadata...")
+        metadata, request_status = utils.fetch_encode_biosamples_metadata(None, start_batch=0)
+        biosample_data_list.extend(metadata)
     else:
-        print("Failed to retrieve biosamples.")
-        return [], []
+        print(f"Fetching biosample metadata with keywords: {keywords}")
+        biosample_base_url += "&searchTerm=" + "+".join(keywords)
+        biosample_response = requests.get(biosample_base_url, headers=headers)
+        print(f"API Call: {biosample_response.url}")
+        request_status = biosample_response.status_code
 
-    biosample_data_list = []
-    filename = "metadata/encode_biosamples.txt"
-    with open(filename, 'w') as file:
-        for accession in biosample_hits:
-            accession_url = f'https://www.encodeproject.org/biosample/{accession}/?frame=object'
-            response = requests.get(accession_url, headers=headers)
-            if response.status_code == 200:
-                metadata = response.json()
-                biosample_data_list.append(metadata)
-                file.write(json.dumps(metadata, indent=4) + '\n')
+        if request_status == 200:
+            biosample_metadata = biosample_response.json()
+            biosample_hits = [accession["accession"] for accession in biosample_metadata["@graph"] if "accession" in accession]
+        else:
+            print("Failed to retrieve biosamples.")
+            return [], request_status, url
 
-    return biosample_hits, biosample_data_list
+        biosample_data_list = []
+        filename = "metadata/encode_biosamples.txt"
+        with open(filename, 'w') as file:
+            for accession in biosample_hits:
+                accession_url = f'https://www.encodeproject.org/biosample/{accession}/?frame=object'
+                response = requests.get(accession_url, headers=headers)
+                print(f"API Call: {response.url}")
+                if response.status_code == 200:
+                    metadata = response.json()
+                    biosample_data_list.append(metadata)
+                    file.write(json.dumps(metadata, indent=4) + '\n')
 
-def fetch_encode_experiments(headers, keywords):
+    return biosample_data_list, request_status, url
+
+
+def fetch_experiments_metadata(keywords):
     """
     Fetch experiment metadata from the ENCODE repository.
 
     Parameters:
-    - headers (dict): HTTP headers for the request.
     - keywords (list): List of keywords to filter metadata.
 
     Returns:
-    - experiment_hits (list): List of experiment accessions.
     - experiment_data_list (list): List of experiment metadata records.
+    - request_status (int): HTTP request status code.
+    - url (str): URL of the repository.
     """
+    print("Fetching ENCODE experiments metadata...")
+    url = "https://www.re3data.org/repository/r3d100013051"
+    headers = {'accept': 'application/json'}
     experiment_base_url = 'https://www.encodeproject.org/search/?type=Experiment&limit=all&format=json'
-    if keywords:
-        experiment_base_url += "&searchTerm=" + "+".join(keywords)
 
-    experiment_response = requests.get(experiment_base_url, headers=headers)
-    if experiment_response.status_code == 200:
-        experiment_metadata = experiment_response.json()
-        experiment_hits = [accession["accession"] for accession in experiment_metadata["@graph"] if
-                           "accession" in accession]
+    if not keywords:
+        print("No keywords provided. Fetching all experiment metadata...")
+        metadata, request_status = utils.fetch_encode_biosamples_metadata(None, start_batch=0)
+        experiment_data_list.extend(metadata)
     else:
-        print("Failed to retrieve experiments.")
-        return [], []
+        print(f"Fetching experiment metadata with keywords: {keywords}")
+        experiment_base_url += "&searchTerm=" + "+".join(keywords)
+        experiment_response = requests.get(experiment_base_url, headers=headers)
+        print(f"API Call: {experiment_response.url}")
+        request_status = experiment_response.status_code
 
-    experiment_data_list = []
-    filename = "metadata/encode_experiments.txt"
-    with open(filename, 'w') as file:
-        for accession in experiment_hits:
-            accession_url = f'https://www.encodeproject.org/experiment/{accession}/?frame=object'
-            response = requests.get(accession_url, headers=headers)
-            if response.status_code == 200:
-                metadata = response.json()
-                experiment_data_list.append(metadata)
-                file.write(json.dumps(metadata, indent=4) + '\n')
+        if request_status == 200:
+            experiment_metadata = experiment_response.json()
+            experiment_hits = [accession["accession"] for accession in experiment_metadata["@graph"] if "accession" in accession]
+        else:
+            print("Failed to retrieve experiments.")
+            return [], request_status, url
 
-    return experiment_hits, experiment_data_list
+        experiment_data_list = []
+        filename = "metadata/encode_experiments.txt"
+        with open(filename, 'w') as file:
+            for accession in experiment_hits:
+                accession_url = f'https://www.encodeproject.org/experiment/{accession}/?frame=object'
+                response = requests.get(accession_url, headers=headers)
+                print(f"API Call: {response.url}")
+                if response.status_code == 200:
+                    metadata = response.json()
+                    experiment_data_list.append(metadata)
+                    file.write(json.dumps(metadata, indent=4) + '\n')
 
-def fetch_gdc_metadata():
+    return experiment_data_list, request_status, url
+
+
+def fetch_gdc_metadata(keywords):
     """
     Fetch metadata from the Genomic Data Commons (GDC) repository.
 
+    Parameters:
+    - keywords (list): List of keywords to filter metadata.
+
     Returns:
     - metadata_list (list): List of metadata records.
     - request_status (int): HTTP request status code.
     - url (str): URL of the repository.
     """
+    print("Fetching GDC metadata...")
     url = "https://www.re3data.org/repository/r3d100012061"
     base_url = 'https://api.gdc.cancer.gov/files'
-
-    all_hits = []
-    params = {
-        'from': '0',
-        'size': '1000',
-        'sort': 'file_size:asc',
-        'pretty': 'true'
-    }
-
-    while True:
-        response = requests.get(base_url, params=params)
-        if response.status_code == 200:
-            metadata = response.json()
-            hits = metadata["data"]["hits"]
-            all_hits.extend([accession["id"] for accession in hits if "id" in accession])
-            print(f"Fetched {len(hits)} records, Total: {len(all_hits)}")
-
-            if len(hits) < 1000:
-                break
-            params['from'] = str(int(params['from']) + 1000)
-        else:
-            print("Failed to retrieve data.")
-            break
-
-    params = {'pretty': 'true'}
     metadata_list = []
-    filename = "metadata/gdc.txt"
-    with open(filename, 'w') as file:
-        for accession in all_hits:
-            accession_url = f'https://api.gdc.cancer.gov/files/{accession}'
-            response = requests.get(accession_url, params=params)
-            if response.status_code == 200:
-                metadata = response.json()
-                metadata_list.append(metadata)
-                file.write(json.dumps(metadata, indent=4) + '\n')
 
-    return metadata_list, response.status_code, url
+    if not keywords:
+        print("No keywords provided. Fetching all metadata...")
+        metadata, request_status = utils.fetch_gdc_metadata(None, start_batch=0)
+        metadata_list.extend(metadata)
+    else:
+        print(f"Fetching metadata with keywords: {keywords}")
+        params = {
+            'from': '0',
+            'size': '1000',
+            'sort': 'file_size:asc',
+            'pretty': 'true'
+        }
+        params_metadata = {'pretty': 'true'}
+        all_hits = []
+        processed_accessions = set()
+        filename = "metadata/gdc.txt"
 
-def fetch_icgc_metadata():
+        if os.path.exists(filename):
+            with open(filename, 'r') as file:
+                buffer = ""
+                for line in file:
+                    buffer += line
+                    try:
+                        metadata = json.loads(buffer)
+                        accession = metadata['data']['file_id']
+                        processed_accessions.add(accession)
+                        metadata_list.append(metadata)
+                        buffer = ""
+                    except (json.JSONDecodeError, KeyError):
+                        continue
+
+        start_time = time.time()
+        total_files_fetched = len(processed_accessions)
+        with open(filename, 'a') as file, tqdm(desc="Fetching metadata", unit="file", initial=total_files_fetched) as pbar:
+            while True:
+                response = requests.get(base_url, params=params)
+                print(f"API Call: {response.url}")
+                request_status = response.status_code
+
+                if request_status == 200:
+                    metadata = response.json()
+                    hits = metadata["data"]["hits"]
+                    if not hits:
+                        break
+
+                    for hit in hits:
+                        accession = hit.get("id")
+                        if accession and accession not in processed_accessions:
+                            all_hits.append(accession)
+                            print(f"Downloading metadata for accession: {accession}")
+                            accession_url = f'https://api.gdc.cancer.gov/files/{accession}'
+                            response_metadata = requests.get(accession_url, params=params_metadata)
+                            print(f"API Call: {response_metadata.url}")
+                            if response_metadata.status_code == 200:
+                                metadata = response_metadata.json()
+                                metadata_list.append(metadata)
+                                file.write(json.dumps(metadata, indent=4) + '\n')
+                            else:
+                                print(f"Failed to download metadata for accession: {accession}")
+                            processed_accessions.add(accession)
+                            pbar.update(1)
+                            elapsed_time = time.time() - start_time
+                            pbar.set_postfix(elapsed=f"{elapsed_time:.2f}s")
+
+                    if len(hits) < 1000:
+                        break
+                    params['from'] = str(int(params['from']) + 1000)
+                else:
+                    print("Failed to retrieve data.")
+                    break
+
+    return metadata_list, request_status, url
+
+
+def fetch_icgc_metadata(keywords):
     """
     Fetch metadata from the International Cancer Genome Consortium (ICGC) repository.
 
+    Parameters:
+    - keywords (list): List of keywords to filter metadata.
+
     Returns:
     - metadata_list (list): List of metadata records.
     - request_status (int): HTTP request status code.
     - url (str): URL of the repository.
     """
-    url = ""
+    print("Fetching ICGC metadata...")
+    url = "https://dcc.icgc.org/api/v1/projects"
     base_url = 'https://dcc.icgc.org/api/v1/projects'
     params = {
         'filters': '{}',
@@ -344,34 +399,43 @@ def fetch_icgc_metadata():
         'from': 1,
         'size': 100
     }
+    metadata_list = []
 
-    all_hits = []
+    if not keywords:
+        print("No keywords provided. Fetching all metadata...")
+        metadata, request_status = utils.fetch_icgc_metadata(None, start_batch=0)
+        metadata_list.extend(metadata)
+    else:
+        print(f"Fetching metadata with keywords: {keywords}")
+        all_hits = []
+        while True:
+            response = requests.get(base_url, params=params)
+            print(f"API Call: {response.url}")
+            request_status = response.status_code
 
-    while True:
-        response = requests.get(base_url, params=params)
-        if response.status_code == 200:
-            metadata = response.json()
-            hits = metadata.get("hits", [])
-            all_hits.extend([hit["id"] for hit in hits if "id" in hit])
-            print(f"Fetched {len(hits)} records, Total: {len(all_hits)}")
+            if request_status == 200:
+                metadata = response.json()
+                hits = metadata.get("hits", [])
+                all_hits.extend([hit["id"] for hit in hits if "id" in hit])
+                print(f"Fetched {len(hits)} records, Total: {len(all_hits)}")
 
-            if len(hits) < 100:
+                if len(hits) < 100:
+                    break
+
+                params['from'] += 100
+            else:
+                print("Failed to retrieve data.")
                 break
 
-            params['from'] += 100
-        else:
-            print("Failed to retrieve data.")
-            break
+        filename = "metadata/icgc.txt"
+        with open(filename, 'w') as file:
+            for project in all_hits:
+                accession_url = f'https://dcc.icgc.org/api/v1/projects/{project}'
+                response = requests.get(accession_url)
+                print(f"API Call: {response.url}")
+                if response.status_code == 200:
+                    metadata = response.json()
+                    metadata_list.append(metadata)
+                    file.write(json.dumps(metadata, indent=4) + '\n')
 
-    metadata_list = []
-    filename = "metadata/icgc.txt"
-    with open(filename, 'w') as file:
-        for project in all_hits:
-            accession_url = f'https://dcc.icgc.org/api/v1/projects/{project}'
-            response = requests.get(accession_url)
-            if response.status_code == 200:
-                metadata = response.json()
-                metadata_list.append(metadata)
-                file.write(json.dumps(metadata, indent=4) + '\n')
-
-    return metadata_list, response.status_code, url
+    return metadata_list, request_status, url
