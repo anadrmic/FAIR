@@ -418,3 +418,147 @@ The score is: 1.
 A2: Evaluating the accessibility principle A2 by checking if a repository name exists in re3data.
 Repository is known to be accessible: the repository is available on re3data.
 The score is: 1.
+
+A1: Evaluating the accessibility principle A1 by checking if the metadata are retrievable by their identifiers using HTTPS protocol, checking the request status.
+Successful request: API request returned the status 200.
+The score is: 1.
+
+A1: Evaluating the accessibility principle A1 by checking if the metadata are retrievable by their identifiers using HTTPS protocol, checking the request status.
+Successful request: API request returned the status 200.
+The score is: 1.
+
+A1.1: Evaluating the accessibility principle A1.1 by performing a follow-up check after A1.
+Follow-up check successful: API request returned the status 200.
+The score is: 1.
+
+A1: Evaluating the accessibility principle A1 by checking if the metadata are retrievable by their identifiers using HTTPS protocol, checking the request status.
+Successful request: API request returned the status 200.
+The score is: 1.
+
+A1.1: Evaluating the accessibility principle A1.1 by performing a follow-up check after A1.
+Follow-up check successful: API request returned the status 200.
+The score is: 1.
+
+A1.2: Evaluating the accessibility principle A1.2 by performing another check after A1.
+Additional check successful: API request returned the status 200.
+The score is: 1.
+
+A1: Evaluating the accessibility principle A1 by checking if the metadata are retrievable by their identifiers using HTTPS protocol, checking the request status.
+Successful request: API request returned the status 200.
+The score is: 1.
+
+A1: Evaluating the accessibility principle A1 by checking if the metadata are retrievable by their identifiers using HTTPS protocol, checking the request status.
+Successful request: API request returned the status 200.
+The score is: 1.
+
+A1.1: Evaluating the accessibility principle A1.1 by performing a follow-up check after A1.
+Follow-up check successful: API request returned the status 200.
+The score is: 1.
+
+A1: Evaluating the accessibility principle A1 by checking if the metadata are retrievable by their identifiers using HTTPS protocol, checking the request status.
+Successful request: API request returned the status 200.
+The score is: 1.
+
+A1.1: Evaluating the accessibility principle A1.1 by performing a follow-up check after A1.
+Follow-up check successful: API request returned the status 200.
+The score is: 1.
+
+A1.2: Evaluating the accessibility principle A1.2 by performing another check after A1.
+Additional check successful: API request returned the status 200.
+The score is: 1.
+
+A1: Evaluating the accessibility principle A1 by checking if the metadata are retrievable by their identifiers using HTTPS protocol, checking the request status.
+Successful request: API request returned the status 200.
+The score is: 1.
+
+A1: Evaluating the accessibility principle A1 by checking if the metadata are retrievable by their identifiers using HTTPS protocol, checking the request status.
+Successful request: API request returned the status 200.
+The score is: 1.
+
+A1.1: Evaluating the accessibility principle A1.1 by performing a follow-up check after A1.
+Follow-up check successful: API request returned the status 200.
+The score is: 1.
+
+A1: Evaluating the accessibility principle A1 by checking if the metadata are retrievable by their identifiers using HTTPS protocol, checking the request status.
+Successful request: API request returned the status 200.
+The score is: 1.
+
+A1.1: Evaluating the accessibility principle A1.1 by performing a follow-up check after A1.
+Follow-up check successful: API request returned the status 200.
+The score is: 1.
+
+A1.2: Evaluating the accessibility principle A1.2 by performing another check after A1.
+Additional check successful: API request returned the status 200.
+The score is: 1.
+
+A1: Evaluating the accessibility principle A1 by checking if the metadata are retrievable by their identifiers using HTTPS protocol, checking the request status.
+Successful request: API request returned the status 200.
+The score is: 1.
+
+A1: Evaluating the accessibility principle A1 by checking if the metadata are retrievable by their identifiers using HTTPS protocol, checking the request status.
+Successful request: API request returned the status 200.
+The score is: 1.
+
+A1.1: Evaluating the accessibility principle A1.1 by performing a follow-up check after A1.
+Follow-up check successful: API request returned the status 200.
+The score is: 1.
+
+A1: Evaluating the accessibility principle A1 by checking if the metadata are retrievable by their identifiers using HTTPS protocol, checking the request status.
+Successful request: API request returned the status 200.
+The score is: 1.
+
+A1.1: Evaluating the accessibility principle A1.1 by performing a follow-up check after A1.
+Follow-up check successful: API request returned the status 200.
+The score is: 1.
+
+A1.2: Evaluating the accessibility principle A1.2 by performing another check after A1.
+Additional check successful: API request returned the status 200.
+The score is: 1.
+
+A1: Evaluating the accessibility principle A1 by checking if the metadata are retrievable by their identifiers using HTTPS protocol, checking the request status.
+Successful request: API request returned the status 200.
+The score is: 1.
+
+A1: Evaluating the accessibility principle A1 by checking if the metadata are retrievable by their identifiers using HTTPS protocol, checking the request status.
+Successful request: API request returned the status 200.
+The score is: 1.
+
+A1.1: Evaluating the accessibility principle A1.1 by performing a follow-up check after A1.
+Follow-up check successful: API request returned the status 200.
+The score is: 1.
+
+A1: Evaluating the accessibility principle A1 by checking if the metadata are retrievable by their identifiers using HTTPS protocol, checking the request status.
+Successful request: API request returned the status 200.
+The score is: 1.
+
+A1.1: Evaluating the accessibility principle A1.1 by performing a follow-up check after A1.
+Follow-up check successful: API request returned the status 200.
+The score is: 1.
+
+A1.2: Evaluating the accessibility principle A1.2 by performing another check after A1.
+Additional check successful: API request returned the status 200.
+The score is: 1.
+
+A1: Evaluating the accessibility principle A1 by checking if the metadata are retrievable by their identifiers using HTTPS protocol, checking the request status.
+Successful request: API request returned the status 200.
+The score is: 1.
+
+A1: Evaluating the accessibility principle A1 by checking if the metadata are retrievable by their identifiers using HTTPS protocol, checking the request status.
+Successful request: API request returned the status 200.
+The score is: 1.
+
+A1.1: Evaluating the accessibility principle A1.1 by performing a follow-up check after A1.
+Follow-up check successful: API request returned the status 200.
+The score is: 1.
+
+A1: Evaluating the accessibility principle A1 by checking if the metadata are retrievable by their identifiers using HTTPS protocol, checking the request status.
+Successful request: API request returned the status 200.
+The score is: 1.
+
+A1.1: Evaluating the accessibility principle A1.1 by performing a follow-up check after A1.
+Follow-up check successful: API request returned the status 200.
+The score is: 1.
+
+A1.2: Evaluating the accessibility principle A1.2 by performing another check after A1.
+Additional check successful: API request returned the status 200.
+The score is: 1.

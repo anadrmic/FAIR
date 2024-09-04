@@ -1,0 +1,3464 @@
+<DocSum>
+	<Id>200156928</Id>
+	<Item Name="Accession" Type="String">GSE156928</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">Parkinson Disease Frontal Cortex Transcriptomic analysis</Item>
+	<Item Name="summary" Type="String">We analyzed the transcriptome of the Frontal Cortex (FC) of Parkinson diseased (PD) individuals compared to age-matched controls.</Item>
+	<Item Name="GPL" Type="String">16791</Item>
+	<Item Name="GSE" Type="String">156928</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSE</Item>
+	<Item Name="gdsType" Type="String">Expression profiling by high throughput sequencing</Item>
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2024/09/03</Item>
+	<Item Name="suppFile" Type="String">TAR, TXT</Item>
+	<Item Name="Samples" Type="List">
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748331</Item>
+			<Item Name="Title" Type="String">Frontal_cortex, Parkinson disease, replicate 1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748334</Item>
+			<Item Name="Title" Type="String">Frontal_cortex, Parkinson disease, replicate 4</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748340</Item>
+			<Item Name="Title" Type="String">Frontal_cortex, Control, replicate 4</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748337</Item>
+			<Item Name="Title" Type="String">Frontal_cortex, Parkinson disease, replicate 6</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748333</Item>
+			<Item Name="Title" Type="String">Frontal_cortex, Parkinson disease, replicate 3</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748339</Item>
+			<Item Name="Title" Type="String">Frontal_cortex, Control, replicate 3</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748342</Item>
+			<Item Name="Title" Type="String">Frontal_cortex, Control, replicate 6</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748336</Item>
+			<Item Name="Title" Type="String">Frontal_cortex, Control, replicate 1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748345</Item>
+			<Item Name="Title" Type="String">Frontal_cortex, Control, replicate 7</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748338</Item>
+			<Item Name="Title" Type="String">Frontal_cortex, Control, replicate 2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748341</Item>
+			<Item Name="Title" Type="String">Frontal_cortex, Control, replicate 5</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748344</Item>
+			<Item Name="Title" Type="String">Frontal_cortex, Parkinson disease, replicate 8</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748343</Item>
+			<Item Name="Title" Type="String">Frontal_cortex, Parkinson disease, replicate 7</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748332</Item>
+			<Item Name="Title" Type="String">Frontal_cortex, Parkinson disease, replicate 2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748335</Item>
+			<Item Name="Title" Type="String">Frontal_cortex, Parkinson disease, replicate 5</Item>
+		</Item>
+	</Item>
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List">
+		<Item Name="ExtRelation" Type="Structure">
+			<Item Name="RelationType" Type="String">SRA</Item>
+			<Item Name="TargetObject" Type="String">SRP278867</Item>
+			<Item Name="TargetFTPLink" Type="String">ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP278/SRP278867/</Item>
+		</Item>
+	</Item>
+	<Item Name="n_samples" Type="Integer">15</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List" />
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE156nnn/GSE156928/</Item>
+	<Item Name="GEO2R" Type="String">no</Item>
+</DocSum>
+
+
+<DocSum>
+	<Id>200156926</Id>
+	<Item Name="Accession" Type="String">GSE156926</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">Parkinson Disease Frontal Cortex ncRNA Profiling</Item>
+	<Item Name="summary" Type="String">We aimed to profile the expression of the entire population of annotated lncRNAs (GENCODE 15) in the Frontal Cortex (FC) of Parkinson diseased (PD) individuals compared to age-matched controls.</Item>
+	<Item Name="GPL" Type="String">19920</Item>
+	<Item Name="GSE" Type="String">156926</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSE</Item>
+	<Item Name="gdsType" Type="String">Non-coding RNA profiling by array</Item>
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2024/09/03</Item>
+	<Item Name="suppFile" Type="String">TXT</Item>
+	<Item Name="Samples" Type="List">
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748320</Item>
+			<Item Name="Title" Type="String">frontal_cortex_pd_16</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748300</Item>
+			<Item Name="Title" Type="String">frontal_cortex_pd_4</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748317</Item>
+			<Item Name="Title" Type="String">frontal_cortex_pd_13</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748297</Item>
+			<Item Name="Title" Type="String">frontal_cortex_pd_1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748303</Item>
+			<Item Name="Title" Type="String">frontal_cortex_pd_7</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748289</Item>
+			<Item Name="Title" Type="String">frontal_cortex_control_3</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748309</Item>
+			<Item Name="Title" Type="String">frontal_cortex_control_12</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748305</Item>
+			<Item Name="Title" Type="String">frontal_cortex_pd_9</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748302</Item>
+			<Item Name="Title" Type="String">frontal_cortex_pd_6</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748306</Item>
+			<Item Name="Title" Type="String">frontal_cortex_pd_10</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748322</Item>
+			<Item Name="Title" Type="String">frontal_cortex_pd_18</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748294</Item>
+			<Item Name="Title" Type="String">frontal_cortex_control_8</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748308</Item>
+			<Item Name="Title" Type="String">frontal_cortex_control_11</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748314</Item>
+			<Item Name="Title" Type="String">frontal_cortex_control_17</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748310</Item>
+			<Item Name="Title" Type="String">frontal_cortex_control_13</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748311</Item>
+			<Item Name="Title" Type="String">frontal_cortex_control_14</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748291</Item>
+			<Item Name="Title" Type="String">frontal_cortex_control_5</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748307</Item>
+			<Item Name="Title" Type="String">frontal_cortex_pd_11</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748288</Item>
+			<Item Name="Title" Type="String">frontal_cortex_control_2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748287</Item>
+			<Item Name="Title" Type="String">frontal_cortex_control_1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748290</Item>
+			<Item Name="Title" Type="String">frontal_cortex_control_4</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748313</Item>
+			<Item Name="Title" Type="String">frontal_cortex_control_16</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748299</Item>
+			<Item Name="Title" Type="String">frontal_cortex_pd_3</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748316</Item>
+			<Item Name="Title" Type="String">frontal_cortex_pd_12</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748293</Item>
+			<Item Name="Title" Type="String">frontal_cortex_control_7</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748295</Item>
+			<Item Name="Title" Type="String">frontal_cortex_control_9</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748319</Item>
+			<Item Name="Title" Type="String">frontal_cortex_pd_15</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748292</Item>
+			<Item Name="Title" Type="String">frontal_cortex_control_6</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748318</Item>
+			<Item Name="Title" Type="String">frontal_cortex_pd_14</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748296</Item>
+			<Item Name="Title" Type="String">frontal_cortex_control_10</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748315</Item>
+			<Item Name="Title" Type="String">frontal_cortex_control_18</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748312</Item>
+			<Item Name="Title" Type="String">frontal_cortex_control_15</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748321</Item>
+			<Item Name="Title" Type="String">frontal_cortex_pd_17</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748304</Item>
+			<Item Name="Title" Type="String">frontal_cortex_pd_8</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748301</Item>
+			<Item Name="Title" Type="String">frontal_cortex_pd_5</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM4748298</Item>
+			<Item Name="Title" Type="String">frontal_cortex_pd_2</Item>
+		</Item>
+	</Item>
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List" />
+	<Item Name="n_samples" Type="Integer">36</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List" />
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE156nnn/GSE156926/</Item>
+	<Item Name="GEO2R" Type="String">no</Item>
+</DocSum>
+
+
+<DocSum>
+	<Id>200131617</Id>
+	<Item Name="Accession" Type="String">GSE131617</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">Genes associated with the progression of neurofibrillary tangles in Alzheimer's disease</Item>
+	<Item Name="summary" Type="String">Transcriptome analysis of post-mortem brain tissue specimens from three brain regions (BRs), entorinal, temporal and frontal cortices, of 71 Japanese brain-donor subjects to identify genes relevant to the expansion of neurofibrillary tangles. In total, 213 brain tissue specimens (= 71 subjects × 3 BRs) were involved in this study. The spreading of neurofibrillary tangles (NFTs), intraneuronal aggregates of highly phosphorylated microtubule-associated protein tau, across the human brain is correlated with the cognitive severity of Alzheimer’s disease (AD). To identify genes relevant to NFT expansion defined by the Braak stage, we conducted exon array analysis with an exploratory sample set consisting of 213 human post-mortem brain tissue specimens from the entorinal, temporal and frontal cortices of 71 brain-donor subjects: Braak NFT stages 0 (N = 13), I–II (N = 20), III–IV (N = 19) and V–VI (N = 19). We identified eight genes, RELN, PTGS2, MYO5C, TRIL, DCHS2, GRB14, NPAS4 and PHYHD1, associated with the Braak stage. The expression levels of three genes, PHYHD1, MYO5C and GRB14, exhibited reproducible association on real-time quantitative PCR analysis. In another sample set, including control subjects (N = 30) and patients with late-onset AD (N = 37), dementia with Lewy bodies (N = 17) and Parkinson disease (N = 36), the expression levels of two genes, PHYHD1 and MYO5C, were obviously associated with late-onset AD. Protein–protein interaction network analysis with a public database revealed that PHYHD1 interacts with MYO5C via POT1, and PHYHD1 directly interacts with amyloid beta-peptide 42. It is thus likely that functional failure of PHYHD1 and MYO5C could lead to AD development.</Item>
+	<Item Name="GPL" Type="String">5188;5175</Item>
+	<Item Name="GSE" Type="String">131617</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSE</Item>
+	<Item Name="gdsType" Type="String">Expression profiling by array</Item>
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2019/05/24</Item>
+	<Item Name="suppFile" Type="String">CEL, CHP, XLSX</Item>
+	<Item Name="Samples" Type="List">
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791107</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-09_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791024</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-01_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813746</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-02_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813792</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-17_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813626</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-01_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813709</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-09_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813663</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-13_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791090</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-03_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791007</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-09_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791127</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-16_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791044</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-08_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791173</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-12_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813729</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-15_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813600</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-05_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813683</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-20_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813646</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-08_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791041</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-07_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791170</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-11_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791087</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-02_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791004</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-08_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813666</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-14_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813749</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-03_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791190</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-18_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791167</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-10_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791084</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-01_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791001</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-07_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813686</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-01_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813769</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-10_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813732</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-16_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3790984</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-01_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791021</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-13_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791187</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-17_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791104</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-08_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813603</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-06_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813752</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-04_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791150</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-04_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791067</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-16_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813623</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-13_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813669</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-15_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813586</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-01_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791027</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-02_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791193</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-19_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791064</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-15_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813726</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-14_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813689</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-02_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813789</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-16_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813706</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-08_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791130</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-17_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791110</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-10_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813643</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-07_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813718</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-12_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791147</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-03_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813755</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-05_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813772</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-11_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813589</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-02_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813606</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-07_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791053</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-11_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791047</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-09_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813655</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-11_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813609</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-08_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813672</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-16_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813692</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-03_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791096</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-05_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791133</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-18_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791050</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-10_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791013</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-11_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791136</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-19_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813758</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-06_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813795</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-18_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791153</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-05_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791116</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-12_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813775</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-12_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3790987</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-02_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813635</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-04_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813649</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-09_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813612</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-09_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791159</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-07_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813798</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-19_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813715</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-11_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813592</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-03_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791156</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-06_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813675</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-17_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813738</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-18_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791033</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-04_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813652</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-10_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3790990</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-03_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813615</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-10_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791179</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-14_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791056</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-12_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813778</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-13_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791093</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-04_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791010</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-10_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813695</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-04_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813681</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-19_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791030</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-03_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791113</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-11_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813784</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-15_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791016</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-12_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813712</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-10_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813629</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-02_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813747</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-02_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791070</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-17_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791188</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-17_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813618</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-11_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813684</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-20_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813601</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-06_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813781</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-14_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813698</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-05_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791076</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-19_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3790993</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-04_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791139</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-01_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791162</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-08_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791079</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-20_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813721</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-13_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813632</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-03_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813598</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-05_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813727</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-15_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791145</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-03_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791062</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-14_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791073</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-18_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813735</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-17_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813701</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-06_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791125</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-15_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791042</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-07_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813787</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-16_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791085</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-02_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791142</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-02_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791176</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-13_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791059</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-13_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813761</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-07_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791122</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-14_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813678</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-18_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791082</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-01_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813641</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-06_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813764</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-08_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813724</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-14_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791119</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-13_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791182</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-15_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791099</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-06_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813744</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-01_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791185</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-16_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813607</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-08_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813704</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-07_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813621</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-12_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791019</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-13_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813664</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-14_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791108</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-09_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791191</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-18_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791168</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-10_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813644</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-07_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791154</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-06_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791105</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-08_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791022</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-01_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791039</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-06_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791071</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-17_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813710</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-09_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813767</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-09_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813638</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-05_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3790996</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-05_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813595</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-04_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791165</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-09_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813658</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-12_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813741</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-19_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791036</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-05_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791151</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-05_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813776</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-12_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813647</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-08_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791088</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-03_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791005</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-08_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813713</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-10_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813750</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-03_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3790999</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-06_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791002</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-07_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791048</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-09_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3790988</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-02_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813604</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-07_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813661</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-13_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813687</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-01_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791045</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-08_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791008</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-09_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791102</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-07_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813690</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-02_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813773</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-11_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813627</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-01_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813790</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-17_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813707</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-08_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813670</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-16_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791194</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-19_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813753</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-04_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791111</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-10_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791025</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-02_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791148</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-04_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791068</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-16_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3790985</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-01_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791117</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-12_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813730</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-16_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791034</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-05_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813793</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-18_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791171</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-11_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813636</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-04_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813673</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-17_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791183</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-15_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791100</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-07_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813630</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-02_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791114</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-11_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813739</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-19_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813610</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-09_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791180</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-14_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813693</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-03_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813733</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-17_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791134</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-18_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791051</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-10_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813676</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-18_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813650</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-09_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791011</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-10_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791140</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-01_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791177</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-13_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791174</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-12_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791091</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-04_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813742</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-01_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813667</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-15_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813624</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-13_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813779</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-13_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813796</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-19_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791077</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-19_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791131</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-17_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791065</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-15_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813736</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-18_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813653</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-10_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813770</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-10_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813756</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-05_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813596</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-04_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791017</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-12_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813679</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-19_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791128</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-16_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3790994</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-04_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813656</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-11_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813587</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-01_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813716</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-11_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791097</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-06_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791014</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-11_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813633</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-03_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791037</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-06_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791074</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-18_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813759</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-06_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791094</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-05_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813782</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-14_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813699</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-05_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791028</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-03_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791043</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-08_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813659</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-12_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813616</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-11_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791080</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-20_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3790997</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-05_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791146</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-03_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791063</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-14_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813599</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-05_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791163</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-09_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813762</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-07_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813665</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-14_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791120</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-13_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813702</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-06_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813590</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-02_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813785</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-15_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813719</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-12_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3790991</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-03_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791143</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-02_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813639</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-05_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813768</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-09_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791106</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-09_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791066</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-15_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813602</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-06_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791126</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-15_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791186</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-16_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791031</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-04_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791103</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-08_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813705</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-07_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813765</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-08_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791169</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-11_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791040</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-07_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791003</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-07_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813682</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-20_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813771</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-10_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813642</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-06_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791000</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-06_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813662</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-13_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813593</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-03_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813745</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-02_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791172</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-12_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813625</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-01_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813708</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-08_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791135</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-18_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791023</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-01_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813654</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-10_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813737</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-18_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813774</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-11_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813685</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-01_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791072</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-17_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791026</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-02_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3790989</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-03_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791149</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-04_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791109</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-10_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813591</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-02_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791057</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-12_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813628</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-02_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791020</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-13_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813788</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-16_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791032</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-04_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791069</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-16_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813696</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-04_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813613</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-10_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813694</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-04_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791123</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-14_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813777</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-12_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813731</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-16_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791160</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-08_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791029</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-03_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813688</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-02_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813797</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-19_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791137</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-19_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791054</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-11_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813668</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-15_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813631</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-03_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791178</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-14_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791129</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-16_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791046</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-09_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791095</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-05_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791132</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-17_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813734</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-17_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813791</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-17_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791157</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-07_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791175</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-13_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791052</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-11_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813671</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-16_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813588</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-01_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791098</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-06_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791061</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-14_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813608</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-08_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813691</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-03_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791164</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-09_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791155</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-06_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791035</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-05_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813617</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-11_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813700</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-06_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813711</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-09_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813794</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-18_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813728</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-15_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813645</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-07_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813766</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-09_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791152</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-05_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813611</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-09_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3790998</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-06_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791161</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-08_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813748</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-03_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813619</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-12_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3790995</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-05_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791060</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-13_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791124</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-15_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791189</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-17_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813722</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-13_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813657</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-11_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813740</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-19_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813620</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-12_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3790992</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-04_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813760</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-07_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813714</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-10_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791049</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-10_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813605</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-07_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791181</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-15_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791141</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-01_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3790983</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-01_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791058</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-13_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813594</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-03_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813622</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-13_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791081</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-20_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791086</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-02_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813723</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-13_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813720</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-12_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813637</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-05_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813660</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-12_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791078</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-19_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791138</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-19_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791055</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-12_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813725</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-14_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791075</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-18_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813763</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-08_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791158</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-07_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813640</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-06_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791166</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-10_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791083</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-01_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813634</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-04_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813743</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-01_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813697</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-05_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791101</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-07_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791018</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-12_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813614</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-10_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791089</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-03_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791006</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-08_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791184</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-16_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813717</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-11_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791192</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-18_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813674</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-17_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813757</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-06_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791115</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-12_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3790986</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-02_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813648</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-08_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791195</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-19_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791112</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-11_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813751</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-04_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791012</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-10_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813651</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-09_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791092</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-04_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791009</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-09_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813754</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-05_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791144</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-02_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791015</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-11_TC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813783</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-14_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791118</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-13_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813703</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-07_EC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813786</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-15_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791121</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_III-IV_subject-14_EC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3791038</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-06_FC (gene-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813677</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-18_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813780</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_V-VI_subject-13_TC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813680</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_I-II_subject-19_FC (exon-level)</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM3813597</Item>
+			<Item Name="Title" Type="String">Braak_NFT_stage_0_subject-04_TC (exon-level)</Item>
+		</Item>
+	</Item>
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List" />
+	<Item Name="n_samples" Type="Integer">426</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List">
+		<Item Name="int" Type="Integer">26126179</Item>
+		<Item Name="int" Type="Integer">31942999</Item>
+	</Item>
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE131nnn/GSE131617/</Item>
+	<Item Name="GEO2R" Type="String">yes</Item>
+</DocSum>
+
+
+<DocSum>
+	<Id>200102709</Id>
+	<Item Name="Accession" Type="String">GSE102709</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">Gene expression changes in the midbrain of Microcebus murinus induced by Canine adenovirus type 2 (CAV-2)</Item>
+	<Item Name="summary" Type="String">Parkinson disease (PD) is a neurodegenerative disease primarily associated with impaired movement affecting elderly people. To improve the understanding of the pathogenesis and to develop new therapies, we have developed a non-human primate model of PD using the lemurian Microcebus murinus (Mim). In this study, we tested the potential of canine adenovirus type 2 (CAV-2) as vector for gene transfer in the Mim brain by analyzing the gene expression changes in three regions involved in motor control: striatum, frontal cortex and midbrain. The CAV-2 viruses were injected in the right striatum of young adult females, 2 years old. CAV-2 vectors preferentially transduce neurons in the primate brain and were carried by axonal transport to afferent structures in both hemispheres. The gene expression changes were analyzed at 2 critical times after infection by CAV-2: an acute time effect at 24h and a delayed time effect at 28 days post infection. In addition, the gene expression was compared in the ipsilateral side versus the contralateral side, and with a non-infected brain samples using human Affymetrix microarrays. The transcriptomic data were analyzed by Significance Analysis of Microarrays (SAM) to identify genes differentially expressed when comparing brain samples in the 3 conditions. The data were also analyzed by ANOVA one way and by Principal Component Analysis (PCA). The results have shown that the transduction of CAV2 in neurons induced specific changes. These changes differed during the immediate and the long-term-point. Gene expression changes were detected in transcriptional regulation, in synaptic transmission, in cellular trafficking and in immune response. More precisely, in the short term, CAV2 activated genes involved in a non-specific innate immune response. In the long term, CAV2 induced an adaptive tolerant immune response. Gene expression changes in the midbrain of Microcebus murinus induced by Canine adenovirus type 2 (CAV-2)</Item>
+	<Item Name="GPL" Type="String">570</Item>
+	<Item Name="GSE" Type="String">102709</Item>
+	<Item Name="taxon" Type="String">Microcebus murinus; Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSE</Item>
+	<Item Name="gdsType" Type="String">Expression profiling by array</Item>
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2018/03/01</Item>
+	<Item Name="suppFile" Type="String">CEL, TXT</Item>
+	<Item Name="Samples" Type="List">
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743434</Item>
+			<Item Name="Title" Type="String">Mim7_24h_L_Midbrain</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743437</Item>
+			<Item Name="Title" Type="String">Mim10_28d_R_Midbrain</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743426</Item>
+			<Item Name="Title" Type="String">Mim2_Ctrl_Midbrain</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743443</Item>
+			<Item Name="Title" Type="String">Mim12_28d_L_Midbrain</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743440</Item>
+			<Item Name="Title" Type="String">Mim9_28d_L_Midbrain</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743432</Item>
+			<Item Name="Title" Type="String">Mim5_24h_L_Midbrain</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743435</Item>
+			<Item Name="Title" Type="String">Mim8_24h_L_Midbrain</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743441</Item>
+			<Item Name="Title" Type="String">Mim10_28d_L_Midbrain</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743429</Item>
+			<Item Name="Title" Type="String">Mim6_24h_R_Midbrain</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743438</Item>
+			<Item Name="Title" Type="String">Mim11_28d_R_Midbrain</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743427</Item>
+			<Item Name="Title" Type="String">Mim3_Ctrl_Midbrain</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743436</Item>
+			<Item Name="Title" Type="String">Mim9_28d_R_Midbrain</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743433</Item>
+			<Item Name="Title" Type="String">Mim6_24h_L_Midbrain</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743430</Item>
+			<Item Name="Title" Type="String">Mim7_24h_R_Midbrain</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743425</Item>
+			<Item Name="Title" Type="String">Mim1_Ctrl_Midbrain</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743431</Item>
+			<Item Name="Title" Type="String">Mim8_24h_R_Midbrain</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743428</Item>
+			<Item Name="Title" Type="String">Mim5_24h_R_Midbrain</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743442</Item>
+			<Item Name="Title" Type="String">Mim11_28d_L_Midbrain</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743439</Item>
+			<Item Name="Title" Type="String">Mim12_28d_R_Midbrain</Item>
+		</Item>
+	</Item>
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List" />
+	<Item Name="n_samples" Type="Integer">19</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List">
+		<Item Name="int" Type="Integer">30046008</Item>
+	</Item>
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE102nnn/GSE102709/</Item>
+	<Item Name="GEO2R" Type="String">yes</Item>
+</DocSum>
+
+
+<DocSum>
+	<Id>200102708</Id>
+	<Item Name="Accession" Type="String">GSE102708</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">Gene expression changes in the frontal cortex of Microcebus murinus induced by Canine adenovirus type 2 (CAV-2)</Item>
+	<Item Name="summary" Type="String">Parkinson disease (PD) is a neurodegenerative disease primarily associated with impaired movement affecting elderly people. To improve the understanding of the pathogenesis and to develop new therapies, we have developed a non-human primate model of PD using the lemurian Microcebus murinus (Mim). In this study, we tested the potential of canine adenovirus type 2 (CAV-2) as vector for gene transfer in the Mim brain by analyzing the gene expression changes in three regions involved in motor control: striatum, frontal cortex and midbrain. The CAV-2 viruses were injected in the right striatum of young adult females, 2 years old. CAV-2 vectors preferentially transduce neurons in the primate brain and were carried by axonal transport to afferent structures in both hemispheres. The gene expression changes were analyzed at 2 critical times after infection by CAV-2: an acute time effect at 24h and a delayed time effect at 28 days post infection. In addition, the gene expression was compared in the ipsilateral side versus the contralateral side, and with a non-infected brain samples using human Affymetrix microarrays. The transcriptomic data were analyzed by Significance Analysis of Microarrays (SAM) to identify genes differentially expressed when comparing brain samples in the 3 conditions. The data were also analyzed by ANOVA one way and by Principal Component Analysis (PCA). The results have shown that the transduction of CAV2 in neurons induced specific changes. These changes differed during the immediate and the long-term-point. Gene expression changes were detected in transcriptional regulation, in synaptic transmission, in cellular trafficking and in immune response. More precisely, in the short term, CAV2 activated genes involved in a non-specific innate immune response. In the long term, CAV2 induced an adaptive tolerant immune response. Gene expression changes in the frontal cortex of Microcebus murinus induced by Canine adenovirus type 2 (CAV-2)</Item>
+	<Item Name="GPL" Type="String">570</Item>
+	<Item Name="GSE" Type="String">102708</Item>
+	<Item Name="taxon" Type="String">Microcebus murinus; Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSE</Item>
+	<Item Name="gdsType" Type="String">Expression profiling by array</Item>
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2018/03/01</Item>
+	<Item Name="suppFile" Type="String">CEL, TXT</Item>
+	<Item Name="Samples" Type="List">
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743410</Item>
+			<Item Name="Title" Type="String">Mim6_24h_R_FCx</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743407</Item>
+			<Item Name="Title" Type="String">Mim3_Ctrl_FCx</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743413</Item>
+			<Item Name="Title" Type="String">Mim5_24h_L_FCx</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743419</Item>
+			<Item Name="Title" Type="String">Mim11_28d_R_FCx</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743416</Item>
+			<Item Name="Title" Type="String">Mim8_24h_L_FCx</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743408</Item>
+			<Item Name="Title" Type="String">Mim4_Ctrl_FCx</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743422</Item>
+			<Item Name="Title" Type="String">Mim10_28d_L_FCx</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743411</Item>
+			<Item Name="Title" Type="String">Mim7_24h_R_FCx</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743405</Item>
+			<Item Name="Title" Type="String">Mim1_Ctrl_FCx</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743414</Item>
+			<Item Name="Title" Type="String">Mim6_24h_L_FCx</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743420</Item>
+			<Item Name="Title" Type="String">Mim12_28d_R_FCx</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743417</Item>
+			<Item Name="Title" Type="String">Mim9_28d_R_FCx</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743409</Item>
+			<Item Name="Title" Type="String">Mim5_24h_R_FCx</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743406</Item>
+			<Item Name="Title" Type="String">Mim2_Ctrl_FCx</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743412</Item>
+			<Item Name="Title" Type="String">Mim8_24h_R_FCx</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743423</Item>
+			<Item Name="Title" Type="String">Mim11_28d_L_FCx</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743418</Item>
+			<Item Name="Title" Type="String">Mim10_28d_R_FCx</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743415</Item>
+			<Item Name="Title" Type="String">Mim7_24h_L_FCx</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743421</Item>
+			<Item Name="Title" Type="String">Mim9_28d_L_FCx</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2743424</Item>
+			<Item Name="Title" Type="String">Mim12_28d_L_FCx</Item>
+		</Item>
+	</Item>
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List" />
+	<Item Name="n_samples" Type="Integer">20</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List">
+		<Item Name="int" Type="Integer">30046008</Item>
+	</Item>
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE102nnn/GSE102708/</Item>
+	<Item Name="GEO2R" Type="String">yes</Item>
+</DocSum>
+
+
+<DocSum>
+	<Id>200102640</Id>
+	<Item Name="Accession" Type="String">GSE102640</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">Gene expression changes in the striatum of Microcebus murinus induced by Canine adenovirus type 2 (CAV-2)</Item>
+	<Item Name="summary" Type="String">Parkinson disease (PD) is a neurodegenerative disease primarily associated with impaired movement affecting elderly people. To improve the understanding of the pathogenesis and to develop new therapies, we have developed a non-human primate model of PD using the lemurian Microcebus murinus (Mim). In this study, we tested the potential of canine adenovirus type 2 (CAV-2) as vector for gene transfer in the Mim brain by analyzing the gene expression changes in three regions involved in motor control: striatum, frontal cortex and midbrain. The CAV-2 viruses were injected in the right striatum of young adult females, 2 years old. CAV-2 vectors preferentially transduce neurons in the primate brain and were carried by axonal transport to afferent structures in both hemispheres. The gene expression changes were analyzed at 2 critical times after infection by CAV-2: an acute time effect at 24h and a delayed time effect at 28 days post infection. In addition, the gene expression was compared in the ipsilateral side versus the contralateral side, and with a non-infected brain samples using human Affymetrix microarrays. The transcriptomic data were analyzed by Significance Analysis of Microarrays (SAM) to identify genes differentially expressed when comparing brain samples in the 3 conditions. The data were also analyzed by ANOVA one way and by Principal Component Analysis (PCA). The results have shown that the transduction of CAV2 in neurons induced specific changes. These changes differed during the immediate and the long-term-point. Gene expression changes were detected in transcriptional regulation, in synaptic transmission, in cellular trafficking and in immune response. More precisely, in the short term, CAV2 activated genes involved in a non-specific innate immune response. In the long term, CAV2 induced an adaptive tolerant immune response. Gene expression changes in the striatum of Microcebus murinus induced by Canine adenovirus type 2 (CAV-2)</Item>
+	<Item Name="GPL" Type="String">570</Item>
+	<Item Name="GSE" Type="String">102640</Item>
+	<Item Name="taxon" Type="String">Homo sapiens; Microcebus murinus</Item>
+	<Item Name="entryType" Type="String">GSE</Item>
+	<Item Name="gdsType" Type="String">Expression profiling by array</Item>
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2018/03/01</Item>
+	<Item Name="suppFile" Type="String">CEL, TXT</Item>
+	<Item Name="Samples" Type="List">
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742123</Item>
+			<Item Name="Title" Type="String">Mim1_Ctrl_Str</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742140</Item>
+			<Item Name="Title" Type="String">Mim10_28d_L_Str</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742132</Item>
+			<Item Name="Title" Type="String">Mim6_24h_L_Str</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742129</Item>
+			<Item Name="Title" Type="String">Mim7_24h_R_Str</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742126</Item>
+			<Item Name="Title" Type="String">Mim4_Ctrl_Str</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742138</Item>
+			<Item Name="Title" Type="String">Mim12_28d_R_Str</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742141</Item>
+			<Item Name="Title" Type="String">Mim11_28d_L_Str</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742135</Item>
+			<Item Name="Title" Type="String">Mim9_28d_R_Str</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742130</Item>
+			<Item Name="Title" Type="String">Mim8_24h_R_Str</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742127</Item>
+			<Item Name="Title" Type="String">Mim5_24h_R_Str</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742124</Item>
+			<Item Name="Title" Type="String">Mim2_Ctrl_Str</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742133</Item>
+			<Item Name="Title" Type="String">Mim7_24h_L_Str</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742139</Item>
+			<Item Name="Title" Type="String">Mim9_28d_L_Str</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742136</Item>
+			<Item Name="Title" Type="String">Mim10_28d_R_Str</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742128</Item>
+			<Item Name="Title" Type="String">Mim6_24h_R_Str</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742125</Item>
+			<Item Name="Title" Type="String">Mim3_Ctrl_Str</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742131</Item>
+			<Item Name="Title" Type="String">Mim5_24h_L_Str</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742137</Item>
+			<Item Name="Title" Type="String">Mim11_28d_R_Str</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742142</Item>
+			<Item Name="Title" Type="String">Mim12_28d_L_Str</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM2742134</Item>
+			<Item Name="Title" Type="String">Mim8_24h_L_Str</Item>
+		</Item>
+	</Item>
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List" />
+	<Item Name="n_samples" Type="Integer">20</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List">
+		<Item Name="int" Type="Integer">30046008</Item>
+	</Item>
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE102nnn/GSE102640/</Item>
+	<Item Name="GEO2R" Type="String">yes</Item>
+</DocSum>
+
+
+<DocSum>
+	<Id>200015826</Id>
+	<Item Name="Accession" Type="String">GSE15826</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">Affymetrix 6.0 study of sporadic motor neuron disease patients and controls.</Item>
+	<Item Name="summary" Type="String">This data was divided into three experiment sets: 1. A somatic study of sporadic motor neuron disease (SMND) brain samples that were compared to the blood from the same individual, normal control brains and disease control brans (Parkinson Disease patients); 2. A twin study comparing blood and other tissue samples from twins that were discordant for MND, concordant for MND and control twins and 3. A trio study of blood samples MND patients compared to their unaffected parents.</Item>
+	<Item Name="GPL" Type="String">6801</Item>
+	<Item Name="GSE" Type="String">15826</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSE</Item>
+	<Item Name="gdsType" Type="String">SNP genotyping by SNP array; Genome variation profiling by SNP array</Item>
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2010/07/31</Item>
+	<Item Name="suppFile" Type="String">CEL, CHP</Item>
+	<Item Name="Samples" Type="List">
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397832</Item>
+			<Item Name="Title" Type="String">Blood-MND-2113-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397749</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1674-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397703</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-0984-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397769</Item>
+			<Item Name="Title" Type="String">Brain-PD-1816-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397686</Item>
+			<Item Name="Title" Type="String">Brain-MND-0766-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397789</Item>
+			<Item Name="Title" Type="String">Blood-MND-1900-rep2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397706</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-0987-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397835</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-2123-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397752</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1677-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397726</Item>
+			<Item Name="Title" Type="String">Brain-MND-1100-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397809</Item>
+			<Item Name="Title" Type="String">Blood-MND-0833-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397689</Item>
+			<Item Name="Title" Type="String">Blood-MND-0844-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397772</Item>
+			<Item Name="Title" Type="String">Brain-PD-1829-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397792</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1901-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397829</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1948-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397766</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1741-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397729</Item>
+			<Item Name="Title" Type="String">Brain-MND-1140-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397709</Item>
+			<Item Name="Title" Type="String">Brain-MND-1003-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397746</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1669-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397683</Item>
+			<Item Name="Title" Type="String">Blood-MND-0754-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397812</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-0835-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397786</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1467-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397740</Item>
+			<Item Name="Title" Type="String">Brain-MND-1438-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397806</Item>
+			<Item Name="Title" Type="String">Blood-MND-0705-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397760</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1680-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397723</Item>
+			<Item Name="Title" Type="String">Brain-MND-1083-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397697</Item>
+			<Item Name="Title" Type="String">Blood-MND-0899-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397763</Item>
+			<Item Name="Title" Type="String">Blood-MND-1690-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397677</Item>
+			<Item Name="Title" Type="String">Blood-MND-0329-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397800</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1955-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397823</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1840-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397737</Item>
+			<Item Name="Title" Type="String">Blood-MND-1267-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397780</Item>
+			<Item Name="Title" Type="String">Brain-PD-1939-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397700</Item>
+			<Item Name="Title" Type="String">Brain-MND-0914-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397803</Item>
+			<Item Name="Title" Type="String">Blood-MND-1417-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397721</Item>
+			<Item Name="Title" Type="String">Brain-MND-1082-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397684</Item>
+			<Item Name="Title" Type="String">Brain-MND-0754-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397824</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1841-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397787</Item>
+			<Item Name="Title" Type="String">Hair-Ctrl-1467-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397680</Item>
+			<Item Name="Title" Type="String">Brain-MND-0539-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397826</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1912-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397743</Item>
+			<Item Name="Title" Type="String">Blood-MND-1665-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397783</Item>
+			<Item Name="Title" Type="String">Blood-MND-0573-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397724</Item>
+			<Item Name="Title" Type="String">Blood-MND-1095-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397717</Item>
+			<Item Name="Title" Type="String">Brain-MND-1062-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397761</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1682-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397678</Item>
+			<Item Name="Title" Type="String">Brain-MND-0329-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397767</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1742-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397820</Item>
+			<Item Name="Title" Type="String">Blood-MND-1685rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397741</Item>
+			<Item Name="Title" Type="String">Blood-MND-1568-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397827</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1931-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397720</Item>
+			<Item Name="Title" Type="String">Blood-MND-1082-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397681</Item>
+			<Item Name="Title" Type="String">Blood-MND-0556-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397804</Item>
+			<Item Name="Title" Type="String">Blood-MND-0639rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397704</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-0985-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397830</Item>
+			<Item Name="Title" Type="String">Blood-MND-1982-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397747</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1672-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397744</Item>
+			<Item Name="Title" Type="String">Brain-MND-1665-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397784</Item>
+			<Item Name="Title" Type="String">Blood-MND-0574-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397795</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1914-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397764</Item>
+			<Item Name="Title" Type="String">Brain-MND-1690-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397807</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-0707-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397781</Item>
+			<Item Name="Title" Type="String">Blood-MND-2146-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397698</Item>
+			<Item Name="Title" Type="String">Brain-MND-0899-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397732</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1169-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397695</Item>
+			<Item Name="Title" Type="String">Blood-MND-0870-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397798</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1928-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397715</Item>
+			<Item Name="Title" Type="String">Brain-MND-1041-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397712</Item>
+			<Item Name="Title" Type="String">Blood-MND-1016-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397718</Item>
+			<Item Name="Title" Type="String">Blood-MND-1081-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397701</Item>
+			<Item Name="Title" Type="String">Blood-MND-0974-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397838</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-2247-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397821</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1686-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397692</Item>
+			<Item Name="Title" Type="String">Brain-MND-0862-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397675</Item>
+			<Item Name="Title" Type="String">Blood-MND-0311-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397776</Item>
+			<Item Name="Title" Type="String">Blood-MND-1895-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397815</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-0909-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397778</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1913-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397822</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1687-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397739</Item>
+			<Item Name="Title" Type="String">Blood-MND-1438-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397676</Item>
+			<Item Name="Title" Type="String">Brain-MND-0311-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397779</Item>
+			<Item Name="Title" Type="String">Brain-PD-1938-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397818</Item>
+			<Item Name="Title" Type="String">Blood-MND-1483-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397735</Item>
+			<Item Name="Title" Type="String">Blood-MND-1221-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397679</Item>
+			<Item Name="Title" Type="String">Blood-MND-0539-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397716</Item>
+			<Item Name="Title" Type="String">Blood-MND-1062-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397819</Item>
+			<Item Name="Title" Type="String">Blood-MND-1522-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397782</Item>
+			<Item Name="Title" Type="String">Brain-MND-2146-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397738</Item>
+			<Item Name="Title" Type="String">Brain-MND-1267-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397801</Item>
+			<Item Name="Title" Type="String">Blood-MND-1956-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397693</Item>
+			<Item Name="Title" Type="String">Blood-MND-0868-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397673</Item>
+			<Item Name="Title" Type="String">Blood-MND-0302-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397696</Item>
+			<Item Name="Title" Type="String">Brain-MND-0870-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397825</Item>
+			<Item Name="Title" Type="String">Blood-MND-1910-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397672</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1838-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397799</Item>
+			<Item Name="Title" Type="String">Blood-MND-1954-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397775</Item>
+			<Item Name="Title" Type="String">Brain-PD-1893-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397699</Item>
+			<Item Name="Title" Type="String">Blood-MND-0914-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397813</Item>
+			<Item Name="Title" Type="String">Blood-MND-0895-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397750</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1675-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397802</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1957-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397719</Item>
+			<Item Name="Title" Type="String">Brain-MND-1081-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397713</Item>
+			<Item Name="Title" Type="String">Brain-MND-1016-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397816</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1421-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397687</Item>
+			<Item Name="Title" Type="String">Blood-MND-0794-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397753</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1678-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397790</Item>
+			<Item Name="Title" Type="String">Hair-MND-1900-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397707</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-0989-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397796</Item>
+			<Item Name="Title" Type="String">Hair-Ctrl-1914-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397793</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1901-rep2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397710</Item>
+			<Item Name="Title" Type="String">Blood-MND-1011-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397770</Item>
+			<Item Name="Title" Type="String">Brain-PD-1823-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397814</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-0896-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397731</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1168-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397777</Item>
+			<Item Name="Title" Type="String">Brain-MND-1895-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397694</Item>
+			<Item Name="Title" Type="String">Brain-MND-0868-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397762</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1683-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397734</Item>
+			<Item Name="Title" Type="String">Brain-MND-1188-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397773</Item>
+			<Item Name="Title" Type="String">Brain-PD-1831-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397771</Item>
+			<Item Name="Title" Type="String">Brain-PD-1827-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397736</Item>
+			<Item Name="Title" Type="String">Brain-MND-1221-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397690</Item>
+			<Item Name="Title" Type="String">Brain-MND-0844-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397839</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-2248-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397837</Item>
+			<Item Name="Title" Type="String">Blood-MND-2215-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397671</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1839-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397774</Item>
+			<Item Name="Title" Type="String">Brain-PD-1891-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397768</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1744-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397730</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1167-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397785</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1418-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397702</Item>
+			<Item Name="Title" Type="String">Brain-MND-0974-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397834</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-2115-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397751</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1676-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397833</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-2114-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397742</Item>
+			<Item Name="Title" Type="String">Brain-MND-1568-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397805</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-0640-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397733</Item>
+			<Item Name="Title" Type="String">Blood-MND-1188-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397705</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-0986-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397836</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-2124-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397754</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1679-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397674</Item>
+			<Item Name="Title" Type="String">Brain-MND-0302-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397745</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1667-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397808</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-0708-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397727</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1105-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397722</Item>
+			<Item Name="Title" Type="String">Blood-MND-1083-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397810</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-0834-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397708</Item>
+			<Item Name="Title" Type="String">Blood-MND-1003-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397748</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1673-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397725</Item>
+			<Item Name="Title" Type="String">Brain-MND-1095-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397828</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1932-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397811</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-0834-rep2</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397728</Item>
+			<Item Name="Title" Type="String">Blood-MND-1140-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397831</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-2006-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397714</Item>
+			<Item Name="Title" Type="String">Blood-MND-1041-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397797</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1927-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397817</Item>
+			<Item Name="Title" Type="String">Blood-Ctrl-1422-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397688</Item>
+			<Item Name="Title" Type="String">Brain-MND-0794-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397691</Item>
+			<Item Name="Title" Type="String">Blood-MND-0862-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397794</Item>
+			<Item Name="Title" Type="String">Hair-Ctrl-1901-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397711</Item>
+			<Item Name="Title" Type="String">Brain-MND-1011-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397685</Item>
+			<Item Name="Title" Type="String">Blood-MND-0766-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397788</Item>
+			<Item Name="Title" Type="String">Blood-MND-1900-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397791</Item>
+			<Item Name="Title" Type="String">Sperm-MND-1900-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397682</Item>
+			<Item Name="Title" Type="String">Brain-MND-0556-rep1</Item>
+		</Item>
+		<Item Name="Sample" Type="Structure">
+			<Item Name="Accession" Type="String">GSM397765</Item>
+			<Item Name="Title" Type="String">Brain-Ctrl-1740-rep1</Item>
+		</Item>
+	</Item>
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List" />
+	<Item Name="n_samples" Type="Integer">164</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List">
+		<Item Name="int" Type="Integer">21741244</Item>
+	</Item>
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE15nnn/GSE15826/</Item>
+	<Item Name="GEO2R" Type="String">no</Item>
+</DocSum>
+
+
+<DocSum>
+	<Id>304748322</Id>
+	<Item Name="Accession" Type="String">GSM4748322</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">frontal_cortex_pd_18</Item>
+	<Item Name="summary" Type="String">Frontal Cortex, post-mortem sample, Parkinson Disease</Item>
+	<Item Name="GPL" Type="String">19920</Item>
+	<Item Name="GSE" Type="String">156926</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSM</Item>
+	<Item Name="gdsType" Type="String" />
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2024/09/03</Item>
+	<Item Name="suppFile" Type="String">TXT</Item>
+	<Item Name="Samples" Type="List" />
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List" />
+	<Item Name="n_samples" Type="Integer">0</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List" />
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4748nnn/GSM4748322/</Item>
+	<Item Name="GEO2R" Type="String" />
+</DocSum>
+
+
+<DocSum>
+	<Id>304748321</Id>
+	<Item Name="Accession" Type="String">GSM4748321</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">frontal_cortex_pd_17</Item>
+	<Item Name="summary" Type="String">Frontal Cortex, post-mortem sample, Parkinson Disease</Item>
+	<Item Name="GPL" Type="String">19920</Item>
+	<Item Name="GSE" Type="String">156926</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSM</Item>
+	<Item Name="gdsType" Type="String" />
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2024/09/03</Item>
+	<Item Name="suppFile" Type="String">TXT</Item>
+	<Item Name="Samples" Type="List" />
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List" />
+	<Item Name="n_samples" Type="Integer">0</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List" />
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4748nnn/GSM4748321/</Item>
+	<Item Name="GEO2R" Type="String" />
+</DocSum>
+
+
+<DocSum>
+	<Id>304748320</Id>
+	<Item Name="Accession" Type="String">GSM4748320</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">frontal_cortex_pd_16</Item>
+	<Item Name="summary" Type="String">Frontal Cortex, post-mortem sample, Parkinson Disease</Item>
+	<Item Name="GPL" Type="String">19920</Item>
+	<Item Name="GSE" Type="String">156926</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSM</Item>
+	<Item Name="gdsType" Type="String" />
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2024/09/03</Item>
+	<Item Name="suppFile" Type="String">TXT</Item>
+	<Item Name="Samples" Type="List" />
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List" />
+	<Item Name="n_samples" Type="Integer">0</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List" />
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4748nnn/GSM4748320/</Item>
+	<Item Name="GEO2R" Type="String" />
+</DocSum>
+
+
+<DocSum>
+	<Id>304748319</Id>
+	<Item Name="Accession" Type="String">GSM4748319</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">frontal_cortex_pd_15</Item>
+	<Item Name="summary" Type="String">Frontal Cortex, post-mortem sample, Parkinson Disease</Item>
+	<Item Name="GPL" Type="String">19920</Item>
+	<Item Name="GSE" Type="String">156926</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSM</Item>
+	<Item Name="gdsType" Type="String" />
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2024/09/03</Item>
+	<Item Name="suppFile" Type="String">TXT</Item>
+	<Item Name="Samples" Type="List" />
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List" />
+	<Item Name="n_samples" Type="Integer">0</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List" />
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4748nnn/GSM4748319/</Item>
+	<Item Name="GEO2R" Type="String" />
+</DocSum>
+
+
+<DocSum>
+	<Id>304748318</Id>
+	<Item Name="Accession" Type="String">GSM4748318</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">frontal_cortex_pd_14</Item>
+	<Item Name="summary" Type="String">Frontal Cortex, post-mortem sample, Parkinson Disease</Item>
+	<Item Name="GPL" Type="String">19920</Item>
+	<Item Name="GSE" Type="String">156926</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSM</Item>
+	<Item Name="gdsType" Type="String" />
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2024/09/03</Item>
+	<Item Name="suppFile" Type="String">TXT</Item>
+	<Item Name="Samples" Type="List" />
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List" />
+	<Item Name="n_samples" Type="Integer">0</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List" />
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4748nnn/GSM4748318/</Item>
+	<Item Name="GEO2R" Type="String" />
+</DocSum>
+
+
+<DocSum>
+	<Id>304748317</Id>
+	<Item Name="Accession" Type="String">GSM4748317</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">frontal_cortex_pd_13</Item>
+	<Item Name="summary" Type="String">Frontal Cortex, post-mortem sample, Parkinson Disease</Item>
+	<Item Name="GPL" Type="String">19920</Item>
+	<Item Name="GSE" Type="String">156926</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSM</Item>
+	<Item Name="gdsType" Type="String" />
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2024/09/03</Item>
+	<Item Name="suppFile" Type="String">TXT</Item>
+	<Item Name="Samples" Type="List" />
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List" />
+	<Item Name="n_samples" Type="Integer">0</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List" />
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4748nnn/GSM4748317/</Item>
+	<Item Name="GEO2R" Type="String" />
+</DocSum>
+
+
+<DocSum>
+	<Id>304748316</Id>
+	<Item Name="Accession" Type="String">GSM4748316</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">frontal_cortex_pd_12</Item>
+	<Item Name="summary" Type="String">Frontal Cortex, post-mortem sample, Parkinson Disease</Item>
+	<Item Name="GPL" Type="String">19920</Item>
+	<Item Name="GSE" Type="String">156926</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSM</Item>
+	<Item Name="gdsType" Type="String" />
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2024/09/03</Item>
+	<Item Name="suppFile" Type="String">TXT</Item>
+	<Item Name="Samples" Type="List" />
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List" />
+	<Item Name="n_samples" Type="Integer">0</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List" />
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4748nnn/GSM4748316/</Item>
+	<Item Name="GEO2R" Type="String" />
+</DocSum>
+
+
+<DocSum>
+	<Id>304748307</Id>
+	<Item Name="Accession" Type="String">GSM4748307</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">frontal_cortex_pd_11</Item>
+	<Item Name="summary" Type="String">Frontal Cortex, post-mortem sample, Parkinson Disease</Item>
+	<Item Name="GPL" Type="String">19920</Item>
+	<Item Name="GSE" Type="String">156926</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSM</Item>
+	<Item Name="gdsType" Type="String" />
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2024/09/03</Item>
+	<Item Name="suppFile" Type="String">TXT</Item>
+	<Item Name="Samples" Type="List" />
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List" />
+	<Item Name="n_samples" Type="Integer">0</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List" />
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4748nnn/GSM4748307/</Item>
+	<Item Name="GEO2R" Type="String" />
+</DocSum>
+
+
+<DocSum>
+	<Id>304748306</Id>
+	<Item Name="Accession" Type="String">GSM4748306</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">frontal_cortex_pd_10</Item>
+	<Item Name="summary" Type="String">Frontal Cortex, post-mortem sample, Parkinson Disease</Item>
+	<Item Name="GPL" Type="String">19920</Item>
+	<Item Name="GSE" Type="String">156926</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSM</Item>
+	<Item Name="gdsType" Type="String" />
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2024/09/03</Item>
+	<Item Name="suppFile" Type="String">TXT</Item>
+	<Item Name="Samples" Type="List" />
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List" />
+	<Item Name="n_samples" Type="Integer">0</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List" />
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4748nnn/GSM4748306/</Item>
+	<Item Name="GEO2R" Type="String" />
+</DocSum>
+
+
+<DocSum>
+	<Id>304748305</Id>
+	<Item Name="Accession" Type="String">GSM4748305</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">frontal_cortex_pd_9</Item>
+	<Item Name="summary" Type="String">Frontal Cortex, post-mortem sample, Parkinson Disease</Item>
+	<Item Name="GPL" Type="String">19920</Item>
+	<Item Name="GSE" Type="String">156926</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSM</Item>
+	<Item Name="gdsType" Type="String" />
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2024/09/03</Item>
+	<Item Name="suppFile" Type="String">TXT</Item>
+	<Item Name="Samples" Type="List" />
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List" />
+	<Item Name="n_samples" Type="Integer">0</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List" />
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4748nnn/GSM4748305/</Item>
+	<Item Name="GEO2R" Type="String" />
+</DocSum>
+
+
+<DocSum>
+	<Id>304748304</Id>
+	<Item Name="Accession" Type="String">GSM4748304</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">frontal_cortex_pd_8</Item>
+	<Item Name="summary" Type="String">Frontal Cortex, post-mortem sample, Parkinson Disease</Item>
+	<Item Name="GPL" Type="String">19920</Item>
+	<Item Name="GSE" Type="String">156926</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSM</Item>
+	<Item Name="gdsType" Type="String" />
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2024/09/03</Item>
+	<Item Name="suppFile" Type="String">TXT</Item>
+	<Item Name="Samples" Type="List" />
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List" />
+	<Item Name="n_samples" Type="Integer">0</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List" />
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4748nnn/GSM4748304/</Item>
+	<Item Name="GEO2R" Type="String" />
+</DocSum>
+
+
+<DocSum>
+	<Id>304748303</Id>
+	<Item Name="Accession" Type="String">GSM4748303</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">frontal_cortex_pd_7</Item>
+	<Item Name="summary" Type="String">Frontal Cortex, post-mortem sample, Parkinson Disease</Item>
+	<Item Name="GPL" Type="String">19920</Item>
+	<Item Name="GSE" Type="String">156926</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSM</Item>
+	<Item Name="gdsType" Type="String" />
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2024/09/03</Item>
+	<Item Name="suppFile" Type="String">TXT</Item>
+	<Item Name="Samples" Type="List" />
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List" />
+	<Item Name="n_samples" Type="Integer">0</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List" />
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4748nnn/GSM4748303/</Item>
+	<Item Name="GEO2R" Type="String" />
+</DocSum>
+
+
+<DocSum>
+	<Id>304748302</Id>
+	<Item Name="Accession" Type="String">GSM4748302</Item>
+	<Item Name="GDS" Type="String" />
+	<Item Name="title" Type="String">frontal_cortex_pd_6</Item>
+	<Item Name="summary" Type="String">Frontal Cortex, post-mortem sample, Parkinson Disease</Item>
+	<Item Name="GPL" Type="String">19920</Item>
+	<Item Name="GSE" Type="String">156926</Item>
+	<Item Name="taxon" Type="String">Homo sapiens</Item>
+	<Item Name="entryType" Type="String">GSM</Item>
+	<Item Name="gdsType" Type="String" />
+	<Item Name="ptechType" Type="String" />
+	<Item Name="valType" Type="String" />
+	<Item Name="SSInfo" Type="String" />
+	<Item Name="subsetInfo" Type="String" />
+	<Item Name="PDAT" Type="String">2024/09/03</Item>
+	<Item Name="suppFile" Type="String">TXT</Item>
+	<Item Name="Samples" Type="List" />
+	<Item Name="Relations" Type="List" />
+	<Item Name="ExtRelations" Type="List" />
+	<Item Name="n_samples" Type="Integer">0</Item>
+	<Item Name="SeriesTitle" Type="String" />
+	<Item Name="PlatformTitle" Type="String" />
+	<Item Name="PlatformTaxa" Type="String" />
+	<Item Name="SamplesTaxa" Type="String" />
+	<Item Name="PubMedIds" Type="List" />
+	<Item Name="Projects" Type="List" />
+	<Item Name="FTPLink" Type="String">ftp://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4748nnn/GSM4748302/</Item>
+	<Item Name="GEO2R" Type="String" />
+</DocSum>
+
+

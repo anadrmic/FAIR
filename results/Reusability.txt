@@ -192,3 +192,26 @@ R1.2:    Evaluating the reusability principle R1.2 for a given dataset by search
 Breakdown of missing fields:
 5 entities are missing 'author' field.
 The score is: 0.0.
+
+R1:    Evaluating the reusability principle R1 for a given dataset by searching for predefined keywords in metadata to assess its completeness.
+0.00% of entities have all required fields (0 out of 20).
+100.00% of entities are missing all required fields (20 out of 20).
+
+Breakdown of missing fields:
+20 entities are missing 'supp' field.
+The score is: 0.0.
+
+R1.1:    Evaluating the reusability principle R1.1 for a given dataset by searching for predefined keywords in metadata to assess its completeness.
+100.00% of entities have all required fields (20 out of 20).
+0.00% of entities are missing all required fields (0 out of 20).
+
+Breakdown of missing fields:
+The score is: 1.0.
+
+R1.2:    Evaluating the reusability principle R1.2 for a given dataset by searching for predefined keywords in metadata to assess its completeness.
+100.00% of entities have all required fields (20 out of 20).
+0.00% of entities are missing all required fields (0 out of 20).
+
+Breakdown of missing fields:
+0 entities are missing 'publicationInfo' field.
+The score is: 1.0.

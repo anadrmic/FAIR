@@ -149,12 +149,12 @@ def F2(keywords, metadata, repository_choice):
     """
     if not keywords:
         findability_fields = get_findability_fields(repository_choice)
-        all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count = utils.check_required_fields_json(metadata, findability_fields)
+        all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count = utils.analyze_json_keywords(metadata, findability_fields)
     else:
         if repository_choice == "2":
             all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count = utils.check_required_fields_geo(metadata, keywords)
         else:
-            all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count = utils.check_required_keywords_in_json(metadata, keywords)
+            all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count = utils.analyze_json_keywords(metadata, keywords)
     score = all_required_percentage/100
     explanation = (f"{all_required_percentage:.2f}% of entities have all required fields ({all_required_count} out of {total_count}).\n"
                    f"{missing_all_percentage:.2f}% of entities are missing some required fields ({missing_all_count} out of {total_count}).\n"

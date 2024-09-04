@@ -37,6 +37,30 @@ def print_evaluation(principle, description, score, explanation):
     print(f"Explanation: {explanation}")
     print("______________________________________________________________________________________________________________")
 
+def analyze_json_keywords(json_list, keywords):
+    total_count = len(json_list)
+    keyword_missing_count = 0
+    keyword_found_count = 0
+    keyword_missing_count_dict = {keyword: 0 for keyword in keywords}
+
+    for json_obj in json_list:
+        json_str = json.dumps(json_obj)
+        keywords_missing = False
+
+        for keyword in keywords:
+            if keyword not in json_str:
+                keyword_missing_count_dict[keyword] += 1
+                keywords_missing = True
+
+        if keywords_missing:
+            keyword_missing_count += 1
+        else:
+            keyword_found_count += 1
+
+    keyword_found_percentage = (keyword_found_count / total_count) * 100 if total_count > 0 else 0
+    missing_keyword_percentage = (keyword_missing_count / total_count) * 100 if total_count > 0 else 0
+
+    return  keyword_found_percentage, missing_keyword_percentage, keyword_missing_count_dict, keyword_found_count, total_count, keyword_missing_count
 
 def check_required_fields_geo(xml_list, fields):
     total_xmls = len(xml_list)
@@ -207,6 +231,7 @@ def fetch_summary_geo(summary_api, record_ids):
     for attempt in range(max_retries):
         try:
             r_summary = requests.get(summary_api, params=summary_params, timeout=30)
+            print(f"API Call: {r_summary.url}")
             r_summary.raise_for_status()
             root_summary = ET.fromstring(r_summary.text)
             return root_summary
@@ -223,6 +248,7 @@ def fetch_batch_geo(retstart, params, repository_api, summary_api):
     for attempt in range(max_retries):
         try:
             r_repo = requests.get(repository_api, params=params, timeout=60)
+            print(f"API Call: {r_repo.url}")
             r_repo.raise_for_status()
             root_meta = ET.fromstring(r_repo.text)
             ids = [record.text for record in root_meta.findall(".//Id")]
@@ -249,8 +275,14 @@ def fetch_geo_metadata(keywords, start_batch=0):
     if keywords:
         params["term"] = f"GSE[ETYP] AND {' AND '.join(keywords)}"
     metadata_list = []
-    filename = "geo_metadata_from_300.txt"
+    filename = "metadata/geo.txt"
+    print("Fetching GEO metadata...")
+    if not keywords:
+        print("No keywords provided. Fetching all metadata...")
+    else:
+        print(f"Fetching metadata with keywords: {keywords}")
     initial_request = requests.get(repository_api, params=params)
+    print(f"API Call: {initial_request.url}")
     initial_root = ET.fromstring(initial_request.text)
     total_count = int(initial_root.find(".//Count").text)
 
@@ -263,12 +295,13 @@ def fetch_geo_metadata(keywords, start_batch=0):
             for future in tqdm(as_completed(futures), total=len(futures), desc='Fetching GEO', unit='batch'):
                 try:
                     batch_metadata = future.result()
+                    print(len(batch_metadata))
                     if batch_metadata is None:
                         failed_batches.append(future)
                     else:
                         for root_summary in batch_metadata:
                             file.write(ET.tostring(root_summary, encoding='unicode') + '\n')
-                            metadata_list.append(root_summary)
+                            metadata_list.append(ET.tostring(root_summary, encoding='unicode'))
                 except Exception as e:
                     logging.error(f"Unexpected error: {e}")
 

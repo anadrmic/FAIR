@@ -146,3 +146,15 @@ The score is: 100.0.
 I3: Qualified references check
 0.00% of entities have a reference to other metadata.
 The score is: 0.0.
+
+I1: Format check
+The metadata are in standard format: json.
+The score is: 1.0.
+
+I1: Format check
+The metadata are in standard format: json.
+The score is: 1.0.
+
+I3: Qualified references check
+100.00% of entities have a reference to other metadata.
+The score is: 1.0.

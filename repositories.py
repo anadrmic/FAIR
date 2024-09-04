@@ -112,27 +112,29 @@ def fetch_geo_metadata(keywords):
     - url (str): URL of the repository.
     """
     print("Fetching GEO metadata...")
-    repository_api = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?"
-    url = "https://www.re3data.org/repository/r3d100010283"
-    repository_acronym = "gds"
-
+    metadata = []
     if not keywords:
         print("No keywords provided. Fetching all metadata...")
         metadata, request_status = utils.fetch_geo_metadata(None, start_batch=0)
     else:
         print(f"Fetching metadata with keywords: {keywords}")
-        params = {"db": repository_acronym, "term": " AND ".join(keywords)}
-        r_repo = requests.get(repository_api, params=params)
+        query_string = ' AND '.join(keywords)
+        r_repo = requests.get("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?",
+                        params={"db"   : "gds",
+                                "term" : query_string})
         print(f"API Call: {r_repo.url}")
         request_status = r_repo.status_code
-        root_meta = ET.fromstring(r_repo.text)
-        metadata = root_meta[0]
+        root = ET.fromstring(r_repo.text)
         filename = "metadata/geo.txt"
         with open(filename, 'w') as file:
-            file.write(ET.tostring(metadata, encoding='unicode') + '\n')
-
-    return metadata, request_status, url
-
+            for field in root.iter('Id'):
+                id = field.text
+                root_summary = utils.fetch_summary_geo("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi", [id])
+                inner_content = list(root_summary)
+                inner_content_string = ''.join(ET.tostring(child, encoding='unicode') for child in inner_content)
+                file.write(inner_content_string + '\n')
+                metadata.append(inner_content_string)
+    return metadata, request_status, "https://www.re3data.org/repository/r3d100010283"
 
 def fetch_gwas_metadata(keywords):
     """
@@ -150,6 +152,7 @@ def fetch_gwas_metadata(keywords):
     url = "https://www.re3data.org/repository/r3d100014209"
     base_url = "https://www.ebi.ac.uk/gwas/rest/api/studies"
     metadata_list = []
+    hits = []
 
     if not keywords:
         print("No keywords provided. Fetching all metadata...")
@@ -157,22 +160,15 @@ def fetch_gwas_metadata(keywords):
         metadata_list.extend(metadata)
     else:
         print(f"Fetching metadata with keywords: {keywords}")
-        params = {"page": 1, "size": 500, "q": " AND ".join(keywords)}
-        while True:
-            r_repo = requests.get(base_url, params=params)
-            print(f"API Call: {r_repo.url}")
-            request_status = r_repo.status_code
-            metadata = r_repo.json()
-
-            if not metadata["_embedded"]["studies"]:
-                break
-
-            for study in metadata["_embedded"]["studies"]:
-                study_accession = study["accessionId"]
-                hits.append(study_accession)
+        params = {"q": " AND ".join(keywords)}
+        r_repo = requests.get(base_url, params=params)
+        print(f"API Call: {r_repo.url}")
+        request_status = r_repo.status_code
+        metadata = r_repo.json()
+        for study in metadata["_embedded"]["studies"]:
+            study_accession = study["accessionId"]
+            hits.append(study_accession)
             
-            params["page"] += 1
-
         filename = "metadata/gwas.txt"
         with open(filename, 'w') as file:
             for study_accession in hits:
