@@ -456,3 +456,115 @@ F3: Evaluating the findability principle F3 for a given dataset by checking for 
 100.00% of entities have an ID field (20 out of 20).
 0.00% of entities are missing the ID field (0 out of 20).
 The score is: 1.0.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+0.00% of entities have all required fields (0 out of 0).
+0.00% of entities are missing some required fields (0 out of 0).
+
+Breakdown of missing fields:
+0 entities are missing 'parkinson' field.
+The score is: 0.0.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+0.00% of entities have all required fields (0 out of 5).
+100.00% of entities are missing some required fields (5 out of 5).
+
+Breakdown of missing fields:
+5 entities are missing 'parkinsons' field.
+The score is: 0.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (5 out of 5).
+0.00% of entities are missing the ID field (0 out of 5).
+The score is: 1.0.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+0.00% of entities have all required fields (0 out of 11).
+100.00% of entities are missing some required fields (11 out of 11).
+
+Breakdown of missing fields:
+11 entities are missing 'parkinsons' field.
+The score is: 0.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (11 out of 11).
+0.00% of entities are missing the ID field (0 out of 11).
+The score is: 1.0.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+0.00% of entities have all required fields (0 out of 11).
+100.00% of entities are missing some required fields (11 out of 11).
+
+Breakdown of missing fields:
+11 entities are missing 'parkinsons' field.
+The score is: 0.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (11 out of 11).
+0.00% of entities are missing the ID field (0 out of 11).
+The score is: 1.0.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+0.00% of entities have all required fields (0 out of 57).
+100.00% of entities are missing some required fields (57 out of 57).
+
+Breakdown of missing fields:
+57 entities are missing 'parkinsons' field.
+The score is: 0.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (57 out of 57).
+0.00% of entities are missing the ID field (0 out of 57).
+The score is: 1.0.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+100.00% of entities have all required fields (100 out of 100).
+0.00% of entities are missing some required fields (0 out of 100).
+
+Breakdown of missing fields:
+0 entities are missing 'melanoma' field.
+The score is: 1.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (100 out of 100).
+0.00% of entities are missing the ID field (0 out of 100).
+The score is: 1.0.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+0.00% of entities have all required fields (0 out of 20).
+100.00% of entities are missing some required fields (20 out of 20).
+
+Breakdown of missing fields:
+20 entities are missing 'melanoma' field.
+The score is: 0.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+0.00% of entities have an ID field (0 out of 20).
+100.00% of entities are missing the ID field (20 out of 20).
+The score is: 0.0.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+0.00% of entities have all required fields (0 out of 5000).
+100.00% of entities are missing some required fields (5000 out of 5000).
+
+Breakdown of missing fields:
+5000 entities are missing 'melanoma' field.
+The score is: 0.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+0.00% of entities have an ID field (0 out of 5000).
+100.00% of entities are missing the ID field (5000 out of 5000).
+The score is: 0.0.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+83.33% of entities have all required fields (10 out of 12).
+16.67% of entities are missing some required fields (2 out of 12).
+
+Breakdown of missing fields:
+2 entities are missing 'melanoma' field.
+The score is: 0.8333333333333335.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (12 out of 12).
+0.00% of entities are missing the ID field (0 out of 12).
+The score is: 1.0.

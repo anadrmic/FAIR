@@ -71,7 +71,7 @@ def fetch_arrayexpress_metadata(keywords):
         # Making the API request
         r_repo = requests.get(repository_api, params={
             "query": combined_query, 
-            "pageSize": 100,
+            "pageSize": 500,
         })
 
         print(f"API Call: {r_repo.url}")
@@ -82,8 +82,8 @@ def fetch_arrayexpress_metadata(keywords):
 
         for hit in hits:
             accession = hit.get("accession", "")
-            if len(accession) == 11:
-                experiment_ids.append(accession)
+            #if len(accession) == 11:
+            experiment_ids.append(accession)
         print(f"Total Study IDs retrieved: {len(experiment_ids)}")
 
         filename = "metadata/arrayexpress.txt"
@@ -121,7 +121,9 @@ def fetch_geo_metadata(keywords):
         query_string = ' AND '.join(keywords)
         r_repo = requests.get("https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?",
                         params={"db"   : "gds",
-                                "term" : query_string})
+                                "term" : query_string,
+                                "retmax" : 5000,
+                                "usehistory" : "y"})
         print(f"API Call: {r_repo.url}")
         request_status = r_repo.status_code
         root = ET.fromstring(r_repo.text)
@@ -150,7 +152,7 @@ def fetch_gwas_metadata(keywords):
     """
     print("Fetching GWAS Catalog metadata...")
     url = "https://www.re3data.org/repository/r3d100014209"
-    base_url = "https://www.ebi.ac.uk/gwas/rest/api/studies"
+    base_url = "https://www.ebi.ac.uk/gwas/rest/api/studies/search/findByDiseaseTrait?"
     metadata_list = []
     hits = []
 
@@ -158,9 +160,9 @@ def fetch_gwas_metadata(keywords):
         print("No keywords provided. Fetching all metadata...")
         metadata, request_status = utils.fetch_gwas_metadata(None, start_batch=0)
         metadata_list.extend(metadata)
-    else:
+    else: 
         print(f"Fetching metadata with keywords: {keywords}")
-        params = {"q": " AND ".join(keywords)}
+        params = {"diseaseTrait": keywords[-1]}
         r_repo = requests.get(base_url, params=params)
         print(f"API Call: {r_repo.url}")
         request_status = r_repo.status_code
@@ -198,15 +200,15 @@ def fetch_biosamples_metadata(keywords):
     print("Fetching ENCODE biosamples metadata...")
     url = "https://www.re3data.org/repository/r3d100013051"
     headers = {'accept': 'application/json'}
-    biosample_base_url = 'https://www.encodeproject.org/search/?type=Biosample&limit=all&format=json'
-
+    biosample_base_url = 'https://www.encodeproject.org/search/?type=Biosample' #https://www.encodeproject.org/search/?searchTerm=bone+chip&frame=object&format=json
+                                                                 #https://www.encodeproject.org/search/?type=Biosample&searchTerm=melanoma&limit=all&format=json
     if not keywords:
         print("No keywords provided. Fetching all biosample metadata...")
         metadata, request_status = utils.fetch_encode_biosamples_metadata(None, start_batch=0)
         biosample_data_list.extend(metadata)
     else:
         print(f"Fetching biosample metadata with keywords: {keywords}")
-        biosample_base_url += "&searchTerm=" + "+".join(keywords)
+        biosample_base_url += "&searchTerm=" + "+".join(keywords) + "&limit=all&format=json"
         biosample_response = requests.get(biosample_base_url, headers=headers)
         print(f"API Call: {biosample_response.url}")
         request_status = biosample_response.status_code
@@ -248,7 +250,7 @@ def fetch_experiments_metadata(keywords):
     print("Fetching ENCODE experiments metadata...")
     url = "https://www.re3data.org/repository/r3d100013051"
     headers = {'accept': 'application/json'}
-    experiment_base_url = 'https://www.encodeproject.org/search/?type=Experiment&limit=all&format=json'
+    experiment_base_url = 'https://www.encodeproject.org/search/?type=Experiment'
 
     if not keywords:
         print("No keywords provided. Fetching all experiment metadata...")
@@ -256,7 +258,7 @@ def fetch_experiments_metadata(keywords):
         experiment_data_list.extend(metadata)
     else:
         print(f"Fetching experiment metadata with keywords: {keywords}")
-        experiment_base_url += "&searchTerm=" + "+".join(keywords)
+        experiment_base_url += "&searchTerm=" + "+".join(keywords) + "&limit=all&format=json"
         experiment_response = requests.get(experiment_base_url, headers=headers)
         print(f"API Call: {experiment_response.url}")
         request_status = experiment_response.status_code
@@ -282,7 +284,6 @@ def fetch_experiments_metadata(keywords):
 
     return experiment_data_list, request_status, url
 
-
 def fetch_gdc_metadata(keywords):
     """
     Fetch metadata from the Genomic Data Commons (GDC) repository.
@@ -302,77 +303,86 @@ def fetch_gdc_metadata(keywords):
 
     if not keywords:
         print("No keywords provided. Fetching all metadata...")
-        metadata, request_status = utils.fetch_gdc_metadata(None, start_batch=0)
-        metadata_list.extend(metadata)
-    else:
-        print(f"Fetching metadata with keywords: {keywords}")
         params = {
             'from': '0',
             'size': '1000',
             'sort': 'file_size:asc',
             'pretty': 'true'
         }
-        params_metadata = {'pretty': 'true'}
-        all_hits = []
-        processed_accessions = set()
-        filename = "metadata/gdc.txt"
+    else:
+        print(f"Fetching metadata with keywords: {keywords}")
+        params = {
+            'from': '0',
+            'size': '1000',
+            'sort': 'file_size:asc',
+            'pretty': 'true',
+            'filters': json.dumps({
+                'op': 'or',
+                'content': [
+                    {'op': 'in', 'content': {'field': 'file_name', 'value': keywords}}
+                ]
+            })
+        }
 
-        if os.path.exists(filename):
-            with open(filename, 'r') as file:
-                buffer = ""
-                for line in file:
-                    buffer += line
-                    try:
-                        metadata = json.loads(buffer)
-                        accession = metadata['data']['file_id']
-                        processed_accessions.add(accession)
+    params_metadata = {'pretty': 'true'}
+    all_hits = []
+    processed_accessions = set()
+    filename = "metadata/gdc.txt"
+
+    # Load already processed accessions from file
+    if os.path.exists(filename):
+        with open(filename, 'r') as file:
+            buffer = ""
+            for line in file:
+                buffer += line
+                try:
+                    metadata = json.loads(buffer)
+                    accession = metadata['data']['file_id']
+                    processed_accessions.add(accession)
+                    metadata_list.append(metadata)
+                    buffer = ""
+                except (json.JSONDecodeError, KeyError):
+                    continue
+
+    start_time = time.time()
+    total_files_fetched = len(processed_accessions)
+
+    while True:
+        response = requests.get(base_url, params=params)
+        print(f"API Call: {response.url}")
+        request_status = response.status_code
+
+        if request_status == 200:
+            metadata = response.json()
+            hits = metadata["data"]["hits"]
+            if not hits:
+                break
+
+            for hit in hits:
+                accession = hit.get("id")
+                if accession and accession not in processed_accessions:
+                    all_hits.append(accession)
+                    print(f"Downloading metadata for accession: {accession}")
+                    accession_url = f'https://api.gdc.cancer.gov/files/{accession}'
+                    response_metadata = requests.get(accession_url, params=params_metadata)
+                    print(f"API Call: {response_metadata.url}")
+                    if response_metadata.status_code == 200:
+                        metadata = response_metadata.json()
                         metadata_list.append(metadata)
-                        buffer = ""
-                    except (json.JSONDecodeError, KeyError):
-                        continue
+                        with open(filename, 'a') as file:
+                            file.write(json.dumps(metadata, indent=4) + '\n')
+                    else:
+                        print(f"Failed to download metadata for accession: {accession}")
+                    processed_accessions.add(accession)
 
-        start_time = time.time()
-        total_files_fetched = len(processed_accessions)
-        with open(filename, 'a') as file, tqdm(desc="Fetching metadata", unit="file", initial=total_files_fetched) as pbar:
-            while True:
-                response = requests.get(base_url, params=params)
-                print(f"API Call: {response.url}")
-                request_status = response.status_code
-
-                if request_status == 200:
-                    metadata = response.json()
-                    hits = metadata["data"]["hits"]
-                    if not hits:
-                        break
-
-                    for hit in hits:
-                        accession = hit.get("id")
-                        if accession and accession not in processed_accessions:
-                            all_hits.append(accession)
-                            print(f"Downloading metadata for accession: {accession}")
-                            accession_url = f'https://api.gdc.cancer.gov/files/{accession}'
-                            response_metadata = requests.get(accession_url, params=params_metadata)
-                            print(f"API Call: {response_metadata.url}")
-                            if response_metadata.status_code == 200:
-                                metadata = response_metadata.json()
-                                metadata_list.append(metadata)
-                                file.write(json.dumps(metadata, indent=4) + '\n')
-                            else:
-                                print(f"Failed to download metadata for accession: {accession}")
-                            processed_accessions.add(accession)
-                            pbar.update(1)
-                            elapsed_time = time.time() - start_time
-                            pbar.set_postfix(elapsed=f"{elapsed_time:.2f}s")
-
-                    if len(hits) < 1000:
-                        break
-                    params['from'] = str(int(params['from']) + 1000)
-                else:
-                    print("Failed to retrieve data.")
-                    break
+            if len(hits) < 1000:
+                break
+            params['from'] = str(int(params['from']) + 1000)
+        else:
+            print("Failed to retrieve data.")
+            break
 
     return metadata_list, request_status, url
-
 
 def fetch_icgc_metadata(keywords):
     """
