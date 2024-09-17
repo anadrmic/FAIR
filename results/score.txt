@@ -1,11 +1,15 @@
-Metric         Score
-F2 score    0.833333
-F3 score    1
-A1 score    1
-A1.1 score  1
-A1.2 score  1
-I1 score    1
-I3 score    1
-R1 score    0
-R1.1 score  1
-R1.2 score  1
+Metric        Score
+F1 score          1
+F2 score          1
+F3 score          1
+F4 score          0
+A1 score          1
+A1.1 score        1
+A1.2 score        1
+A2 score          0
+I1 score          1
+I2 score          0
+I3 score          0
+R1 score          1
+R1.1 score        1
+R1.2 score        0

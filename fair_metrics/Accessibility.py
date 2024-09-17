@@ -42,6 +42,7 @@ def write_accessibility_log(principle, description, score, explanation):
         file.write(explanation + "\n")
         file.write(f"The score is: {score}.\n")
 
+
 def A1(request_status):
     """
     Evaluate the accessibility principle A1 by checking the request status.
@@ -61,7 +62,6 @@ def A1(request_status):
     
     utils.print_evaluation("A1", "Accessibility: Request status", score, explanation)
     return score
-
 
 def A1_1(request_status):
     """
@@ -84,7 +84,6 @@ def A1_1(request_status):
     
     return score
 
-
 def A1_2(request_status):
     """
     Evaluate the accessibility principle A1.2 by performing another check after A1.
@@ -106,7 +105,6 @@ def A1_2(request_status):
     
     return score
 
-
 def A2(repository_choice):
     """
     Evaluate the accessibility principle A2 by checking if a repository name exists in re3data.
@@ -122,7 +120,7 @@ def A2(repository_choice):
         "2": "Gene Expression Omnibus",
         "3": "GWAS Catalog",
         "4": "ENCODE",
-        "5": "GENOMIC DATA COMMONS",
+        "5": "GDC",
         "6": "ICGC"
     }
     

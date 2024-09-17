@@ -2,6 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import utils
+from tenacity import retry, stop_after_attempt, wait_fixed
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 def find_doi_in_webpage(url):
     """
@@ -72,13 +74,13 @@ def extract_dataset_names(metadata, repository_choice):
     elif repository_choice[0] == "4":
         return [hit.get("description", "") for hit in metadata]
     elif repository_choice == "5":
-        return ["" for _ in metadata]
+        return []
     elif repository_choice == "6":
         return [hit.get("name", "") for hit in metadata]
     else:
         return []
 
-
+@retry(stop=stop_after_attempt(5), wait=wait_fixed(2), reraise=True)
 def search_dataset_on_google(dataset_name):
     """
     Search for a dataset name on Google Dataset Search.
@@ -98,7 +100,6 @@ def search_dataset_on_google(dataset_name):
         print("Error fetching data:", e)
         return False
 
-
 def log_findability_evaluation(principle, description, score, explanation):
     """
     Log the findability evaluation to a file.
@@ -113,6 +114,66 @@ def log_findability_evaluation(principle, description, score, explanation):
         file.write(f"\n{principle}: {description}\n")
         file.write(f"{explanation}\n")
         file.write(f"The score is: {score}.\n")
+
+def get_findability_fields_id(repository_choice):
+    """
+    Get the id fields based on the repository choice.
+
+    Args:
+        repository_choice (str): Identifier for the repository type.
+
+    Returns:
+        list: List of id fields.
+    """
+    findability_fields_dict = {
+        "1": ["accno"],
+        "2": ["Accession"],
+        "3": ["accessionId"],
+        "41": ["accession"],
+        "42": ["accession"],
+        "5": ["file_id"],
+        "6": ["icgcId"]
+    }
+    return findability_fields_dict.get(repository_choice, [])
+
+def get_findability_fields(repository_choice):
+    """
+    Get the findability fields based on the repository choice.
+
+    Args:
+        repository_choice (str): Identifier for the repository type.
+
+    Returns:
+        list: List of findability fields.
+    """
+    findability_fields_dict = {
+        "1": ["value"], 
+        "2": ["title", "taxon", "gdsType"],
+        "3": ["initialSampleSize", "snpCount"],
+        "41": ["aliases", "lab", "organism"],
+        "42": ["doi", "lab", "organism"],
+        "5": ["data_category", "data_type", "data_release"],
+        "6": ["primarySite", "icgcId", "ssmTestedDonorCount"]
+    }
+    return findability_fields_dict.get(repository_choice, [])
+
+def check_required_fields_ae(json_elements):
+    total_count = len(json_elements)
+    missing_fields_count = {field: 0 for field in ["value"]}
+    if total_count == 0:
+        return "No JSON elements provided.", 0, 0, {}
+    all_required_count = 0
+    missing_all_count = 0
+    for element in json_elements:
+        if element["attributes"][0]["value"]:
+            all_required_count += 1
+        else:
+            missing_all_count += 1
+            missing_fields_count["value"] += 1
+    all_required_percentage = (all_required_count / total_count) * 100 if total_count > 0 else 0
+    missing_all_percentage = (missing_all_count / total_count) * 100 if total_count > 0 else 0
+    return all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count
+
 
 def F1(url):
     """
@@ -134,8 +195,7 @@ def F1(url):
 
     return score
 
-
-def F2(keywords, metadata, repository_choice):
+def F2(metadata, repository_choice):
     """
     Evaluate the findability principle F2 for a given dataset by searching for keywords in metadata.
 
@@ -147,48 +207,26 @@ def F2(keywords, metadata, repository_choice):
     Returns:
         float: Score indicating the percentage of keywords found in the metadata.
     """
-    if not keywords:
-        findability_fields = get_findability_fields(repository_choice)
-        all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count = utils.analyze_json_keywords(metadata, findability_fields)
+    findability_fields = get_findability_fields(repository_choice)
+    if repository_choice == "1":
+        all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count = check_required_fields_ae(metadata)
+    elif repository_choice == "2":
+        all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count = utils.check_required_fields_geo(metadata, findability_fields)
+    elif repository_choice == "5":
+        all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count = utils.check_required_fields_json_gdc(metadata, findability_fields)
     else:
-        if repository_choice == "2":
-            all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count = utils.check_required_fields_geo(metadata, keywords)
-        else:
-            all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count = utils.analyze_json_keywords(metadata, keywords)
+        all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count = utils.check_required_fields_json(metadata, findability_fields)
     score = all_required_percentage/100
     explanation = (f"{all_required_percentage:.2f}% of entities have all required fields ({all_required_count} out of {total_count}).\n"
                    f"{missing_all_percentage:.2f}% of entities are missing some required fields ({missing_all_count} out of {total_count}).\n"
                    "\nBreakdown of missing fields:\n" +
                    "\n".join(f"{count} entities are missing '{field}' field." for field, count in missing_fields_count.items()))
     
-    log_findability_evaluation("F2", "Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.",
+    log_findability_evaluation("F2", "Evaluating the findability principle F2 for a given dataset by searching for predefined findability fields in metadata.",
                                score, explanation) 
     utils.print_evaluation("F2", "Findability: Keyword search in metadata", score, explanation) 
 
     return score
-
-
-def get_findability_fields(repository_choice):
-    """
-    Get the findability fields based on the repository choice.
-
-    Args:
-        repository_choice (str): Identifier for the repository type.
-
-    Returns:
-        list: List of findability fields.
-    """
-    findability_fields_dict = {
-        "1": ["accno"],
-        "2": ["title", "taxon", "entryType", "gdsType", "PDAT"],
-        "3": ["initialSampleSize"],
-        "41": ["aliases", "lab", "date_released"],
-        "42": ["doi", "lab", "date_released"],
-        "5": ["data"],
-        "6": ["id", "icgcId", "name"]
-    }
-    return findability_fields_dict.get(repository_choice, [])
-
 
 def F3(metadata, repository_choice):
     """
@@ -201,9 +239,15 @@ def F3(metadata, repository_choice):
     Returns:
         float: Score indicating the percentage of entries containing the identifier.
     """
-    findability_fields = get_findability_fields(repository_choice)
-    all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count = utils.check_required_fields_json(metadata, findability_fields)
 
+    findability_fields = get_findability_fields_id(repository_choice)
+    if repository_choice == "2":
+        all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count = utils.check_required_fields_geo(metadata, findability_fields)
+    elif repository_choice == "5":
+        all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count = utils.check_required_fields_json_gdc(metadata, findability_fields)
+    else:
+        all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count = utils.check_required_fields_json(metadata, findability_fields)
+    score = all_required_percentage/100
     explanation = (f"{all_required_percentage:.2f}% of entities have an ID field ({all_required_count} out of {total_count}).\n"
                    f"{missing_all_percentage:.2f}% of entities are missing the ID field ({missing_all_count} out of {total_count}).")
     score = all_required_percentage/100
@@ -225,7 +269,7 @@ def F4(metadata, repository_choice):
     Returns:
         float: Score indicating the percentage of dataset names found in Google Dataset Search.
     """
-    score = search_google_datasets(metadata, repository_choice)
+    score = round(search_google_datasets(metadata, repository_choice), 2)
     explanation = f"Datasets found in Google Dataset Search: {score * 100}%"
 
     utils.print_evaluation("F4", "Findability: Presence in Google Datasets", score, explanation)

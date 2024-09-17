@@ -8,7 +8,63 @@ from tqdm import tqdm
 from time import sleep
 import logging
 import random
+from datetime import datetime
+from tqdm import tqdm
 import json
+
+
+def check_required_fields_json(json_elements, required_fields):
+    total_count = len(json_elements)
+    if total_count == 0:
+        return "No JSON elements provided.", 0, 0, {}
+
+    all_required_count = 0
+    missing_all_count = 0
+    missing_fields_count = {field: 0 for field in required_fields}
+
+    for element in json_elements:
+        has_all_required = True
+        for field in required_fields:
+            value = element.get(field)
+            if value in [None, '', [], {}]:
+                missing_fields_count[field] += 1
+                has_all_required = False
+                print(f"Field: {field}, Value: {value} (Missing or empty)")
+        if has_all_required:
+            all_required_count += 1
+        else:
+            missing_all_count += 1
+    all_required_percentage = (all_required_count / total_count) * 100 if total_count > 0 else 0
+    missing_all_percentage = (missing_all_count / total_count) * 100 if total_count > 0 else 0
+
+    return all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count
+
+def check_required_fields_json_gdc(json_elements, required_fields):
+    total_count = len(json_elements)
+    if total_count == 0:
+        return "No JSON elements provided.", 0, 0, {}
+
+    all_required_count = 0
+    missing_all_count = 0
+    missing_fields_count = {field: 0 for field in required_fields}
+
+    for element in json_elements:
+        element = element["data"]
+        has_all_required = True
+        for field in required_fields:
+            value = element.get(field)
+            if value in [None, '', [], {}]:
+                missing_fields_count[field] += 1
+                has_all_required = False
+                print(f"Field: {field}, Value: {value} (Missing or empty)")
+        if has_all_required:
+            all_required_count += 1
+        else:
+            missing_all_count += 1
+    all_required_percentage = (all_required_count / total_count) * 100 if total_count > 0 else 0
+    missing_all_percentage = (missing_all_count / total_count) * 100 if total_count > 0 else 0
+
+    return all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count
 
 def initialize_output_file(filename):
     """
@@ -36,31 +92,6 @@ def print_evaluation(principle, description, score, explanation):
     print(f"Score: {score}")
     print(f"Explanation: {explanation}")
     print("______________________________________________________________________________________________________________")
-
-def analyze_json_keywords(json_list, keywords):
-    total_count = len(json_list)
-    keyword_missing_count = 0
-    keyword_found_count = 0
-    keyword_missing_count_dict = {keyword: 0 for keyword in keywords}
-
-    for json_obj in json_list:
-        json_str = json.dumps(json_obj)
-        keywords_missing = False
-
-        for keyword in keywords:
-            if keyword not in json_str:
-                keyword_missing_count_dict[keyword] += 1
-                keywords_missing = True
-
-        if keywords_missing:
-            keyword_missing_count += 1
-        else:
-            keyword_found_count += 1
-
-    keyword_found_percentage = (keyword_found_count / total_count) * 100 if total_count > 0 else 0
-    missing_keyword_percentage = (keyword_missing_count / total_count) * 100 if total_count > 0 else 0
-
-    return  keyword_found_percentage, missing_keyword_percentage, keyword_missing_count_dict, keyword_found_count, total_count, keyword_missing_count
 
 def check_required_fields_geo(xml_list, fields):
     total_xmls = len(xml_list)
@@ -94,112 +125,6 @@ def check_required_fields_geo(xml_list, fields):
     
     return all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_xmls, missing_all_count
 
-def check_required_fields_json_0(json_elements, required_fields):
-    total_count = len(json_elements)
-    if total_count == 0:
-        return "No JSON elements provided.", 0, 0, {}
-    
-    all_required_count = 0
-    missing_all_count = 0
-    missing_fields_count = {field: 0 for field in required_fields}
-    
-    for element in json_elements:
-        has_all_required = True
-        
-        for field in required_fields:
-            value = element.get(field)
-            if value in [None, '', [], {}]:
-                missing_fields_count[field] += 1
-                has_all_required = False
-
-        if has_all_required:
-            all_required_count += 1
-        else:
-            missing_all_count += 1
-    
-    all_required_percentage = (all_required_count / total_count) * 100
-    missing_all_percentage = (missing_all_count / total_count) * 100
-
-    return all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count
-
-def search_key_in_nested(element, key):
-    """
-    Recursively search for a key in nested JSON and return its value if found.
-    """
-    if isinstance(element, dict):
-        if key in element:
-            return element[key]
-        for sub_key in element:
-            found_value = search_key_in_nested(element[sub_key], key)
-            if found_value is not None:
-                return found_value
-    elif isinstance(element, list):
-        for item in element:
-            found_value = search_key_in_nested(item, key)
-            if found_value is not None:
-                return found_value
-    return None
-    
-def check_required_fields_json(json_elements, required_fields):
-
-    total_count = len(json_elements)
-    if total_count == 0:
-        return "No JSON elements provided.", 0, 0, {}
-
-    all_required_count = 0
-    missing_all_count = 0
-    missing_fields_count = {field: 0 for field in required_fields}
-
-    for element in json_elements:
-        has_all_required = True
-        for field in required_fields:
-            value = search_key_in_nested(element, field)
-            print(value)
-            if value in [None, '', [], {}]:
-                missing_fields_count[field] += 1
-                has_all_required = False
-
-        if has_all_required:
-            all_required_count += 1
-        else:
-            missing_all_count += 1
-
-    all_required_percentage = (all_required_count / total_count) * 100
-    missing_all_percentage = (missing_all_count / total_count) * 100
-
-    return all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count
-
-def check_required_keywords_in_json(json_elements, required_keywords):
-    """
-    Check for the presence of specified keywords in JSON elements by converting each element to a string.
-    """
-    total_count = len(json_elements)
-    if total_count == 0:
-        return "No JSON elements provided.", 0, 0, {}
-
-    keyword_found_count = 0
-    missing_keyword_count = 0
-    keyword_missing_count = {keyword: 0 for keyword in required_keywords}
-
-    for element in json_elements:
-        element_string = json.dumps(element).lower()
-
-        has_keyword = True
-        for keyword in required_keywords:
-            normalized_keyword = keyword.lower()
-            if normalized_keyword not in element_string:
-                has_keyword = False
-                keyword_missing_count[keyword] += 1                
-        if has_keyword:
-            keyword_found_count += 1
-        else:
-            missing_keyword_count += 1
-
-    keyword_found_percentage = (keyword_found_count / total_count) * 100
-    missing_keyword_percentage = (missing_keyword_count / total_count) * 100
-
-    return keyword_found_percentage, missing_keyword_percentage, keyword_missing_count, keyword_found_count, total_count, missing_keyword_count
-
 def find_list_in_list(long_list, short_list):
 
     """
@@ -221,8 +146,88 @@ def find_list_in_list(long_list, short_list):
                 index.append(i)
     return found, index
 
-def fetch_ae_metadata():
-    pass
+
+def fetch_summary_ae(summary_api, record_ids):
+    """Fetches summaries for a list of records with retries."""
+    summary_api += record_ids
+    max_retries = 5
+    for attempt in range(max_retries):
+        try:
+            r_summary = requests.get(summary_api, timeout=30)
+            print(f"API Call: {r_summary.url}")
+            r_summary.raise_for_status()
+            root_summary = r_summary.json()
+            return root_summary
+        except (requests.exceptions.RequestException, ET.ParseError) as e:
+            if attempt == max_retries - 1:
+                logging.error(f"Error fetching summary for IDs {record_ids}: {e}")
+            sleep(2 ** attempt + random.uniform(0, 1)) 
+    return None
+
+def fetch_batch_ae(retstart, params, repository_api, summary_api):
+    """Fetches a batch of records from the repository with retries."""
+    max_retries = 5
+    for attempt in range(max_retries):
+        try:
+            batch_metadata = []
+            for i in range(0, len(retstart)):
+                id_group = retstart[i]
+                root_summary = fetch_summary_ae(summary_api, id_group)
+                if root_summary is not None:
+                    batch_metadata.append(root_summary)
+                sleep(0.1)  
+            return batch_metadata
+        except (requests.exceptions.RequestException, ET.ParseError) as e:
+            if attempt == max_retries - 1:
+                logging.error(f"Error fetching batch starting at {retstart}: {e}")
+            sleep(2 ** attempt + random.uniform(0, 1)) 
+    return None
+
+def fetch_ae_metadata(start_batch=0):
+    """Main function to fetch AE metadata."""
+    repository_api = "https://www.ebi.ac.uk/biostudies/api/v1/search"
+    summary_api = "https://www.ebi.ac.uk/biostudies/api/v1/studies/"
+    params = {"pageSize": 500}
+    metadata_list = []
+    r_repo = requests.get(repository_api, params=params)
+    print(f"API Call: {r_repo.url}")
+    request_status = r_repo.status_code
+    response_data = r_repo.json()
+    hits = response_data.get("hits", [])
+    experiment_ids = []
+    for hit in hits:
+        accession = hit.get("accession", "")
+        if len(accession) == 11:
+            experiment_ids.append(accession)
+            print(accession)
+    total_count = len(experiment_ids) 
+    print(f"Total Study IDs retrieved: {total_count}")
+    filename = "metadata/arrayexpress.txt"
+    failed_batches = []
+    with open(filename, 'a') as file: 
+        with ThreadPoolExecutor(max_workers=5) as executor:
+            futures = []
+            for i in range(start_batch * 5, 5, total_count):
+                retstart = experiment_ids[i:i+5]
+                futures.append(executor.submit(fetch_batch_ae, retstart, params.copy(), repository_api, summary_api))
+            for future in tqdm(as_completed(futures), total=len(futures), desc='Fetching AE', unit='batch'):
+                try:
+                    batch_metadata = future.result()
+                    if batch_metadata is None:
+                        failed_batches.append(future)
+                    else:
+                        print(batch_metadata)
+                        for metadata in batch_metadata:
+                            metadata_list.append(metadata)
+                            file.write(json.dumps(metadata, indent=4) + '\n')
+                except Exception as e:
+                    logging.error(f"Unexpected error: {e}")
+    if failed_batches:
+        with open("metadata/failed_batches_ae.txt", "w") as fail_file:
+            for future in failed_batches:
+                params_with_retstart = future.args[1]
+                fail_file.write(f"Failed batch with retstart={params_with_retstart['retstart']} and params={params_with_retstart}\n")
+    return metadata_list, request_status
 
 def fetch_summary_geo(summary_api, record_ids):
     """Fetches summaries for a list of records with retries."""

@@ -568,3 +568,388 @@ F3: Evaluating the findability principle F3 for a given dataset by checking for 
 100.00% of entities have an ID field (12 out of 12).
 0.00% of entities are missing the ID field (0 out of 12).
 The score is: 1.0.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+0.00% of entities have all required fields (0 out of 0).
+0.00% of entities are missing some required fields (0 out of 0).
+
+Breakdown of missing fields:
+0 entities are missing 'kidney' field.
+The score is: 0.0.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+89.00% of entities have all required fields (89 out of 100).
+11.00% of entities are missing some required fields (11 out of 100).
+
+Breakdown of missing fields:
+11 entities are missing 'kidney' field.
+The score is: 0.89.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (100 out of 100).
+0.00% of entities are missing the ID field (0 out of 100).
+The score is: 1.0.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+0.00% of entities have all required fields (0 out of 19).
+100.00% of entities are missing some required fields (19 out of 19).
+
+Breakdown of missing fields:
+3 entities are missing 'suicide' field.
+19 entities are missing 'homo sapiens' field.
+The score is: 0.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (19 out of 19).
+0.00% of entities are missing the ID field (0 out of 19).
+The score is: 1.0.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+50.00% of entities have all required fields (2 out of 4).
+50.00% of entities are missing some required fields (2 out of 4).
+
+Breakdown of missing fields:
+2 entities are missing 'suicide' field.
+The score is: 0.5.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (4 out of 4).
+0.00% of entities are missing the ID field (0 out of 4).
+The score is: 1.0.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+0.00% of entities have all required fields (0 out of 19).
+100.00% of entities are missing some required fields (19 out of 19).
+
+Breakdown of missing fields:
+3 entities are missing 'melanoma' field.
+19 entities are missing 'homo sapiens' field.
+The score is: 0.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+0.00% of entities have an ID field (0 out of 19).
+100.00% of entities are missing the ID field (19 out of 19).
+The score is: 0.0.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+0.00% of entities have all required fields (0 out of 0).
+0.00% of entities are missing some required fields (0 out of 0).
+
+Breakdown of missing fields:
+0 entities are missing 'brain' field.
+The score is: 0.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.17616/R31NJNGH', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+83.33% of entities have all required fields (10 out of 12).
+16.67% of entities are missing some required fields (2 out of 12).
+
+Breakdown of missing fields:
+2 entities are missing 'melanoma' field.
+The score is: 0.8333333333333335.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (12 out of 12).
+0.00% of entities are missing the ID field (0 out of 12).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.17616/R31NJNGH', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined keywords in metadata.
+83.33% of entities have all required fields (10 out of 12).
+16.67% of entities are missing some required fields (2 out of 12).
+
+Breakdown of missing fields:
+2 entities are missing 'melanoma' field.
+The score is: 0.8333333333333335.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (12 out of 12).
+0.00% of entities are missing the ID field (0 out of 12).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined findability fields in metadata.
+100.00% of entities have all required fields (27 out of 27).
+0.00% of entities are missing some required fields (0 out of 27).
+
+Breakdown of missing fields:
+0 entities are missing 'accno' field.
+The score is: 1.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (27 out of 27).
+0.00% of entities are missing the ID field (0 out of 27).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined findability fields in metadata.
+100.00% of entities have all required fields (27 out of 27).
+0.00% of entities are missing some required fields (0 out of 27).
+
+Breakdown of missing fields:
+0 entities are missing 'accno' field.
+The score is: 1.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (27 out of 27).
+0.00% of entities are missing the ID field (0 out of 27).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined findability fields in metadata.
+100.00% of entities have all required fields (27 out of 27).
+0.00% of entities are missing some required fields (0 out of 27).
+
+Breakdown of missing fields:
+0 entities are missing 'accno' field.
+The score is: 1.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (27 out of 27).
+0.00% of entities are missing the ID field (0 out of 27).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined findability fields in metadata.
+100.00% of entities have all required fields (27 out of 27).
+0.00% of entities are missing some required fields (0 out of 27).
+
+Breakdown of missing fields:
+0 entities are missing 'accno' field.
+The score is: 1.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+0.00% of entities have an ID field (0 out of 27).
+100.00% of entities are missing the ID field (27 out of 27).
+The score is: 0.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined findability fields in metadata.
+0.00% of entities have all required fields (0 out of 1).
+100.00% of entities are missing some required fields (1 out of 1).
+
+Breakdown of missing fields:
+1 entities are missing 'value' field.
+The score is: 0.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (1 out of 1).
+0.00% of entities are missing the ID field (0 out of 1).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined findability fields in metadata.
+100.00% of entities have all required fields (1 out of 1).
+0.00% of entities are missing some required fields (0 out of 1).
+
+Breakdown of missing fields:
+0 entities are missing 'value' field.
+The score is: 1.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (1 out of 1).
+0.00% of entities are missing the ID field (0 out of 1).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined findability fields in metadata.
+100.00% of entities have all required fields (1 out of 1).
+0.00% of entities are missing some required fields (0 out of 1).
+
+Breakdown of missing fields:
+0 entities are missing 'value' field.
+The score is: 1.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (1 out of 1).
+0.00% of entities are missing the ID field (0 out of 1).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.6k0kwd', '10.17616/R3302G', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined findability fields in metadata.
+100.00% of entities have all required fields (1 out of 1).
+0.00% of entities are missing some required fields (0 out of 1).
+
+Breakdown of missing fields:
+0 entities are missing 'value' field.
+The score is: 1.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (1 out of 1).
+0.00% of entities are missing the ID field (0 out of 1).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.17616/R31NJNGH', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined findability fields in metadata.
+91.67% of entities have all required fields (11 out of 12).
+8.33% of entities are missing some required fields (1 out of 12).
+
+Breakdown of missing fields:
+0 entities are missing 'initialSampleSize' field.
+1 entities are missing 'snpCount' field.
+The score is: 0.9166666666666665.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (12 out of 12).
+0.00% of entities are missing the ID field (0 out of 12).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.17616/R31NJNGH', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined findability fields in metadata.
+94.32% of entities have all required fields (93849 out of 99497).
+5.68% of entities are missing some required fields (5648 out of 99497).
+
+Breakdown of missing fields:
+9 entities are missing 'initialSampleSize' field.
+5647 entities are missing 'snpCount' field.
+The score is: 0.9432344693809863.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (99497 out of 99497).
+0.00% of entities are missing the ID field (0 out of 99497).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.17616/R31NJNGH', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined findability fields in metadata.
+94.32% of entities have all required fields (93849 out of 99497).
+5.68% of entities are missing some required fields (5648 out of 99497).
+
+Breakdown of missing fields:
+9 entities are missing 'initialSampleSize' field.
+5647 entities are missing 'snpCount' field.
+The score is: 0.9432344693809863.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (99497 out of 99497).
+0.00% of entities are missing the ID field (0 out of 99497).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.17616/R31NJNGH', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined findability fields in metadata.
+94.32% of entities have all required fields (93849 out of 99497).
+5.68% of entities are missing some required fields (5648 out of 99497).
+
+Breakdown of missing fields:
+9 entities are missing 'initialSampleSize' field.
+5647 entities are missing 'snpCount' field.
+The score is: 0.9432344693809863.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (99497 out of 99497).
+0.00% of entities are missing the ID field (0 out of 99497).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.RyVjoS', '10.17616/R39645', '10.17616/R3D'].
+The score is: 1.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.RyVjoS', '10.17616/R39645', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined findability fields in metadata.
+0.00% of entities have all required fields (0 out of 10).
+100.00% of entities are missing some required fields (10 out of 10).
+
+Breakdown of missing fields:
+10 entities are missing 'data_category' field.
+10 entities are missing 'data_type' field.
+10 entities are missing 'data_release' field.
+The score is: 0.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+0.00% of entities have an ID field (0 out of 10).
+100.00% of entities are missing the ID field (10 out of 10).
+The score is: 0.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.RyVjoS', '10.17616/R39645', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined findability fields in metadata.
+100.00% of entities have all required fields (10 out of 10).
+0.00% of entities are missing some required fields (0 out of 10).
+
+Breakdown of missing fields:
+0 entities are missing 'data_category' field.
+0 entities are missing 'data_type' field.
+0 entities are missing 'data_release' field.
+The score is: 1.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (10 out of 10).
+0.00% of entities are missing the ID field (0 out of 10).
+The score is: 1.0.
+
+F1: Evaluating the findability principle F1 for a given data source by checking DOI presence in a webpage.
+The data source has a valid DOI associated with it available at re3data: ['10.25504/FAIRsharing.RyVjoS', '10.17616/R39645', '10.17616/R3D'].
+The score is: 1.
+
+F2: Evaluating the findability principle F2 for a given dataset by searching for predefined findability fields in metadata.
+100.00% of entities have all required fields (10 out of 10).
+0.00% of entities are missing some required fields (0 out of 10).
+
+Breakdown of missing fields:
+0 entities are missing 'data_category' field.
+0 entities are missing 'data_type' field.
+0 entities are missing 'data_release' field.
+The score is: 1.0.
+
+F3: Evaluating the findability principle F3 for a given dataset by checking for identifiers in metadata.
+100.00% of entities have an ID field (10 out of 10).
+0.00% of entities are missing the ID field (0 out of 10).
+The score is: 1.0.

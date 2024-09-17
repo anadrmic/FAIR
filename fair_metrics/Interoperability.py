@@ -3,8 +3,9 @@ from xml.etree.ElementTree import Element
 import json
 import requests
 import re
-import pandas as pd
 import utils
+from tenacity import retry, stop_after_attempt, wait_fixed
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 def check_format(metadata_list):
     """
@@ -53,7 +54,6 @@ def check_format(metadata_list):
             print(META + "N-Triples")
             score += 1
             format_detected = "N-Triples"
-
     return score / len(metadata_list), format_detected
 
 def is_json(input_str):
@@ -158,18 +158,21 @@ def check_ontology_gwas(metadata):
     """Check ontology usage for GWAS repository."""
     count = 0
     for hit in metadata:
-        ontology_score = 0
-        ontology_link = hit["_links"]["efoTraits"]["href"]
-        response = requests.get(ontology_link)
-        if response.status_code == 200 and response.json():
-            ontology_score += 1
-        manufacturer = hit["platforms"][0]["manufacturer"]
-        genotypingTechnology = hit["genotypingTechnologies"][0]["genotypingTechnology"]
-        trait = hit["diseaseTrait"]["trait"]
-        for term in [manufacturer, genotypingTechnology, trait]:
-            if search_bioportal(term, "EFO"):
+        try:
+            ontology_score = 0
+            ontology_link = hit["_links"]["efoTraits"]["href"]
+            response = requests.get(ontology_link)
+            if response.status_code == 200 and response.json():
                 ontology_score += 1
-        count += ontology_score / 4
+            manufacturer = hit["platforms"][0]["manufacturer"]
+            genotypingTechnology = hit["genotypingTechnologies"][0]["genotypingTechnology"]
+            trait = hit["diseaseTrait"]["trait"]
+            for term in [manufacturer, genotypingTechnology, trait]:
+                if search_bioportal(term, "EFO"):
+                    ontology_score += 1
+            count += ontology_score / 4
+        except: 
+            pass
     return count / len(metadata) if metadata else 0
 
 def check_ontology_array_express(metadata):
@@ -195,6 +198,8 @@ def extract_ontology_from_attributes(attributes):
     print(ontology_info)
     return ontology_info
 
+
+@retry(stop=stop_after_attempt(5), wait=wait_fixed(2), reraise=True)
 def search_bioportal(query, ontology_name):
     """
     Search for a term in BioPortal to check if it exists within a specified ontology.
@@ -211,17 +216,54 @@ def search_bioportal(query, ontology_name):
     url = f"{BASE_URL}/ontologies"
     params = {"q": query}
     headers = {"Authorization": f"apikey token={API_KEY}"}
-    response = requests.get(url, params=params, headers=headers)
+    try:
+        response = requests.get(url, params=params, headers=headers)
+        response.raise_for_status() 
+        if response.status_code == 200:
+            ontologies = response.json()
+            for ontology in ontologies:
+                if ontology["acronym"] == ontology_name:
+                    return 1
+            return 0
+        else:
+            print("Error:", response.status_code)
+            return None
+    except requests.exceptions.RequestException as e:
+        print("Error fetching data:", e)
+        raise 
 
-    if response.status_code == 200:
-        ontologies = response.json()
-        for ontology in ontologies:
-            if ontology["acronym"] == ontology_name:
-                return 1
-        return 0
+def log_interoperability_evaluation(principle, description, score, explanation):
+    """
+    Log the interoperability evaluation to a file.
+
+    Args:
+        principle (str): The principle being evaluated.
+        description (str): Description of the evaluation.
+        score (float): The score of the evaluation.
+        explanation (str): Explanation of the result.
+    """
+    with open("results/Interoperability.txt", "a") as file:
+        file.write(f"\n{principle}: {description}\n")
+        file.write(f"{explanation}\n")
+        file.write(f"The score is: {score}.\n")
+
+def check_required_fields(metadata, repository_choice):
+    """Check for required fields based on repository choice."""
+    if repository_choice.startswith("1"):
+        return utils.check_required_fields_json(metadata, ["refs"])[0]
+    elif repository_choice.startswith("3"):
+        return utils.check_required_fields_json(metadata, ["_links"])[0]
+    elif repository_choice == "2":
+        return utils.check_required_fields_geo(metadata, ["FTPLink"])[0]
+    elif repository_choice.startswith("4"):
+        return utils.check_required_fields_json(metadata, ["dbxrefs"])[0]
+    elif repository_choice.startswith("5"):
+        return utils.check_required_fields_json_gdc(metadata, ["refs"])[0]
+    elif repository_choice.startswith("6"):
+        return utils.check_required_fields_json(metadata, ["refs"])[0]
     else:
-        print("Error:", response.status_code)
-        return None
+        return 0
+    
 
 def I1(metadata):
     """
@@ -268,40 +310,10 @@ def I3(metadata, repository_choice):
     all_required_percentage = check_required_fields(metadata, repository_choice)
     score = all_required_percentage / 100
     explanation = f"{all_required_percentage:.2f}% of entities have a reference to other metadata."
-
     log_interoperability_evaluation("I3", "Qualified references check", score, explanation)
     utils.print_evaluation("I3", "Interoperability: Metadata include qualified references to other (meta)data", score, explanation)
-
     return score
 
-def check_required_fields(metadata, repository_choice):
-    """Check for required fields based on repository choice."""
-    if repository_choice.startswith("1"):
-        return utils.check_required_fields_json(metadata, ["refs"])[0]
-    elif repository_choice.startswith("3"):
-        return utils.check_required_fields_json(metadata, ["_links"])[0]
-    elif repository_choice == "2":
-        return utils.check_required_fields_geo(metadata, ["FTPLink"])[0]
-    elif repository_choice.startswith("4"):
-        return utils.check_required_fields_json(metadata, ["dbxrefs"])[0]
-    elif repository_choice.startswith("5"):
-        return utils.check_required_fields_json(metadata, ["refs"])[0]
-    elif repository_choice.startswith("6"):
-        return utils.check_required_fields_json(metadata, ["refs"])[0]
-    else:
-        return 0
 
-def log_interoperability_evaluation(principle, description, score, explanation):
-    """
-    Log the interoperability evaluation to a file.
 
-    Args:
-        principle (str): The principle being evaluated.
-        description (str): Description of the evaluation.
-        score (float): The score of the evaluation.
-        explanation (str): Explanation of the result.
-    """
-    with open("results/Interoperability.txt", "a") as file:
-        file.write(f"\n{principle}: {description}\n")
-        file.write(f"{explanation}\n")
-        file.write(f"The score is: {score}.\n")
+
