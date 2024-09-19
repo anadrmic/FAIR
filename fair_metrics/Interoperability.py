@@ -2,10 +2,8 @@ import xml.etree.ElementTree as ET
 from xml.etree.ElementTree import Element
 import json
 import requests
-import re
 import utils
-from tenacity import retry, stop_after_attempt, wait_fixed
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
 def check_format(metadata_list):
     """
@@ -124,14 +122,17 @@ def check_ontology(metadata, repository_choice):
     else:
         return 0
 
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=2, max=10), 
+       retry=retry_if_exception_type(requests.exceptions.RequestException))
 def check_ontology_icgc(metadata):
     """Check ontology usage for ICGC repository."""
     samples = 0
     count = 0
+    session = utils.create_session_with_retries()
     for hit in metadata:
         mutation_id = hit["id"]
         url = f'https://dcc.icgc.org/api/v1/projects/{mutation_id}/mutations?filters=%7B%7D&from=1&size=1&sort=affectedDonorCountFiltered&order=desc'
-        response = requests.get(url)
+        response = session.get(url)
         if response.status_code == 200:
             data = response.json()
             for ont in data["hits"][0]["clinical_evidence"].keys():
@@ -147,21 +148,23 @@ def check_ontology_icgc(metadata):
 def check_ontology_biosamples(metadata):
     """Check ontology usage for biosamples repository."""
     count = 0
-    for hit in metadata["biosamples"]:
-        ontology_id = hit.get("biosample_ontology", "")
-        pattern = r'(?<=_)[A-Z]+(?=_)'
-        if re.search(pattern, ontology_id):
+    for hit in metadata:
+        ontology_id = hit.get("biosample_ontology", "").get("term_id", "")
+        if ontology_id:
             count += 1
-    return count / len(metadata["biosamples"]) if metadata["biosamples"] else 0
+    return count / len(metadata) if metadata else 0
 
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=2, max=10), 
+       retry=retry_if_exception_type(requests.exceptions.RequestException))
 def check_ontology_gwas(metadata):
     """Check ontology usage for GWAS repository."""
     count = 0
+    session = utils.create_session_with_retries()
     for hit in metadata:
         try:
             ontology_score = 0
             ontology_link = hit["_links"]["efoTraits"]["href"]
-            response = requests.get(ontology_link)
+            response = session.get(ontology_link)
             if response.status_code == 200 and response.json():
                 ontology_score += 1
             manufacturer = hit["platforms"][0]["manufacturer"]
@@ -199,7 +202,8 @@ def extract_ontology_from_attributes(attributes):
     return ontology_info
 
 
-@retry(stop=stop_after_attempt(5), wait=wait_fixed(2), reraise=True)
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=2, max=10), 
+       retry=retry_if_exception_type(requests.exceptions.RequestException))
 def search_bioportal(query, ontology_name):
     """
     Search for a term in BioPortal to check if it exists within a specified ontology.
@@ -216,8 +220,9 @@ def search_bioportal(query, ontology_name):
     url = f"{BASE_URL}/ontologies"
     params = {"q": query}
     headers = {"Authorization": f"apikey token={API_KEY}"}
+    session = utils.create_session_with_retries()
     try:
-        response = requests.get(url, params=params, headers=headers)
+        response = session.get(url, params=params, headers=headers)
         response.raise_for_status() 
         if response.status_code == 200:
             ontologies = response.json()

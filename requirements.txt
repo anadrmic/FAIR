@@ -1,8 +1,7 @@
 requests
+beautifulsoup4
+tenacity
 tabulate
-pandas
-bs4
-re
-json
-ftplib
 matplotlib
+numpy
+tqdm

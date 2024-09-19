@@ -22,25 +22,25 @@ def assess(metadata, keywords, repository_choice, url, request_status):
         list: A list of scores for the assessed metrics.
     """
     data = [
-        ["F1 score", F.F1(url)],
-        ["F2 score", F.F2(metadata, repository_choice)],
-        ["F3 score", F.F3(metadata, repository_choice)],
-        ["F4 score", F.F4(metadata, repository_choice)],
-        ["A1 score", A.A1(request_status)],
-        ["A1.1 score", A.A1_1(request_status)],
-        ["A1.2 score", A.A1_2(request_status)],
-        ["A2 score", A.A2(repository_choice)],
-        ["I1 score", I.I1(metadata)],
-        ["I2 score", I.I2(metadata, repository_choice)],
-        ["I3 score", I.I3(metadata, repository_choice)],
-        ["R1 score", R.R1(metadata, repository_choice)],
-        ["R1.1 score", R.R1_1(url)],
-        ["R1.2 score", R.R1_2(metadata, repository_choice)],
+        ["F1 score", round(F.F1(url), 2)],
+        ["F2 score", round(F.F2(metadata, repository_choice), 2)],
+        ["F3 score", round(F.F3(metadata, repository_choice), 2)],
+        ["F4 score", round(F.F4(metadata, repository_choice), 2)],
+        ["A1 score", round(A.A1(request_status), 2)],
+        ["A1.1 score", round(A.A1_1(request_status), 2)],
+        ["A1.2 score", round(A.A1_2(request_status), 2)],
+        ["A2 score", round(A.A2(repository_choice), 2)],
+        ["I1 score", round(I.I1(metadata), 2)],
+        ["I2 score", round(I.I2(metadata, repository_choice), 2)],
+        ["I3 score", round(I.I3(metadata, repository_choice), 2)],
+        ["R1 score", round(R.R1(metadata, repository_choice), 2)],
+        ["R1.1 score", round(R.R1_1(url), 2)],
+        ["R1.2 score", round(R.R1_2(metadata, repository_choice), 2)],
     ]
 
     print(tabulate(data, headers=["Metric", "Score"], tablefmt="fancy_grid"))
 
-    with open("results/score.txt", "w") as file:
+    with open("results/scores.txt", "w") as file:
         file.write(tabulate(data, headers=["Metric", "Score"], tablefmt="plain"))
 
     scores = {row[0]: row[1] for row in data}

@@ -55,7 +55,7 @@ def fetch_arrayexpress_metadata(keywords):
     repository_api = "https://www.ebi.ac.uk/biostudies/api/v1/search"
     if not keywords:
         print("No keywords provided. Fetching all metadata...")
-        metadata, request_status = utils.fetch_ae_metadata(start_batch=0)
+        metadata, request_status = utils.fetch_arrayexpress_metadata()
         metadata_list.extend(metadata)
     else:
         print(f"Fetching metadata with keywords: {keywords}")
@@ -144,7 +144,7 @@ def fetch_gwas_metadata(keywords):
     hits = []
     if not keywords:
         print("No keywords provided. Fetching all metadata...")
-        metadata, request_status = utils.fetch_gwas_metadata(None, start_batch=0)
+        metadata, request_status = utils.fetch_gwas_metadata()
         metadata_list.extend(metadata)
     else: 
         print(f"Fetching metadata with keywords: {keywords}")
@@ -189,7 +189,7 @@ def fetch_biosamples_metadata(keywords):
                                                                  #https://www.encodeproject.org/search/?type=Biosample&searchTerm=melanoma&limit=all&format=json
     if not keywords:
         print("No keywords provided. Fetching all biosample metadata...")
-        metadata, request_status = utils.fetch_encode_biosamples_metadata(None, start_batch=0)
+        metadata, request_status = utils.fetch_biosamples_metadata()
         biosample_data_list.extend(metadata)
     else:
         print(f"Fetching biosample metadata with keywords: {keywords}")
@@ -236,7 +236,7 @@ def fetch_experiments_metadata(keywords):
     experiment_base_url = 'https://www.encodeproject.org/search/?type=Experiment'
     if not keywords:
         print("No keywords provided. Fetching all experiment metadata...")
-        metadata, request_status = utils.fetch_encode_biosamples_metadata(None, start_batch=0)
+        metadata, request_status = utils.fetch_experiments_metadata()
         experiment_data_list.extend(metadata)
     else:
         print(f"Fetching experiment metadata with keywords: {keywords}")

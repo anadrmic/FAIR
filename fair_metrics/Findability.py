@@ -2,8 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import utils
-from tenacity import retry, stop_after_attempt, wait_fixed
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
 def find_doi_in_webpage(url):
     """
@@ -42,6 +41,8 @@ def search_google_datasets(metadata, repository_choice):
     Returns:
         float: The percentage of dataset names found in Google Dataset Search.
     """
+    if repository_choice == "2":
+        return utils.title_geo(metadata, start_element=0)
     dataset_name_list = extract_dataset_names(metadata, repository_choice)
     if not dataset_name_list:
         return 0.0
@@ -67,8 +68,6 @@ def extract_dataset_names(metadata, repository_choice):
     """
     if repository_choice == "1":
         return [hit["attributes"][0]["value"] for hit in metadata]
-    elif repository_choice == "2":
-        return [utils.xml_to_list(metadata)[0][1][3]]
     elif repository_choice == "3":
         return [hit["publicationInfo"]["title"] for hit in metadata]
     elif repository_choice[0] == "4":
@@ -80,7 +79,8 @@ def extract_dataset_names(metadata, repository_choice):
     else:
         return []
 
-@retry(stop=stop_after_attempt(5), wait=wait_fixed(2), reraise=True)
+@retry(stop=stop_after_attempt(5), wait=wait_exponential(multiplier=1, min=2, max=10), 
+       retry=retry_if_exception_type(requests.exceptions.RequestException))
 def search_dataset_on_google(dataset_name):
     """
     Search for a dataset name on Google Dataset Search.
@@ -91,9 +91,10 @@ def search_dataset_on_google(dataset_name):
     Returns:
         bool: True if found, False otherwise.
     """
+    session = utils.create_session_with_retries()
     url = f"https://datasetsearch.research.google.com/search?query={dataset_name}"
     try:
-        response = requests.get(url)
+        response = session.get(url)
         response.raise_for_status()
         return dataset_name.lower() in BeautifulSoup(response.content, 'html.parser').get_text().lower()
     except requests.exceptions.RequestException as e:
@@ -218,7 +219,7 @@ def F2(metadata, repository_choice):
         all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count = utils.check_required_fields_json(metadata, findability_fields)
     score = all_required_percentage/100
     explanation = (f"{all_required_percentage:.2f}% of entities have all required fields ({all_required_count} out of {total_count}).\n"
-                   f"{missing_all_percentage:.2f}% of entities are missing some required fields ({missing_all_count} out of {total_count}).\n"
+                   f"{missing_all_percentage:.2f}% of entities are missing all required fields ({missing_all_count} out of {total_count}).\n"
                    "\nBreakdown of missing fields:\n" +
                    "\n".join(f"{count} entities are missing '{field}' field." for field, count in missing_fields_count.items()))
     
@@ -272,6 +273,9 @@ def F4(metadata, repository_choice):
     score = round(search_google_datasets(metadata, repository_choice), 2)
     explanation = f"Datasets found in Google Dataset Search: {score * 100}%"
 
+    log_findability_evaluation("F4", "Evaluating the findability principle F4 for a given dataset by checking the presence in Google Dataset Search.",
+                               score, explanation)
+    
     utils.print_evaluation("F4", "Findability: Presence in Google Datasets", score, explanation)
 
     return score

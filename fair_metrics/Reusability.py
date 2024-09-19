@@ -10,11 +10,17 @@ def check_required_fields_ae(json_elements):
     all_required_count = 0
     missing_all_count = 0
     for element in json_elements:
-        if element["section"]["subsections"][3]["attributes"][1]["value"]:
-            all_required_count += 1
-        else:
+        try:
+            if element["section"]["subsections"][3]["attributes"][0]["value"]:
+                all_required_count += 1
+            elif element["section"]["subsections"][3]["attributes"][1]["value"]:
+                all_required_count += 1
+            else:
+                missing_all_count += 1
+                missing_fields_count["value"] += 1
+        except:
             missing_all_count += 1
-            missing_fields_count["value"] += 1
+            missing_fields_count["value"] += 1         
     all_required_percentage = (all_required_count / total_count) * 100 if total_count > 0 else 0
     missing_all_percentage = (missing_all_count / total_count) * 100 if total_count > 0 else 0
     return all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count
@@ -70,7 +76,7 @@ def log_reusability_evaluation_2(principle, score):
     """
     with open("results/Reusability.txt", "a") as file:
         file.write(f"\n{principle}:    Evaluating the reusability principle {principle} for a given dataset by searching for predefined keywords in metadata to assess its completeness.\n")
-        file.write(f"The repositori has a valid licence at stated at re3data.\n")
+        file.write(f"The repository has a valid licence at stated at re3data.\n")
         file.write(f"The score is: {score}.\n")
 
 
@@ -149,7 +155,7 @@ def R1_2(metadata, repository_choice):
         all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count = utils.check_required_fields_json_gdc(metadata, ["lab"])
     if repository_choice == "6":
         all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count = utils.check_required_fields_json(metadata, ["lab"])
-    score = all_required_percentage/100
+    score = round(all_required_percentage/100, 2)
     log_reusability_evaluation("R1.2", all_required_percentage, missing_all_percentage, missing_fields_count, all_required_count, total_count, missing_all_count, score)
     explanation = (
         "All provenance metadata present" if score == 1 else
