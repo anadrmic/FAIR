@@ -11,7 +11,7 @@ This repository is part of the Master’s Thesis titled:
 - **Advisor**: Prof. Anna Bernasconi
 - **Academic Year**: 2023-24
 
-The project involves evaluating specific keywords against various genomic data repositories or the entire repositories to retrieve and assess relevant metadata using a FAIRness evaluation workflow. The system supports multiple repositories and uses different APIs to fetch data based on user input. The metadata is then evaluated using several custom metrics, and the results are displayed in the `results` folder.
+The project involves evaluating specific keywords against various genomic data repositories or the entire repositories to retrieve and assess relevant metadata using a FAIRness evaluation workflow. The system supports multiple repositories and uses different APIs to fetch data based on user input. The metadata is then evaluated using several custom metrics, and results are displayed in the `results` folder.
 
 ## Installation and Usage
 
